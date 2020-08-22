@@ -1,0 +1,71 @@
+@media only screen and (max-width: 600px) {
+    .landing-section{
+        
+    grid-template-areas: "logo menu" "illust illust" "title title";
+    }
+    .landing-illustration{
+        
+    }
+    .landing-heading{
+        
+    align-self: safe;
+    /*! width: min-content; */
+    align-self: auto;
+    padding-left: 15%;
+    }
+    .top-nav{
+        
+    margin: 0vh;
+    }
+    .menu-item{
+        
+    display: none;
+    }
+    .menu-item-btn{display: block;}
+    .content-wrapper{
+        
+    }
+    .content-section{
+        
+    width: 100%;
+    grid-template-areas: "about" "topics" "content";
+    grid-template-columns: unset;
+    }
+    .about-forum{
+        
+    /*! padding-left: 4vh; */
+    width: 83%;
+    justify-self: center;
+    text-align: left;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    }
+    aside{
+        
+    /*! justify-content: center; */
+    align-items: flex-start;
+    }
+    .topic-item{display: none;}
+    .title-sm{
+        
+    text-align: left;
+    }
+    .card{
+        
+    flex-direction: column;
+    align-items: center;
+    }
+    .card-image{
+        
+    width: 75%;
+    align-content: ;
+    }
+    .card-content{
+        
+    width: 90%;
+    }
+    .logo{
+        
+    /*! padding: -2vh; */
+    }
+}
