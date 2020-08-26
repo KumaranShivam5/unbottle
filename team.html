@@ -12,13 +12,16 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.0/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script type="module" src="apivar.js"></script>
     <link rel="stylesheet" href="team_assets/team.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700;800;900&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
-<div class="wrap-it-up">
+<div class="wrap-it-up" id="team-mid-end">
 	<section class="about-us-section">
 		<div class="background-vec"></div>
 		<div class="image-vec"></div>
@@ -57,85 +60,13 @@
 	<section class="team-section">
 		<div class="team-head-2"> MEET THE TEAM </div>
 		<div class="background-vec-2"><img src="team_assets/images/vec29.png" class="vec-resize"></div>
-		
+			
 		<div class="team-card-wrapper">
-			<div class="team-card">
-			<img class="team-card-img" src="team_assets/images/im1.jpg">
-				<div class="team-card-desc">
-					<h1>SAM</h1>
-					<p>Unbottle is an initiative with the goal of bringing about mental health awareness and breaking the stigma that comes with it. Very often,
-					we see people going through mental health issues without knowing what it is they are feeling or how to seek help. Unbottle is an attempt to
-					extend a helping hand to anyone who needs it by facilitating professional help</p>
-					<div class="team-card-tag">COORDINATOR</div>
-					<div class="team-card-tag">CONTENT WRITER</div>
-				</div>
-			</div>
-			
-			<div class="team-card">
-			<img class="team-card-img" src="team_assets/images/im1.jpg">
-				<div class="team-card-desc">
-					<h1>SAM</h1>
-					<p>Unbottle is an initiative with the goal of bringing about mental health awareness and breaking the stigma that comes with it. Very often,
-					we see people going through mental health issues without knowing what it is they are feeling or how to seek help. Unbottle is an attempt to
-					extend a helping hand to anyone who needs it by facilitating professional help</p>
-					<div class="team-card-tag">COORDINATOR</div>
-					<div class="team-card-tag">CONTENT WRITER</div>
-				</div>
-			</div>
-			
-			<div class="team-card">
-			<img class="team-card-img" src="team_assets/images/im1.jpg">
-				<div class="team-card-desc">
-					<h1>VANI</h1>
-					<p>Unbottle is an initiative with the goal of bringing about mental health awareness and breaking the stigma that comes with it. Very often,
-					we see people going through mental health issues without knowing what it is they are feeling or how to seek help. Unbottle is an attempt to
-					extend a helping hand to anyone who needs it by facilitating professional help</p>
-					<div class="team-card-tag">COORDINATOR</div>
-					<div class="team-card-tag">CONTENT WRITER</div>
-				</div>
-
-			</div>
-			
-			<div class="team-card">
-			<img class="team-card-img" src="team_assets/images/im1.jpg">
-				<div class="team-card-desc">
-					<h1>VANI</h1>
-					<p>Unbottle is an initiative with the goal of bringing about mental health awareness and breaking the stigma that comes with it. Very often,
-					we see people going through mental health issues without knowing what it is they are feeling or how to seek help. Unbottle is an attempt to
-					extend a helping hand to anyone who needs it by facilitating professional help</p>
-					<div class="team-card-tag">COORDINATOR</div>
-					<div class="team-card-tag">CONTENT WRITER</div>
-				</div>
-			</div>
-			
-			<div class="team-card">
-			<img class="team-card-img" src="team_assets/images/im1.jpg">
-				<div class="team-card-desc">
-					<h1>SAM</h1>
-					<p>Unbottle is an initiative with the goal of bringing about mental health awareness and breaking the stigma that comes with it. Very often,
-					we see people going through mental health issues without knowing what it is they are feeling or how to seek help. Unbottle is an attempt to
-					extend a helping hand to anyone who needs it by facilitating professional help</p>
-					<div class="team-card-tag">COORDINATOR</div>
-					<div class="team-card-tag">CONTENT WRITER</div>
-				</div>
-			</div>
-			
-			
-			<div class="team-card">
-			<img class="team-card-img" src="team_assets/images/im1.jpg">
-				<div class="team-card-desc">
-					<h1>SAM</h1>
-					<p>Unbottle is an initiative with the goal of bringing about mental health awareness and breaking the stigma that comes with it. Very often,
-					we see people going through mental health issues without knowing what it is they are feeling or how to seek help. Unbottle is an attempt to
-					extend a helping hand to anyone who needs it by facilitating professional help</p>
-					<div class="team-card-tag">COORDINATOR</div>
-					<div class="team-card-tag">CONTENT WRITER</div>
-				</div>
-			</div>
+			<teamcard v-for="acard in team_array" :scard="acard" :key="acard.ID"></teamcard>
 		</div>
 	</section>
 	
 </div>	
-
+	<script src="team_assets/team_mid.js"></script>
 </body>
 </html>
