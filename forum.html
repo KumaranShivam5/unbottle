@@ -12,6 +12,8 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.0/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="forum_assets/forum.css">
     <link rel="stylesheet" href="forum_assets/forum_mb.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700;800;900&display=swap" rel="stylesheet">
@@ -21,6 +23,7 @@
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+<div id="forum-mid-end">
     <section class="landing-section">
         <div class="top-left-splash splash"><img src="forum_assets/ilst/splash_01.svg" style="width: 30vw;"></div>
         <div class="logo">
@@ -56,81 +59,12 @@
             </span>
             <aside>
                 <span class="title-sm">TOPICS</span>
-                <span class='topic-item'>topic one</span>
-                <span class='topic-item'>topic two</span>
-                <span class='topic-item'>topic three</span>
-                <span class='topic-item'>topic four</span>
-                <span class='topic-item'>topic five</span>
+				<span class='topic-item' v-on:click='forum_all'>all</span>
+                <span class='topic-item' v-for="ctg in ctg_array" v-on:click='forum_by_category(ctg.ctg_name)'>{{ctg.ctg_name}}</span>
             </aside>
             <main>
-                <div class="card-container">
-                    <div class=card>
-                        <img class="card-image" src="forum_assets/ilst/sketch/04.png">
-                        <div class="card-content">
-                            <span class="card-title">
-                                Loneliness, killing from inside , not yet..
-                            </span>
-                            <div class="card-subtext">
-                                <span class="msg-writer">Anonymus</span>
-                                <span class="card-message">this is the placeholder that contains most recent message in this thread</span>
-                            </div>
-                            <div class="card-details">
-                                <div class="card-detail-item">
-                                    <span class="card-detail-head">Created BY - </span><span class="card-detail-text">J Solomon Ivan</span>
-                                </div>
-                                <div class="card-detail-item">
-                                    <span class="card-detail-head">Date - </span><span class="card-detail-text">28 Oct 1999</span>
-                                </div>
-
-                            </div>
-                            <div class="open-btn">read</div>
-                        </div>
-                    </div>
-                    <div class=card>
-                        <img class="card-image" src="forum_assets/ilst/sketch/05.png">
-                        <div class="card-content">
-                            <span class="card-title">
-                                Taking Nervousness , Nervously....
-                            </span>
-                            <div class="card-subtext">
-                                <span class="msg-writer">Anonymus</span>
-                                <span class="card-message">this is the placeholder that contains most recent message in this thread</span>
-                            </div>
-                            <div class="card-details">
-                                <div class="card-detail-item">
-                                    <span class="card-detail-head">Created BY - </span><span class="card-detail-text">J Solomon Ivan</span>
-                                </div>
-                                <div class="card-detail-item">
-                                    <span class="card-detail-head">Date - </span><span class="card-detail-text">28 Oct 1999</span>
-                                </div>
-
-                            </div>
-                            <div class="open-btn">read</div>
-                        </div>
-                    </div>
-                    <div class=card>
-                        <img class="card-image" src="forum_assets/ilst/sketch/06.png">
-                        <div class="card-content">
-                            <span class="card-title">
-                                Now i am out of topics...
-                            </span>
-                            <div class="card-subtext">
-                                <span class="msg-writer">Anonymus</span>
-                                <span class="card-message">this is the placeholder that contains most recent message in this thread</span>
-                            </div>
-                            <div class="card-details">
-                                <div class="card-detail-item">
-                                    <span class="card-detail-head">Created BY - </span><span class="card-detail-text">J Solomon Ivan</span>
-                                </div>
-                                <div class="card-detail-item">
-                                    <span class="card-detail-head">Date - </span><span class="card-detail-text">28 Oct 1999</span>
-                                </div>
-
-                            </div>
-                            <div class="open-btn">read</div>
-                        </div>
-                    </div>
-
+                <div class="card-container"> 
+					<forumcard v-for="acard in forum_array" :scard="acard" :key="acard.ID" @read=searchstuff></forumcard>
                 </div>
             </main>
         </div>
@@ -138,7 +72,11 @@
     <section class="footer">
 
     </section>
+</div>	
+
     <script src="forum_assets/forum.js" async defer></script>
+	<script src="forum_assets/forum_mid.js"></script>
+
 </body>
 
 </html>
