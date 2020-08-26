@@ -12,6 +12,9 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.0/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <link rel="stylesheet" href="forum_assets/forum.css">
     <link rel="stylesheet" href="forum_assets/forum_mb.css">
     <link rel="stylesheet" href="forum_assets/forum-view.css">
@@ -19,6 +22,7 @@
 </head>
 
 <body>
+<div id="forum-mid-end">
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -57,61 +61,33 @@
             </span>
             <aside>
                 <span class="title-sm">TOPICS</span>
-                <span class='topic-item'>topic one</span>
-                <span class='topic-item'>topic two</span>
-                <span class='topic-item'>topic three</span>
-                <span class='topic-item'>topic four</span>
-                <span class='topic-item'>topic five</span>
+				<span class='topic-item' v-on:click='forum_all'>all</span>
+                <span class='topic-item' v-for="ctg in ctg_array" v-on:click='forum_by_category(ctg.ctg_name)'>{{ctg.ctg_name}}</span>
             </aside>
             <main>
                 <div class="card-container">
                     <div class="header-card f-card">
                         <div class="forum-img">
-                            <img class='forum-img-img' src='forum_assets/ilst/sketch/01.png'>
+                            <img class='forum-img-img' :src="apiurl+forum_array[0].image">
                         </div>
                         <div class="forum-details">
                             <span class='forum-title'>
-                                This is the title for 1st forum, 
+                                {{forum_array[0].topic}}
                             </span>
                             <span class='forum-details-all'>
                                 Created by - Kumaran Shivam <br>
-                                Date created - 28/10/2020
+                                Date created - {{forum_array[0].date}}
                             </span>
                             <span class='forum-ctg'>Topic One</span>
                         </div>
                     </div>
-                    <div class='f-msg-card f-msg-card-c1'>
-                        <div class='f-msg-header'>
-                            <span class="f-msg-name">Alberto D</span>
-                            <span class='f-msg-date'>28/10/2020</span>
-                        </div>
-                        <div class="f-msg-content">
-                            this placeholder again I hae to fill using some dummy content...filling stuff with dummy content is more f tha filling it with lorem ipsum sit idor amet and bla bla bla, oherwise how i am supposed to make proper space for this container
-                        </div>
-                    </div>
-                    <div class='f-msg-card f-msg-card-c2'>
-                        <div class='f-msg-header'>
-                            <span class="f-msg-name">Alberto D</span>
-                            <span class='f-msg-date'>28/10/2020</span>
-                        </div>
-                        <div class="f-msg-content">
-                            this placeholder again I hae to fill using some dummy content...filling stuff with dummy content is more f tha filling it with lorem ipsum sit idor amet and bla bla bla, oherwise how i am supposed to make proper space for this container
-                        </div>
-                    </div>
-                    <div class='f-msg-card f-msg-card-c1'>
-                        <div class='f-msg-header'>
-                            <span class="f-msg-name">Alberto D</span>
-                            <span class='f-msg-date'>28/10/2020</span>
-                        </div>
-                        <div class="f-msg-content">
-                            this placeholder again I hae to fill using some dummy content...filling stuff with dummy content is more f tha filling it with lorem ipsum sit idor amet and bla bla bla, oherwise how i am supposed to make proper space for this container
-                        </div>
-                    </div>
+                    <forumcard v-for="acard in forum_array[1]" :scard="acard" :key="acard.ID"></forumcard>
+					
                     <div class='f-r-card f-msg-card'>
                         <span class='f-r-title'>Leave a reply</span>
-                        <input class='f-r-v-name input'></input>
-                        <textarea class='f-r-v-reply'></textarea>
-                        <button class='submit'>Submit</button>
+                        <input class='f-r-v-name input' placeholder='Name(optional)' v-model='reply_name'></input>
+                        <textarea class='f-r-v-reply' placeholder='Text' v-model='reply_content'></textarea>
+                        <button class='submit' v-on:click='submit_reply'>Submit</button>
                     </div>
                 </div>
             </main>
@@ -120,7 +96,11 @@
     <section class="footer">
 
     </section>
+</div>
+
+
     <script src="forum_assets/forum.js" async defer></script>
+	<script src="forum_assets/forum_view_mid.js"></script>
 </body>
 
 </html>
