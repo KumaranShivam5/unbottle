@@ -12,9 +12,9 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.0/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.0/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <link rel="stylesheet" href="forum_assets/forum.css">
     <link rel="stylesheet" href="forum_assets/forum_mb.css">
     <link rel="stylesheet" href="forum_assets/forum-view.css">
@@ -22,107 +22,85 @@
 </head>
 
 <body>
-<div id="forum-mid-end">
-    <!--[if lt IE 7]>
+    <div id="forum-mid-end">
+        <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <section class="landing-section">
-        <div class="top-left-splash splash"><img src="forum_assets/ilst/splash_01.svg" style="width: 30vw;"></div>
-        <div class="logo">
-            <img src="forum_assets/ilst/Group 6.png">
-        </div>
-        <nav class="top-nav">
-            <span class='menu-item'>HOME</span>
-            <span class='menu-item'>Advisor</span>
-            <span class='menu-item'>Social</span>
-            <span class='menu-item'>OurTeam</span>
-            <span class='menu-item menu-item-btn'>Join Us</span>
-        </nav>
-        <div class="landing-heading">
-            <span class='title-unbotle'>UNBOTTLE</span>
-            <span class="title-forum">FORUM</span>
-            <span class="title-talk-it">TALK IT</span>
-            <span class="title-out">OUT</span>
-        </div>
-        <div class="landing-illustration">
-            <img src="forum_assets/ilst/undraw_team_work_k80m.svg" style="height: 100%;
+        <section class="landing-section">
+            <div class="top-left-splash splash"><img src="forum_assets/ilst/splash_01.svg" style="width: 30vw;"></div>
+            <div class="logo">
+                <img src="forum_assets/ilst/Group 6.png">
+            </div>
+            <nav class="top-nav">
+                <span class='menu-item'>HOME</span>
+                <span class='menu-item'>Advisor</span>
+                <span class='menu-item'>Social</span>
+                <span class='menu-item'>OurTeam</span>
+                <span class='menu-item menu-item-btn'>Join Us</span>
+            </nav>
+            <div class="landing-heading">
+                <span class='title-unbotle'>UNBOTTLE</span>
+                <span class="title-forum">FORUM</span>
+                <span class="title-talk-it">TALK IT</span>
+                <span class="title-out">OUT</span>
+            </div>
+            <div class="landing-illustration">
+                <img src="forum_assets/ilst/undraw_team_work_k80m.svg" style="height: 100%;
             padding-bottom: 5vh;
             width: 100%;
             object-fit: contain;">
-        </div>
+            </div>
 
-    </section>
+        </section>
 
-    <section class="content-wrapper">
-        <div class="content-section">
-            <span class="about-forum">
+        <section class="content-wrapper">
+            <div class="content-section">
+                <span class="about-forum">
                 this is a placeholder for containing some details lining ot the purpose of this pae and how to use it , how oit will benifit the user, now i am running out of lines to write but i have to fill this placeholder to make it look good, stop me or i will start
             writin lorem ipsum sit idor amet, no one knows what this means anyway
             </span>
-            <aside>
-                <span class="title-sm">TOPICS</span>
-				<span class='topic-item' v-on:click='forum_all'>all</span>
-                <span class='topic-item' v-for="ctg in ctg_array" v-on:click='forum_by_category(ctg.ctg_name)'>{{ctg.ctg_name}}</span>
-            </aside>
-            <main>
-                <div class="card-container">
-                    <div class="header-card f-card">
-                        <div class="forum-img">
-                            <img class='forum-img-img' :src="apiurl+forum_array[0].image">
-                        </div>
-                        <div class="forum-details">
-                            <span class='forum-title'>
+                <aside>
+                    <span class="title-sm">TOPICS</span>
+                    <span class='topic-item' v-on:click='forum_all'>all</span>
+                    <span class='topic-item' v-for="ctg in ctg_array" v-on:click='forum_by_category(ctg.ctg_name)'>{{ctg.ctg_name}}</span>
+                </aside>
+                <main>
+                    <div class="card-container">
+                        <div class="header-card f-card">
+                            <div class="forum-img">
+                                <img class='forum-img-img' :src="apiurl+forum_array[0].image">
+                            </div>
+                            <div class="forum-details">
+                                <span class='forum-title'>
                                 {{forum_array[0].topic}}
                             </span>
-                            <span class='forum-details-all'>
+                                <span class='forum-details-all'>
                                 Created by - Kumaran Shivam <br>
                                 Date created - {{forum_array[0].date}}
                             </span>
-                            <span class='forum-ctg'>Topic One</span>
+                                <span class='forum-ctg'>Topic One</span>
+                            </div>
+                        </div>
+                        <forumcard v-for="acard in forum_array[1]" :scard="acard" :key="acard.ID"></forumcard>
+
+                        <div class='f-r-card f-msg-card'>
+                            <span class='f-r-title'>Leave a reply</span>
+                            <input class='f-r-v-name input' placeholder='Name(optional)' v-model='reply_name'></input>
+                            <textarea class='f-r-v-reply' placeholder='Text' v-model='reply_content'></textarea>
+                            <button class='submit' v-on:click='submit_reply'>Submit</button>
                         </div>
                     </div>
-                    <forumcard v-for="acard in forum_array[1]" :scard="acard" :key="acard.ID"></forumcard>
-					
-                    <div class='f-r-card f-msg-card'>
-                        <span class='f-r-title'>Leave a reply</span>
-                        <input class='f-r-v-name input' placeholder='Name(optional)' v-model='reply_name'></input>
-                        <textarea class='f-r-v-reply' placeholder='Text' v-model='reply_content'></textarea>
-                        <button class='submit' v-on:click='submit_reply'>Submit</button>
-                    </div>
-                </div>
-            </main>
-        </div>
-    </section>
-    <section class="footer">
+                </main>
+            </div>
+        </section>
+        <section class="footer">
 
-    </section>
-</div>
+        </section>
+    </div>
 
 
     <script src="forum_assets/forum.js" async defer></script>
-<<<<<<< HEAD
-    <script>
-        function call_trial() {
-            var data = null;
-
-            var xhr = new XMLHttpRequest();
-
-
-            xhr.addEventListener("readystatechange", function() {
-                if (this.readyState === 4) {
-                    console.log(this.responseText);
-                }
-            });
-
-            xhr.open("GET", "http://ushasi.pythonanywhere.com/kumaran/view-forum-list/");
-
-
-            xhr.send(data);
-        }
-    </script>
-=======
-	<script src="forum_assets/forum_view_mid.js"></script>
->>>>>>> 97ddd26390e3342cc0fb5eb13a942515422b1312
+    <script src="forum_assets/forum_view_mid.js"></script>
 </body>
 
 </html>
