@@ -121,6 +121,25 @@
 
     </section>
     <script src="forum_assets/forum.js" async defer></script>
+    <script>
+        function call_trial() {
+            var data = null;
+
+            var xhr = new XMLHttpRequest();
+
+
+            xhr.addEventListener("readystatechange", function() {
+                if (this.readyState === 4) {
+                    console.log(this.responseText);
+                }
+            });
+
+            xhr.open("GET", "http://ushasi.pythonanywhere.com/kumaran/view-forum-list/");
+
+
+            xhr.send(data);
+        }
+    </script>
 </body>
 
 </html>

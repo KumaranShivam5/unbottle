@@ -1,0 +1,257 @@
+/*
+font-family: 'Poppins', sans-serif;
+*/
+
+:root {
+    --main-bg-color: coral;
+    --light-blue-a: #1C9ECA;
+    --light-blue-b: #007299;
+    --dark-blue: #3F3D56;
+    --pink-a: #FF6584;
+    --pink-b: ;
+    --pink-white: #FFCAD587;
+    --blue-white: #77DDFF4F;
+}
+
+hei {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    background: black;
+}
+
+.insta--landing-section {
+    display: flex;
+    width: 97%;
+    height: 96%;
+    align-items: center;
+    justify-content: center;
+    /*! background: url(frame.svg); */
+    background-size: contain;
+    overflow-x: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+    border-radius: 6vh;
+    margin-right: 1vw;
+}
+
+.insta-center-content {
+    /*! position: absolute; */
+    /*! top: 10vh; */
+    /*! left: 10vh; */
+    background-image: url(frame-circle.svg);
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45vh;
+    height: 45vh;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.insta-center-logo {}
+
+.insta-landing-dot {
+    position: absolute;
+    top: 8vh;
+    left: 8vh;
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+    background: #bc01db;
+}
+
+.insta-center-logo {
+    width: 30vh;
+    object-fit: contain;
+}
+
+.top-nav {
+    position: absolute;
+    top: 10vh;
+    right: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-item {
+    font-size: 2vh;
+    font-weight: 300;
+    padding: 1.3vh;
+    cursor: pointer;
+}
+
+.menu-item-btn {
+    /*! border: 2px; */
+    background: #fc7602;
+    color: white;
+    border-radius: 2vh;
+}
+
+.insta--landing-section-wrapper {
+    background: linear-gradient(103.74deg, #BC01DB 3.15%, #F40101 49.97%, #FF9C02 100.77%);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6vh;
+}
+
+.post-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(top-splash.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding-top: 20vh;
+    flex-direction: column;
+}
+
+.post-grid-wrapper {
+    width: 66.666%;
+    /*! height: 100vh; */
+    /*! border-left: 15px solid #c601b3; */
+}
+
+
+/* ---- grid ---- */
+
+.grid {
+    background: #DDD;
+}
+
+
+/* clear fix */
+
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+    width: 33.333%;
+}
+
+.grid-item {
+    float: left;
+    cursor: pointer;
+    /*! margin: 4px; */
+}
+
+.grid-item img {
+    display: block;
+    max-width: 100%;
+}
+
+.top-splash {
+    width: 100%;
+    height: 30vh;
+    background-image: url(top-splash.svg);
+    position: absolute;
+    z-index: 1;
+    top: 100vh;
+    background-repeat: no-repeat;
+    display: none;
+}
+
+.post-title {
+    width: 100%;
+    padding-left: 33.33vw;
+    margin-bottom: 4vh;
+}
+
+.post-popup {
+    position: fixed;
+    z-index: -1;
+    opacity: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000000ba;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.post-bkg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vh;
+    background: linear-gradient(103.74deg, #BC01DB 3.15%, #F40101 49.97%, #FF9C02 100.77%);
+    height: 85vh;
+    border-radius: 7vh;
+    /*! overflow-y: scroll; */
+    /*! padding-top: 10vh; */
+}
+
+.post-container {
+    width: 94%;
+    height: 100%;
+    background: white;
+    border-radius: 6vh;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    /*! overflow-y: scroll; */
+}
+
+.post-bkg {}
+
+.window-wrapper {
+    width: 0%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    transition: 0.5s ease-in-out;
+}
+
+.post-container-scroller {
+    width: 80%;
+    display: flex;
+    align-items: first baseline;
+    justify-content: center;
+    overflow-y: scroll;
+    height: 100%;
+}
+
+.popup-close-btn {
+    position: absolute;
+    top: 5vh;
+    right: 30vh;
+}
+
+.grid-item:hover .grid-post-overlay{
+    opacity: 1;
+}
+.footer-section{
+    
+}
+.footer-wrapper{
+    
+}
+.footer-bkg-img{
+    
+    transform: rotate(180deg);
+    height: 100%;
+    object-fit: cover;
+}
+.grid-post-overlay {width: 100%;position: absolute;height: 100%;background: #00000073;color: white;display: flex;align-items: center;justify-content: center;filter: brightness;filter: sepia;transition: 0.3s ease-out;opacity: 0;}
