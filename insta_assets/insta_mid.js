@@ -28,11 +28,11 @@ var insta_disp =new Vue ({
 				$('.post-popup').css('z-index', 2);
             			$('.post-popup').css('opacity', 1);
            			 $('.window-wrapper').css('width', '80%');
-				console.log("call2");
+				console.log($('.instagram-media').attr('data-instgrm-permalink'),"af-open");
             		}, 500)	
                		var righturl= url + '?utm_source=ig_embed&amp;utm_campaign=loading';
 			$('.instagram-media').attr('data-instgrm-permalink', righturl);
-			$('.to-change').attr('href',righturl);console.log("call");
+			$('.to-change').attr('href',righturl);console.log($('.instagram-media').attr('data-instgrm-permalink'));
         	},
 		
 	},
