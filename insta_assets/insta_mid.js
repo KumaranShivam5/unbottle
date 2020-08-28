@@ -39,9 +39,12 @@ var insta_disp =new Vue ({
 		
 		reloadJs(src) {
 			console.log("called reload",src);
-			src = $('script[src$="' + src + '"]').attr("src");
-			$('script[src$="' + src + '"]').remove();
-			$('<script/>').attr('src', src).appendTo('head');
+			$('#random').remove();
+			let myScript = document.createElement("script");
+			myScript.setAttribute("src", src);
+			myScript.setAttribute("id", 'random');
+			document.getElementById('test').appendChild(myScript);
+			console.log("called reload",src);
 		},
 		
 	},
