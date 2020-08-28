@@ -24,16 +24,25 @@ var insta_disp =new Vue ({
 	
 	methods: {
 		open_post(url) { 
-			setTimeout(function() {
-				$('.post-popup').css('z-index', 2);
-            			$('.post-popup').css('opacity', 1);
-           			 $('.window-wrapper').css('width', '80%');
-				console.log($('.instagram-media').attr('data-instgrm-permalink'),"af-open");
-            		}, 500)	
-               		var righturl= url + '?utm_source=ig_embed&amp;utm_campaign=loading';
+			var righturl= url + '?utm_source=ig_embed&amp;utm_campaign=loading';
 			$('.instagram-media').attr('data-instgrm-permalink', righturl);
-			$('.to-change').attr('href',righturl);console.log($('.instagram-media').attr('data-instgrm-permalink'));
+			$('.to-change').attr('href',righturl);
+			
+			this.reloadJs("//www.instagram.com/embed.js");
+			console.log($('.instagram-media').attr('data-instgrm-permalink'));
+			$('.post-popup').css('z-index', 2);
+            $('.post-popup').css('opacity', 1);
+            $('.window-wrapper').css('width', '80%');
+
+			
         	},
+		
+		reloadJs(src) {
+			console.log("called reload",src);
+			src = $('script[src$="' + src + '"]').attr("src");
+			$('script[src$="' + src + '"]').remove();
+			$('<script/>').attr('src', src).appendTo('head');
+		},
 		
 	},
 	
