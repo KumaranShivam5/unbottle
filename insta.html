@@ -13,6 +13,9 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="insta_assets/insta.css">
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.0/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700;800;900&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
@@ -21,6 +24,8 @@
 </head>
 
 <body>
+<div id="insta-mid-end">
+
     <section class='insta--landing-section-wrapper'>
         <div class="insta--landing-section">
             <div class="insta-landing-dot"></div>
@@ -50,97 +55,7 @@ jb open kro kisi post ko to it opens a popup-with actual post, proper instagram 
 
             <div class="grid">
                 <div class="grid-sizer"></div>
-                <div class="grid-item" onclick="open_post(1)">
-                    <div class='grid-post-overlay'>
-                        open Post
-                    </div>
-                    <img src="insta_assets/samples/img1.jpg" />
-                </div>
-                <div class="grid-item" onclick="open_post(1)">
-                    <div class='grid-post-overlay'>
-                        open Post
-                    </div>
-                    <img src="insta_assets/samples/img2.jpg" />
-                </div>
-                <div class="grid-item" onclick="open_post(1)">
-                    <div class='grid-post-overlay'>
-                        open Post
-                    </div>
-                    <img src="insta_assets/samples/img3.jpg" />
-                </div>
-                <div class="grid-item" onclick="open_post(1)">
-                    <div class='grid-post-overlay'>
-                        open Post
-                    </div>
-                    <img src="insta_assets/samples/img4.jpg" />
-                </div>
-                <div class="grid-item" onclick="open_post(1)">
-                    <div class='grid-post-overlay'>
-                        open Post
-                    </div>
-                    <img src="insta_assets/samples/img5.jpg" />
-                </div>
-                <div class="grid-item" onclick="open_post(1)">
-                    <div class='grid-post-overlay'>
-                        open Post
-                    </div>
-                    <img src="insta_assets/samples/img6.jpg" />
-                </div>
-                <div class="grid-item" onclick="open_post(1)">
-                    <div class='grid-post-overlay'>
-                        open Post
-                    </div>
-                    <img src="insta_assets/samples/img7.jpg" />
-                </div>
-                <div class="grid-item" onclick="open_post(1)">
-                    <div class='grid-post-overlay'>
-                        open Post
-                    </div>
-                    <img src="insta_assets/samples/img8.jpg" />
-                </div>
-                <div class="grid-item" onclick="open_post(1)">
-                    <div class='grid-post-overlay'>
-                        open Post
-                    </div>
-                    <img src="insta_assets/samples/img9.jpg" />
-                </div>
-                <div class="grid-item" onclick="open_post(1)">
-                    <div class='grid-post-overlay'>
-                        open Post
-                    </div>
-                    <img src="insta_assets/samples/img10.jpg" />
-                </div>
-                <div class="grid-item" onclick="open_post(1)">
-                    <div class='grid-post-overlay'>
-                        open Post
-                    </div>
-                    <img src="insta_assets/samples/img11.jpg" />
-                </div>
-                <div class="grid-item" onclick="open_post(1)">
-                    <div class='grid-post-overlay'>
-                        open Post
-                    </div>
-                    <img src="insta_assets/samples/img12.jpg" />
-                </div>
-                <div class="grid-item" onclick="open_post(1)">
-                    <div class='grid-post-overlay'>
-                        open Post
-                    </div>
-                    <img src="insta_assets/samples/img13.jpg" />
-                </div>
-                <div class="grid-item" onclick="open_post(1)">
-                    <div class='grid-post-overlay'>
-                        open Post
-                    </div>
-                    <img src="insta_assets/samples/img14.jpg" />
-                </div>
-                <div class="grid-item" onclick="open_post(1)">
-                    <div class='grid-post-overlay'>
-                        open Post
-                    </div>
-                    <img src="insta_assets/samples/img15.jpg" />
-                </div>
-
+                <instacard v-for="acard in insta_array" :scard="acard" :key="acard.ID" @open="open_post"></instacard>
             </div>
 
         </div>
@@ -154,11 +69,11 @@ jb open kro kisi post ko to it opens a popup-with actual post, proper instagram 
             <div class="popup-close-btn" onclick="close_post()"><img src='insta_assets/close_btn.svg'></div>
             <div class='post-bkg'>
                 <div class="post-container">
-                    <div class='post-container-scroller'>
+                    <div class='post-container-scroller' id="test">
                         <!--this blockquote maybe a template  with the links coming from back-end--https://www.instagram.com/p/CEWSqWPlmnn.......this is just the url of insta post-->
-                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/CEI96kUlUtT/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="12" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/CDyHJhKFvnu/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="12" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
                             <div style="padding:16px;">
-                                <a href="https://www.instagram.com/p/CEI96kUlUtT//?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
+                                <a class="to-change" href="https://www.instagram.com/p/CDyHJhKFvnu//?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
                                     <div style=" display: flex; flex-direction: row; align-items: center;">
                                         <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div>
                                         <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
@@ -189,34 +104,21 @@ jb open kro kisi post ko to it opens a popup-with actual post, proper instagram 
                                         </div>
                                     </div>
                                 </a>
-                                <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/CEI96kUlUtT/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;"
+                                <p style=" margin:8px 0 0 0; padding:0 4px;"> <a class="to-change" href="https://www.instagram.com/p/CDyHJhKFvnu/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;"
                                         target="_blank">Swipe to learn about What is Self Care First Aid Kit ? What should you include in it ? #mentalhealth #mentalhealthawareness #selfcare #anxiety #selflove #love #depression #motivation #health #mentalhealthmatters #wellness #mindfulness #covid #healing #fitness #life #loveyourself #therapy #inspiration #mentalillness #happiness #positivity #positivevibes #meditation #quotes #psychology #mindset #recovery #wellbeing #bhfyp</a></p>
                                 <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A post shared by <a href="https://www.instagram.com/un.bottle/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;"
                                         target="_blank"> Unbottle</a> (@un.bottle) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2020-08-26T09:57:24+00:00">Aug 26, 2020 at 2:57am PDT</time></p>
                             </div>
                         </blockquote>
-                        <script async src="//www.instagram.com/embed.js"></script>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+	
+</div>
+
     <script>
-        var $grid = $('.grid').masonry({
-            itemSelector: '.grid-item',
-            percentPosition: true,
-            columnWidth: '.grid-sizer'
-        });
-        $grid.imagesLoaded().progress(function() {
-            $grid.masonry();
-        });
-
-        function open_post(post_id) {
-            $('.post-popup').css('z-index', 2);
-            $('.post-popup').css('opacity', 1);
-            $('.window-wrapper').css('width', '80%');
-        }
-
         function close_post() {
             setTimeout(function() {
                 $('.post-popup').css('z-index', -1);
@@ -224,9 +126,12 @@ jb open kro kisi post ko to it opens a popup-with actual post, proper instagram 
 
             }, 500)
             $('.window-wrapper').css('width', '0%');
+	    location.reload();
 
         }
     </script>
+	
+	<script src="insta_assets/insta_mid.js"></script>
 </body>
 
 </html>
