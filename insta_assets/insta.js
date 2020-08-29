@@ -1,5 +1,7 @@
 (function() {
     console.log('inside acttual fun');
+
+
     var global = this;
     var __BUNDLE_START_TIME__ = this.nativePerformanceNow ? nativePerformanceNow() : Date.now(),
         __DEV__ = false,
@@ -486,9 +488,11 @@
             return n.set(s, t), this.size += n.size == h ? 0 : 1, this
         }
     }, 14, [45]);
+
     __d(function(g, r, i, a, m, e, d) {
         "use strict";
         Object.defineProperty(e, '__esModule', { value: !0 }), window.instgrm || (window.instgrm = { Embeds: {} }), e.getGlobalContext = function() { return window.instgrm.Embeds }
     }, 5, []);
     global.__r(0);
+
 }).call({});

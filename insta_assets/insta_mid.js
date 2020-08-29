@@ -28,8 +28,8 @@ var insta_disp = new Vue({
             $('.instagram-media').attr('data-instgrm-permalink', righturl);
             $('.to-change').attr('href', righturl);
 
-            //this.reloadJs("//www.instagram.com/embed.js");
-            this.reloadInstaEmbed()
+            this.reloadJs("//www.instagram.com/embed.js");
+            //this.reloadInstaEmbed()
 
             console.log($('.instagram-media').attr('data-instgrm-permalink'));
             $('.post-popup').css('z-index', 2);
@@ -47,11 +47,13 @@ var insta_disp = new Vue({
             myScript.setAttribute("id", 'random');
             document.getElementById('test').appendChild(myScript);
             console.log("called reload", src);
+            instgrm.Embeds.process();
+            //reload_post();
         },
 
         reloadInstaEmbed() {
             // reload_post();
-            instgrm.Embeds.process();
+
         },
 
 
