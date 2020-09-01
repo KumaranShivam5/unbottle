@@ -13,7 +13,7 @@ font-family: 'Poppins', sans-serif;
     --blue-white: #77DDFF4F;
 }
 
-hei {
+* {
     box-sizing: border-box;
 }
 
@@ -239,19 +239,31 @@ body {
     right: 30vh;
 }
 
-.grid-item:hover .grid-post-overlay{
+.grid-item:hover .grid-post-overlay {
     opacity: 1;
 }
-.footer-section{
-    
-}
-.footer-wrapper{
-    
-}
-.footer-bkg-img{
-    
+
+.footer-section {}
+
+.footer-wrapper {}
+
+.footer-bkg-img {
     transform: rotate(180deg);
     height: 100%;
     object-fit: cover;
 }
-.grid-post-overlay {width: 100%;position: absolute;height: 100%;background: #00000073;color: white;display: flex;align-items: center;justify-content: center;filter: brightness;filter: sepia;transition: 0.3s ease-out;opacity: 0;}
+
+.grid-post-overlay {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    background: #00000073;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: brightness;
+    filter: sepia;
+    transition: 0.3s ease-out;
+    opacity: 0;
+}

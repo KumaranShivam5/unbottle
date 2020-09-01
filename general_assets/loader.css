@@ -15,7 +15,7 @@ body {
     /*! z-index: -1; */
     background: #d23b0d;
     animation-duration: 5s;
-    animation-timing-function: ease-out;
+    animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
 }
 
@@ -29,6 +29,22 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 2vh;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-name: anim-circle-main;
+}
+
+@keyframes anim-circle-main {
+    0% {
+        transform: translateX(2vh);
+    }
+    50% {
+        transform: translateX(-2vh);
+    }
+    100% {
+        transform: translateX(2vh);
+    }
 }
 
 .circle--a {

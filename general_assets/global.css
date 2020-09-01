@@ -1,0 +1,44 @@
+:root {
+    --main-bg-color: coral;
+    --light-blue-a: #1C9ECA;
+    --light-blue-b: #007299;
+    --dark-blue: #3F3D56;
+    --pink-a: #FF6584;
+    --pink-b: ;
+    --pink-white: #FFCAD587;
+    --blue-white: #77DDFF4F;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+.top-nav {
+    position: absolute;
+    top: 10vh;
+    right: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-item {
+    font-size: 2vh;
+    font-weight: 300;
+    padding: 1.3vh;
+    cursor: pointer;
+}
+
+.menu-item-btn {
+    /*! border: 2px; */
+    background: #fc7602;
+    color: white;
+    border-radius: 2vh;
+}
+
+.bkg-wrapper {
+    /*! background: url(main-bkg.svg); */
+}
