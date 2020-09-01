@@ -9,6 +9,12 @@
     --blue-white: #77DDFF4F;
 }
 
+
+a{
+    color: inherit !important;;
+    text-decoration: inherit !important;
+}
+
 body {
     margin: 0px;
     padding: 0px;
