@@ -1,0 +1,57 @@
+@media only screen and (max-width: 600px) {
+    .top-nav{
+        
+    width: 100% !important;
+    right: 0 !important;
+    height: 9vh !important;
+    background: none !important;
+    color: black !important;
+    }
+    nav{
+        
+    /*! position: fixed !important; */
+    top: 0 !important;
+    }
+    nav item{
+        
+    color: black;
+    }
+    .bkg-wrapper{
+        
+    /*! background-size: contain; */
+    background-size: 180%;
+    background-repeat: no-repeat;
+    background-position-y: 100%;
+    background-position-x: 97%;
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 1.3fr 2fr 4fr 3fr;
+    }
+    .landing{
+        
+    background: white;
+    }
+    .bkg-grad{
+        
+    display: none;
+    }
+    .h-title{
+        
+    font-size: 7vh;
+    }
+    .menu-btn{
+        
+    background: var(--pink-a);
+    color: white;
+    border-radius: 2vh;
+    padding: 2vh;
+    height: unset;
+    }
+    .h-about{
+        
+    height: 10vh;
+    }
+    .main-content{
+        
+    /*! width: 77%; */
+    }
+}

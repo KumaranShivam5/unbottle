@@ -1,0 +1,134 @@
+.join-close-btn{
+  
+  position: absolute;
+  right: 0;
+  width: 10vh;
+  height: 10vh;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.join-form{
+  
+  grid-area: form;
+  display: flex;
+  align-items: center;
+}
+.join-image{
+  
+  width: 100%;
+  grid-area: img;
+  /*! height: 100%; */
+  /*! align-self: center; */
+  justify-self: center;
+}
+.join-image-img{
+  
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.join-popup{
+  
+  width: 60%;
+  background: white;
+  display: grid;
+  grid-template-areas: "img title" "img form" "desc form";
+  height: 90%;
+  grid-template-rows: 2fr 2fr 4fr;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 3vh;
+  padding: 2vh;
+  position: absolute;
+  backdrop-filter: blur(2px);
+}
+.join-text{
+  
+  grid-area: desc;
+  align-self: flex-start;
+  justify-self: center;
+  text-align: justify;
+  color: var(--light-blue-a);
+  font-weight: 400;
+  font-size: 2vh;
+  padding: 3vh;
+}
+.join-title{
+  
+  grid-area: title;
+  font-size: 5vh;
+  font-weight: 700;
+  align-self: end;
+}
+.join-us-popup-wrapper{
+  
+  position: fixed;
+  z-index: 10;
+  background: #00000085;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  scroll-behavior: smooth;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1s ease-out;
+  backdrop-filter: blur(2px);
+  /*! display: none; */
+}
+.join-title-black{
+  
+  margin: 0;
+  padding: 0;
+  font-size: 5vh;
+}
+.join-title-blue{
+  
+  margin: 0;
+  font-size: 8vh;
+  color: var(--pink-a);
+}
+#join-us-form{
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+input, textarea{
+  
+  width: 95%;
+  margin: 1vh;
+  height: 7vh;
+  border: none;
+  background: var(--pink-white);
+  border-radius: 2vh;
+  text-align: center;
+  font-size: 2vh;
+  color: black;
+}
+textarea{
+  
+  height: unset;
+  align-content: center;
+}
+#submit{
+  
+  background: var(--light-blue-a);
+  border: none;
+  color: white;
+  padding: 2vh;
+  border-radius: 2vh;
+  font-size: 2vh;
+  font-weight: bold;
+  text-transform: none;
+  /*! align-self: flex-start; */
+}
+.close-popup{
+  
+  width: 80%;
+  height: 80%;
+}

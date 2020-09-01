@@ -13,9 +13,11 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="help_assets/help.css">
+    <link rel="stylesheet" href="help_assets/help_mb.css">
     <link rel="stylesheet" href="general_assets/global.css">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="general_assets/join.css">
 
 
 
@@ -31,7 +33,7 @@
                 <item>TEAM</item>
                 <item>ADVISOR</item>
                 <item>FORUM</item>
-                <item class='menu-btn'>JOIN US</item>
+                <item class='menu-btn' onclick="open_popup('#join-us-popup')">JOIN US</item>
             </nav>
             <div class="h-title">
                 <span class="h-title-black">REACH</span>
@@ -231,6 +233,40 @@
     <section class="footer">
 
     </section>
+
+    <div class="join-us-popup-wrapper" id="join-us-popup">
+        <div class="join-popup">
+            <div class="join-title">
+                <h2 class="join-title-black">Join TEAM</h2>
+                <h1 class="join-title-blue">UNBOTTLE</h1>
+            </div>
+            <div class="join-close-btn" onclick="close_popup('#join-us-popup')">
+                <img src="general_assets/close_btn.svg" alt="" class="close-popup">
+            </div>
+            <div class="join-image"><img src="general_assets/join-img.png" alt="join team unbottle , mental health" class="join-image-img"></div>
+            <div class="join-text">some word about ehy you should join, to motivate the visitor to join your page, now i am being repetative, but you get the point right..</div>
+            <div class="join-form">
+                <form action="" id="join-us-form">
+                    <input type="text" id="name" placeholder='name'>
+                    <input type="text" id="contact-no" placeholder='contact no'>
+                    <input type="text" id="emai-id" placeholder='Emai Id'>
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Leave a Message for us"></textarea>
+                    <button id="submit">Send Request</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(close_popup('#join-us-popup'));
+
+        function open_popup(which_one) {
+            $(which_one).fadeIn();
+        }
+
+        function close_popup(which_one) {
+            $(which_one).fadeOut();
+        }
+    </script>
 </body>
 
 </html>
