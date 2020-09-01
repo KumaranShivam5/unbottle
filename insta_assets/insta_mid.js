@@ -34,7 +34,11 @@ var insta_disp = new Vue({
             console.log($('.instagram-media').attr('data-instgrm-permalink'));
             $('.post-popup').css('z-index', 2);
             $('.post-popup').css('opacity', 1);
-            $('.window-wrapper').css('width', '80%');
+            if ($(window).width() < 600) {
+                $('.window-wrapper').css('width', '100%');
+            } else {
+                $('.window-wrapper').css('width', '80%');
+            }
 
 
         },

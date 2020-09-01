@@ -68,6 +68,7 @@
   min-width: 300px;
   margin-top: 3vh;
   overflow: hidden;
+  background: white;
 }
 .h-content{
   
@@ -123,7 +124,7 @@
   width: 63%;
   display: flex;
   flex-direction: column;
-  background: #fff;
+  background: #ffffffd6;
   margin: 10vh;
   padding: 4vh;
   border-radius: 4vh;

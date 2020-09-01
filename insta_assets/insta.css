@@ -91,7 +91,7 @@ body {
 
 .menu-item-btn {
     /*! border: 2px; */
-    background: #fc7602;
+    background: #ff8402;
     color: white;
     border-radius: 2vh;
 }
@@ -266,4 +266,38 @@ body {
     filter: sepia;
     transition: 0.3s ease-out;
     opacity: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    .top-nav{
+        
+    position: ;
+    right: unset;
+    left: 0;
+    width: 100%;
+    }
+    .insta-landing-dot{
+        
+    display: none;
+    }
+    .menu-item-btn{background: #d901b5;border-radius: 6vh;font-weight: bold;}
+    .post-section{
+        
+    padding-top: 10vh;
+    }
+    .post-popup{
+        
+    }
+    .post-title{padding-left: 10%;}
+    .post-title img{width: 65%;}
+    .post-grid-wrapper{width: 100%;}
+    .post-container{width: 95%;}
+    .post-bkg{
+        
+    width: 100%;
+    border-radius: 0;
+    }
+    .post-container-scroller{width: 100%;}
+    .window-wrapper{}
+    .popup-close-btn{right: 50%;top: 0;transform: translateX(50%);}
 }
