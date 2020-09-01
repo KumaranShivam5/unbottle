@@ -132,3 +132,25 @@ textarea{
   width: 80%;
   height: 80%;
 }
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+  
+  
+  .join-close-btn{}
+  .join-form{}
+  .join-image{/*! display: none; */}
+  .join-image-img{}
+  .join-popup{width: 85%;grid-template-areas: "img title" "desc desc""form form";}
+  .join-text{font-size: 1.8vh;font-weight: 300;}
+  .join-title{font-size: 3vh;/*! background: url(join-img.png); *//*! background-size: contain; *//*! background-position: right; *//*! background-repeat: no-repeat; */align-self: end;}
+  .join-us-popup-wrapper{}
+  .join-title-black{font-size: 3vh;}
+  .join-title-blue{font-size: 5vh;/*! color: var(--pink-a); */}
+  input{height: 5vh;}
+  textarea{height: 20vh;}
+  #submit{}
+}
