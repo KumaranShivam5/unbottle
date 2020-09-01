@@ -19,12 +19,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="general_assets/join.css">
 
-
+    <link rel="stylesheet" href="general_assets/mb_menu.css">
 
 
 </head>
 
 <body>
+    <!--can you keep this mobile menu out of vue ..??....if not put iska wala script in head..-->
+    <div class="mb-menu-btn open-btn" onclick="open_mb_menu()"><img src="general_assets/open-menu.svg" alt=""></div>
+    <div class="mb-menu-wrapper" onclick="close_mb_menu()">
+        <div class="mb-menu-btn close-btn"><img src="general_assets/close.svg" alt=""></div>
+        <div class="mb-menu">
+            <a href='index.html' class="mb-menu-item">HOME</a>
+            <a href="insta.html" class="mb-menu-item">INSTAGRAM</a>
+            <a href="forum.html" class="mb-menu-item">FORUM</a>
+            <a href="help_page.html" class="mb-menu-item">ADVISOR</a>
+            <a href="events.html" class="mb-menu-item">EVENTS</a>
+            <a href="team.html" class="mb-menu-item">TEAM</a>
+            <a href="#" onclick="open_popup('#join-us-popup')" class="mb-menu-item mb-join-btn">JOIN US</a>
+        </div>
+    </div>
+    <script>
+        function open_mb_menu() {
+            $('.mb-menu-wrapper').css('width', '100vw');
+            $('.mb-menu-wrapper').css('opacity', 1);
+        }
+
+        function close_mb_menu() {
+            $('.mb-menu-wrapper').css('width', '0vw');
+            $('.mb-menu-wrapper').css('opacity', 0);
+        }
+    </script>
+    <!--mobile menu ends here-->
     <section class="landing">
         <div class="bkg-grad"></div>
         <div class="bkg-wrapper">

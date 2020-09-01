@@ -64,7 +64,7 @@
 .join-us-popup-wrapper{
   
   position: fixed;
-  z-index: 10;
+  z-index: 10004;
   background: #00000085;
   top: 0;
   left: 0;

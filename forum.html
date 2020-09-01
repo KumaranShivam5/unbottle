@@ -12,70 +12,98 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.0/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.0/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="forum_assets/forum.css">
     <link rel="stylesheet" href="forum_assets/forum_mb.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="general_assets/mb_menu.css">
 </head>
 
 <body>
+    <!--can you keep this mobile menu out of vue ..??....if not put iska wala script in head..-->
+    <div class="mb-menu-btn open-btn" onclick="open_mb_menu()"><img src="general_assets/open-menu.svg" alt=""></div>
+    <div class="mb-menu-wrapper" onclick="close_mb_menu()">
+        <div class="mb-menu-btn close-btn"><img src="general_assets/close.svg" alt=""></div>
+        <div class="mb-menu">
+            <a href='index.html' class="mb-menu-item">HOME</a>
+            <a href="insta.html" class="mb-menu-item">INSTAGRAM</a>
+            <a href="forum.html" class="mb-menu-item">FORUM</a>
+            <a href="help.html" class="mb-menu-item">ADVISOR</a>
+            <a href="team.html" class="mb-menu-item">TEAM</a>
+            <a href="events.html" class="mb-menu-item">EVENTS</a>
+            <a href="#" onclick="open_popup()" class="mb-menu-item mb-join-btn">JOIN US</a>
+        </div>
+    </div>
+    <script>
+        function open_mb_menu() {
+            $('.mb-menu-wrapper').css('width', '100vw');
+            $('.mb-menu-wrapper').css('opacity', 1);
+        }
+
+        function close_mb_menu() {
+            $('.mb-menu-wrapper').css('width', '0vw');
+            $('.mb-menu-wrapper').css('opacity', 0);
+        }
+    </script>
+    <!--mobile menu ends here-->
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-<div id="forum-mid-end">
-    <section class="landing-section">
-        <div class="top-left-splash splash"><img src="forum_assets/ilst/splash_01.svg" style="width: 30vw;"></div>
-        <div class="logo">
-            <img src="forum_assets/ilst/Group 6.png">
-        </div>
-        <nav class="top-nav">
-            <span class='menu-item'>HOME</span>
-            <span class='menu-item'>Advisor</span>
-            <span class='menu-item'>Social</span>
-            <span class='menu-item'>OurTeam</span>
-            <span class='menu-item menu-item-btn'>Join Us</span>
-        </nav>
-        <div class="landing-heading">
-            <span class='title-unbotle'>UNBOTTLE</span>
-            <span class="title-forum">FORUM</span>
-            <span class="title-talk-it">TALK IT</span>
-            <span class="title-out">OUT</span>
-        </div>
-        <div class="landing-illustration">
-            <img src="forum_assets/ilst/undraw_team_work_k80m.svg" style="height: 100%;
+    <div id="forum-mid-end">
+        <section class="landing-section">
+            <div class="top-left-splash splash"><img src="forum_assets/ilst/splash_01.svg" style="width: 30vw;"></div>
+            <div class="logo">
+                <img src="forum_assets/ilst/Group 6.png">
+            </div>
+            <nav class="top-nav">
+                <span class='menu-item'>HOME</span>
+                <span class='menu-item'>Advisor</span>
+                <span class='menu-item'>Social</span>
+                <span class='menu-item'>OurTeam</span>
+                <span class='menu-item menu-item-btn'>Join Us</span>
+            </nav>
+            <div class="landing-heading">
+                <span class='title-unbotle'>UNBOTTLE</span>
+                <span class="title-forum">FORUM</span>
+                <span class="title-talk-it">TALK IT</span>
+                <span class="title-out">OUT</span>
+            </div>
+            <div class="landing-illustration">
+                <img src="forum_assets/ilst/undraw_team_work_k80m.svg" style="height: 100%;
             padding-bottom: 5vh;
             width: 100%;
             object-fit: contain;">
-        </div>
+            </div>
 
-    </section>
+        </section>
 
-    <section class="content-wrapper">
-        <div class="content-section">
-            <span class="about-forum">
+        <section class="content-wrapper">
+            <div class="content-section">
+                <span class="about-forum">
                 this is a placeholder for containing some details lining ot the purpose of this pae and how to use it , how oit will benifit the user, now i am running out of lines to write but i have to fill this placeholder to make it look good, stop me or i will start
             writin lorem ipsum sit idor amet, no one knows what this means anyway
             </span>
-            <aside>
-                <span class="title-sm">TOPICS</span>
-				<span class='topic-item' v-on:click='forum_all'>all</span>
-                <span class='topic-item' v-for="ctg in ctg_array" v-on:click='forum_by_category(ctg.ctg_name)'>{{ctg.ctg_name}}</span>
-            </aside>
-            <main>
-                <div class="card-container"> 
-					<forumcard v-for="acard in forum_array" :scard="acard" :key="acard.ID" @read=searchstuff></forumcard>
-                </div>
-            </main>
-        </div>
-    </section>
-    <section class="footer">
+                <aside>
+                    <span class="title-sm">TOPICS</span>
+                    <span class='topic-item' v-on:click='forum_all'>all</span>
+                    <span class='topic-item' v-for="ctg in ctg_array" v-on:click='forum_by_category(ctg.ctg_name)'>{{ctg.ctg_name}}</span>
+                </aside>
+                <main>
+                    <div class="card-container">
+                        <forumcard v-for="acard in forum_array" :scard="acard" :key="acard.ID" @read=searchstuff></forumcard>
+                    </div>
+                </main>
+            </div>
+        </section>
+        <section class="footer">
 
-    </section>
-</div>	
+        </section>
+    </div>
 
     <script src="forum_assets/forum.js" async defer></script>
-	<script src="forum_assets/forum_mid.js"></script>
+    <script src="forum_assets/forum_mid.js"></script>
 
 </body>
 

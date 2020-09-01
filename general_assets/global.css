@@ -9,9 +9,9 @@
     --blue-white: #77DDFF4F;
 }
 
-
-a{
-    color: inherit !important;;
+a {
+    color: inherit !important;
+    ;
     text-decoration: inherit !important;
 }
 
@@ -24,26 +24,27 @@ body {
 
 .top-nav {
     position: absolute;
-top: 6vh;
-right: 10vh;
-display: flex;
-align-items: center;
-justify-content: space-evenly;
-width: 57vh;
-background: #002606a6;
-height: 6vh;
-border-radius: 5vh;
-font-size: 1.5vh;position: absolute;
-top: 6vh;
-right: 10vh;
-display: flex;
-align-items: center;
-justify-content: space-evenly;
-width: 57vh;
-background: #002606a6;
-height: 6vh;
-border-radius: 5vh;
-font-size: 1.5vh;
+    top: 6vh;
+    right: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 57vh;
+    background: #002606a6;
+    height: 6vh;
+    border-radius: 5vh;
+    font-size: 1.5vh;
+    position: absolute;
+    top: 6vh;
+    right: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 57vh;
+    background: #002606a6;
+    height: 6vh;
+    border-radius: 5vh;
+    font-size: 1.5vh;
 }
 
 .menu-item {
