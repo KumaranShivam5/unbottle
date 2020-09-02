@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="events_assets/events_mb.css">
     <link rel="stylesheet" href="general_assets/global.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.0/vue.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="general_assets/join.css">
 
@@ -33,9 +35,9 @@
             <a href='index.html' class="mb-menu-item">HOME</a>
             <a href="insta.html" class="mb-menu-item">INSTAGRAM</a>
             <a href="forum.html" class="mb-menu-item">FORUM</a>
-            <a href="help_page.html" class="mb-menu-item">ADVISOR</a>
+            <a href="help_page.html" class="mb-menu-item">HELPLINE</a>
+            <a href="team.html" class="mb-menu-item">ABOUT</a>
             <a href="events.html" class="mb-menu-item">EVENTS</a>
-            <a href="team.html" class="mb-menu-item">TEAM</a>
             <a href="#" onclick="open_popup('#join-us-popup')" class="mb-menu-item mb-join-btn">JOIN US</a>
         </div>
     </div>
@@ -51,14 +53,18 @@
         }
     </script>
     <!--mobile menu ends here-->
+	
+<div id="event-mid-end">
     <section class="landing">
         <div class="bkg-grad"></div>
         <div class="bkg-wrapper">
             <nav class='top-nav'>
-                <item>HOME</item>
-                <item>TEAM</item>
-                <item>ADVISOR</item>
-                <item>FORUM</item>
+                <item onclick="window.location.href='index.html'">HOME</item>
+                <item onclick="window.location.href='team.html'">ABOUT</item>
+                <item onclick="window.location.href='help_page.html'">HELPLINE</item>
+				<item onclick="window.location.href='insta.html'">INSTAGRAM</item>
+                <item onclick="window.location.href='forum.html'">FORUM</item>
+				<item onclick="window.location.href='events.html'">EVENTS</item>
                 <item class='menu-btn' onclick="open_popup('#join-us-popup')">JOIN US</item>
             </nav>
             <div class="h-title">
@@ -84,193 +90,29 @@
                     <span class="title-section">Upcoming Events</span>
                 </div>
                 <div class="card-wrapper">
-                    <div class="h-card">
-                        <img src="events_assets/1.webp" alt="" class="card-img">
-                        <div class="card-details">
-                            <span class="card-title">TITLE</span>
-
-                            <div class="detail-text-wrap">
-                                <span class="detail-title">Date:</span><span class="detail-text">28/10/2020</span>
-                            </div>
-                            <div class="detail-text-wrap">
-                                <span class="detail-title">Time:</span><span class="detail-text">12:30:00</span>
-                            </div>
-                            <div class="detail-text-wrap">
-                                <span class="detail-title">Contact:</span><span class="detail-text">9113761353</span>
-                            </div>
-                            <div class="detail-text-wrap">
-                                <span class="detail-title">venue:</span><span class="detail-text">9113761353</span>
-                            </div>
-                            <div class="contact-btn"><a href="#event_link_goes_here" class="detail-text">More details</a></div>
-                        </div>
-                    </div>
-                    <div class="h-card">
-                        <img src="events_assets/1.webp" alt="" class="card-img">
-                        <div class="card-details">
-                            <span class="card-title">TITLE</span>
-
-                            <div class="detail-text-wrap">
-                                <span class="detail-title">Date:</span><span class="detail-text">28/10/2020</span>
-                            </div>
-                            <div class="detail-text-wrap">
-                                <span class="detail-title">Time:</span><span class="detail-text">12:30:00</span>
-                            </div>
-                            <div class="detail-text-wrap">
-                                <span class="detail-title">Contact:</span><span class="detail-text">9113761353</span>
-                            </div>
-                            <div class="detail-text-wrap">
-                                <span class="detail-title">venue:</span><span class="detail-text">9113761353</span>
-                            </div>
-                            <div class="contact-btn"><a href="#event_link_goes_here" class="detail-text">More details</a></div>
-                        </div>
-                    </div>
-
-                    <div class="h-card">
-                        <img src="events_assets/1.webp" alt="" class="card-img">
-                        <div class="card-details">
-                            <span class="card-title">TITLE</span>
-
-                            <div class="detail-text-wrap">
-                                <span class="detail-title">Date:</span><span class="detail-text">28/10/2020</span>
-                            </div>
-                            <div class="detail-text-wrap">
-                                <span class="detail-title">Time:</span><span class="detail-text">12:30:00</span>
-                            </div>
-                            <div class="detail-text-wrap">
-                                <span class="detail-title">Contact:</span><span class="detail-text">9113761353</span>
-                            </div>
-                            <div class="detail-text-wrap">
-                                <span class="detail-title">venue:</span><span class="detail-text">9113761353</span>
-                            </div>
-                            <div class="contact-btn"><a href="#event_link_goes_here" class="detail-text">More details</a></div>
-                        </div>
-                    </div>
-
-                    <div class="h-card">
-                        <img src="events_assets/1.webp" alt="" class="card-img">
-                        <div class="card-details">
-                            <span class="card-title">TITLE</span>
-
-                            <div class="detail-text-wrap">
-                                <span class="detail-title">Date:</span><span class="detail-text">28/10/2020</span>
-                            </div>
-                            <div class="detail-text-wrap">
-                                <span class="detail-title">Time:</span><span class="detail-text">12:30:00</span>
-                            </div>
-                            <div class="detail-text-wrap">
-                                <span class="detail-title">Contact:</span><span class="detail-text">9113761353</span>
-                            </div>
-                            <div class="detail-text-wrap">
-                                <span class="detail-title">venue:</span><span class="detail-text">9113761353</span>
-                            </div>
-                            <div class="contact-btn"><a href="#event_link_goes_here" class="detail-text">More details</a></div>
-                        </div>
-                    </div>
-
-                    <div class="h-card">
-                        <img src="events_assets/1.webp" alt="" class="card-img">
-                        <div class="card-details">
-                            <span class="card-title">TITLE</span>
-
-                            <div class="detail-text-wrap">
-                                <span class="detail-title">Date:</span><span class="detail-text">28/10/2020</span>
-                            </div>
-                            <div class="detail-text-wrap">
-                                <span class="detail-title">Time:</span><span class="detail-text">12:30:00</span>
-                            </div>
-                            <div class="detail-text-wrap">
-                                <span class="detail-title">Contact:</span><span class="detail-text">9113761353</span>
-                            </div>
-                            <div class="detail-text-wrap">
-                                <span class="detail-title">venue:</span><span class="detail-text">9113761353</span>
-                            </div>
-                            <div class="contact-btn"><a href="#event_link_goes_here" class="detail-text">More details</a></div>
-                        </div>
-                    </div>
-
-                    <div class="h-card">
-                        <img src="events_assets/1.webp" alt="" class="card-img">
-                        <div class="card-details">
-                            <span class="card-title">TITLE</span>
-
-                            <div class="detail-text-wrap">
-                                <span class="detail-title">Date:</span><span class="detail-text">28/10/2020</span>
-                            </div>
-                            <div class="detail-text-wrap">
-                                <span class="detail-title">Time:</span><span class="detail-text">12:30:00</span>
-                            </div>
-                            <div class="detail-text-wrap">
-                                <span class="detail-title">Contact:</span><span class="detail-text">9113761353</span>
-                            </div>
-                            <div class="detail-text-wrap">
-                                <span class="detail-title">venue:</span><span class="detail-text">9113761353</span>
-                            </div>
-                            <div class="contact-btn"><a href="#event_link_goes_here" class="detail-text">More details</a></div>
-                        </div>
-                    </div>
-
-
-
-
+					<eventcard v-for="acard in newevent_array" :key="acard.ID" :scard=acard></eventcard>
                 </div>
+				
                 <div class="content-title">
                     <span class="title-section">Conducted Events</span>
                 </div>
                 <div class="card-wrapper">
-                    <div class="h-card">
-                        <img src="events_assets/1.webp" alt="" class="card-img">
-                        <div class="card-details">
-                            <span class="card-title">TITLE</span>
-
-                            <div class="detail-text-wrap">
-                                <span class="detail-title">Date:</span><span class="detail-text">28/10/2020</span>
-                            </div>
-                            <div class="detail-text-wrap">
-                                <span class="detail-title">Time:</span><span class="detail-text">12:30:00</span>
-                            </div>
-                            <div class="detail-text-wrap">
-                                <span class="detail-title">Contact:</span><span class="detail-text">9113761353</span>
-                            </div>
-                            <div class="detail-text-wrap">
-                                <span class="detail-title">venue:</span><span class="detail-text">9113761353</span>
-                            </div>
-                            <div class="contact-btn"><a href="#event_link_goes_here" class="detail-text">More details</a></div>
-                        </div>
-                    </div>
-                    <div class="h-card">
-                        <img src="events_assets/1.webp" alt="" class="card-img">
-                        <div class="card-details">
-                            <span class="card-title">TITLE</span>
-
-                            <div class="detail-text-wrap">
-                                <span class="detail-title">Date:</span><span class="detail-text">28/10/2020</span>
-                            </div>
-                            <div class="detail-text-wrap">
-                                <span class="detail-title">Time:</span><span class="detail-text">12:30:00</span>
-                            </div>
-                            <div class="detail-text-wrap">
-                                <span class="detail-title">Contact:</span><span class="detail-text">9113761353</span>
-                            </div>
-                            <div class="detail-text-wrap">
-                                <span class="detail-title">venue:</span><span class="detail-text">9113761353</span>
-                            </div>
-                            <div class="contact-btn"><a href="#event_link_goes_here" class="detail-text">More details</a></div>
-                        </div>
-                    </div>
-
-
-
+					<eventcard v-for="acard in event_array" :key="acard.ID" :scard=acard></eventcard>
                 </div>
             </div>
+			
             <div class="footer-wrapper">
                 <span class="footer-text">Disclaimer:content open</span>
                 <span class="footer-text">some contact details</span>
                 <span class="footer-text">website designed and developed by: </span>
             </div>
+		</div>
     </section>
     <section class="footer">
 
     </section>
+</div>
+
 
     <div class="join-us-popup-wrapper" id="join-us-popup">
         <div class="join-popup">
@@ -294,6 +136,8 @@
             </div>
         </div>
     </div>
+	
+	<script src="events_assets/events_mid.js"></script>
     <script>
         $(document).ready(close_popup('#join-us-popup'));
 
