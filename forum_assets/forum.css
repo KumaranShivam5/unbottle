@@ -17,6 +17,11 @@ font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
 
+.create-card-btn{/*! width: 14%; *//*! padding: 0%; *//*! padding: 10vh; */}
+.create-card-title{/*! width: 50%; */display: flex;align-items: center;justify-content: center;width: 50%;font-size: 3vh;font-weight: bold;color: var(--light-blue-a);}
+.create-forum-btn-img{width: 15vh;}
+.create-card{justify-content: space-between;}
+
 body {
     margin: 0px;
     padding: 0px;
@@ -24,6 +29,11 @@ body {
     overflow-x: hidden;
 }
 
+.card:hover{
+    
+    box-shadow: 5px 5px 17px 10px #0006;
+    /*! width: 81%; */
+}
 .landing-section {
     display: grid;
     width: 100vw;
@@ -189,6 +199,9 @@ main {
     height: -moz-fit-content;
     height: max-content;
     /*! box-sizing: border-box; */
+    cursor: pointer;
+    transition: 0.2s;
+    justify-content: space-around;
 }
 
 .card-image {
