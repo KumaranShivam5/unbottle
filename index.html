@@ -17,6 +17,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700;800;900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="general_assets/mb_menu.css">
+    <link rel="stylesheet" href="general_assets/popup.css">
+    <link rel="stylesheet" href="general_assets/global.css">
 
 </head>
 
@@ -66,9 +68,9 @@
             <item onclick="window.location.href='index.html'">HOME</item>
             <item onclick="window.location.href='team.html'">ABOUT</item>
             <item onclick="window.location.href='help_page.html'">HELPLINE</item>
-			<item onclick="window.location.href='insta.html'">INSTAGRAM</item>
+            <item onclick="window.location.href='insta.html'">INSTAGRAM</item>
             <item onclick="window.location.href='forum.html'">FORUM</item>
-			<item onclick="window.location.href='events.html'">EVENTS</item>
+            <item onclick="window.location.href='events.html'">EVENTS</item>
             <item class='menu-btn' onclick="open_popup('#join-us-popup')">JOIN US</item>
         </nav>
         <div class="focal-btn">MORE</div>
@@ -83,7 +85,7 @@
                 <span class="what-title">What is mental Health.?</span>
                 <span class='what-content'>
                     Mental health includes our emotional, psychological, and social well-being. It affects how we think, feel, and act. It also helps determine how we handle stress, relate to others, and make choices..</span>
-                <span class='more-btn'>Read More</span>
+                <span class='more-btn' onclick="open_popup('#more-on-mental-health')">Read More</span>
             </div>
         </div>
     </section>
@@ -201,6 +203,90 @@
         <span class='footer-credits'>some footer contents<br>Maybe contacts, of copyright things, <br>maybe site designed and developed by thing..</span>
     </section>
     <script src="index_assets/main.js" async defer></script>
+
+
+    <div class="univ-popup-wrap message-popup" id="some-message">
+        <div class="univ-popup-window">
+            <div class="close-btn" onclick="close_popup('#some-message')"><img src="general_assets/close-clr.svg" alt="" class="popup-btn-img"></div>
+
+            <p class='popup-message'></p>
+            <img src="index_assets/what-ilst.svg" alt="what is mental health" class="popup-msg-img">
+            <div class="popup-msg-content">
+                <h4 class="popup-msg-title">For you Ushasi</h4>
+                <p class='popup-message'>
+                    <br>Hiii....wanted to write something here for you....but yahan nhi...willl be surprise. ....<br><br>Kumaran
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="univ-popup-wrap message-popup" id="more-on-mental-health">
+        <div class="univ-popup-window">
+            <div class="close-btn" onclick="close_popup('#more-on-mental-health')"><img src="general_assets/close-clr.svg" alt="" class="popup-btn-img"></div>
+            <img src="index_assets/what-ilst.svg" alt="what is mental health" class="popup-msg-img">
+            <div class="popup-msg-content">
+                <h4 class="popup-msg-title">What is Mental Health</h4>
+                <p class='popup-message'>
+
+                    Mental health includes our emotional, psychological, and social well-being. It affects how we think, feel, and act. It also helps determine how we handle stress, relate to others, and make choices
+                    <br>2. Mental health can affect daily living, relationships, and physical health. However, this link also works in the other direction. Factors in people’s lives, interpersonal connections, and physical factors can all contribute to
+                    mental health disruptions.
+                    <br>3. Looking after mental health can preserve a person’s ability to enjoy life. Doing this involves reaching a balance between life activities, responsibilities, and efforts to achieve psychological resilience.<br> Importance of
+                    mental health Like physical health, mental health is important at every stage of life. Emotional and mental health is important because it’s a vital part of your life and impacts your thoughts, behaviors and emotions. Being healthy
+                    emotionally can not only promote productivity and effectiveness in activities like work, school or caregiving, <br>It also plays an important part in the health of out relationships, and allows us to adapt to changes in out life and
+                    cope with adversity. When we are mentally healthy, we enjoy our life and environment, and the people in it. <br>It helps us to deal with all sorts of problems including those coming from chronic physical illnesses. <br>A healthy mind
+                    helps us to manage stress and the sadness and anger that can come with various emotional factors in our lives, we are able to move on and enjoy our lives once again.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="univ-popup-wrap" id='join-us-popup'>
+        <div class="univ-popup-window">
+            <img src="general_assets/team.svg" alt="create a forum on mental health" class="popup-img">
+            <div class="close-btn" onclick="close_popup('#join-us-popup')"><img src="general_assets/close-clr.svg" alt="" class="popup-btn-img"></div>
+            <h3 class="popup-title">Join <br><span class='blue-title'>UNBOTTLE</span></h3>
+            <p class="popup-desc">
+                __PLACEHOLDER:01__
+                <br> We are glad to have you on board with us.<br> Tell us the extant and your capacity with which you want to work for Unbottle, <br> and for how long you wish to be a part of Unbottle's efforts,. <br> Leave us any message for us</textxtarea>
+                <br> TEAM UNBOTTLE
+            </p>
+
+            <form action="" method="post" class="popup-form" id="create-fprum">
+                <div class="input-wrap">
+                    <input type="text" id="name" class="char-input char-input-full" placeholder="Name">
+                </div>
+                <div class="input-wrap">
+                    <input type="text" id="name" class="char-input" placeholder='age'>
+                    <input type="text" id="name" class="char-input" placeholder="Profession">
+                </div>
+                <div class="input-wrap">
+                    <input type="text" id="name" class="char-input" placeholder="Email ID">
+                    <input type="text" id="name" class="char-input" placeholder="Contact No">
+                </div>
+                <div class="para-wrap">
+                    <textarea name="message" id="" cols="30" rows="10" class='para-input'></textarea>
+                </div>
+                <div class="button-wrap">
+                    <button type="reset" class="form-btn"><img src="general_assets/reload.svg" alt="" class="popup-btn-img"></button>
+                    <button type="submit" class="form-btn"><img src="general_assets/success.svg" alt="" class="popup-btn-img"></button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('.univ-popup-wrap').fadeOut();
+        });
+
+        function open_popup(which_one) {
+            $(which_one).fadeIn();
+        }
+
+        function close_popup(which_one) {
+            $(which_one).fadeOut();
+        }
+    </script>
 </body>
 
 </html>

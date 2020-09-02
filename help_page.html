@@ -16,19 +16,20 @@
     <link rel="stylesheet" href="help_assets/help_mb.css">
     <link rel="stylesheet" href="general_assets/global.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.0/vue.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.0/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="general_assets/join.css">
+
 
     <link rel="stylesheet" href="general_assets/mb_menu.css">
+    <link rel="stylesheet" href="general_assets/popup.css">
 
 
 </head>
 
 <body>
     <!--can you keep this mobile menu out of vue ..??....if not put iska wala script in head..-->
-	<!-- dont worry kuch ni karenge chill ... keep your menu to yourself -->
+    <!-- dont worry kuch ni karenge chill ... keep your menu to yourself -->
     <div class="mb-menu-btn open-btn" onclick="open_mb_menu()"><img src="general_assets/open-menu.svg" alt=""></div>
     <div class="mb-menu-wrapper" onclick="close_mb_menu()">
         <div class="mb-menu-btn close-btn"><img src="general_assets/close.svg" alt=""></div>
@@ -54,85 +55,109 @@
         }
     </script>
     <!--mobile menu ends here-->
-<div id="help-mid-end">
-    <section class="landing">
-        <div class="bkg-grad"></div>
-        <div class="bkg-wrapper">
-            <nav class='top-nav'>
-                <item onclick="window.location.href='index.html'">HOME</item>
-                <item onclick="window.location.href='team.html'">ABOUT</item>
-                <item onclick="window.location.href='help_page.html'">HELPLINE</item>
-				<item onclick="window.location.href='insta.html'">INSTAGRAM</item>
-                <item onclick="window.location.href='forum.html'">FORUM</item>
-				<item onclick="window.location.href='events.html'">EVENTS</item>
-                <item class='menu-btn' onclick="open_popup('#join-us-popup')">JOIN US</item>
-            </nav>
-            <div class="h-title">
-                <span class="h-title-black">REACH</span>
-                <span class="h-title-blue">OUT</span>
-                <span class='title-about'>
+    <div id="help-mid-end">
+        <section class="landing">
+            <div class="bkg-grad"></div>
+            <div class="bkg-wrapper">
+                <nav class='top-nav'>
+                    <item onclick="window.location.href='index.html'">HOME</item>
+                    <item onclick="window.location.href='team.html'">ABOUT</item>
+                    <item onclick="window.location.href='help_page.html'">HELPLINE</item>
+                    <item onclick="window.location.href='insta.html'">INSTAGRAM</item>
+                    <item onclick="window.location.href='forum.html'">FORUM</item>
+                    <item onclick="window.location.href='events.html'">EVENTS</item>
+                    <item class='menu-btn' onclick="open_popup('#join-us-popup')">JOIN US</item>
+                </nav>
+                <div class="h-title">
+                    <span class="h-title-black">REACH</span>
+                    <span class="h-title-blue">OUT</span>
+                    <span class='title-about'>
                     some para about this page,. right now i am filling this placeholder with random content,
             will fill up this with proper content , once you give it to us, now I need to write one more line
                 </span>
+                </div>
+                <div class="logo">
+                    <img src="help_assets/logo.png" alt="unbottle" class="logo-img">
+                </div>
             </div>
-            <div class="logo">
-                <img src="help_assets/logo.png" alt="unbottle" class="logo-img">
-            </div>
-        </div>
-    </section>
-    <section class="h-content">
-        <span class="h-about">
+        </section>
+        <section class="h-content">
+            <span class="h-about">
             
         </span>
-        <div class="h-content-wrapper">
-            <div class="main-content">
-                <div class="content-title">
-                    <span class="title-section">HELPLINES</span>
+            <div class="h-content-wrapper">
+                <div class="main-content">
+                    <div class="content-title">
+                        <span class="title-section">HELPLINES</span>
+                    </div>
+                    <div class="card-wrapper">
+                        <helpcard v-for="acard in help_array" :key="acard.ID" :scard=acard @text="contactus"></helpcard>
+                    </div>
                 </div>
-                <div class="card-wrapper">
-                    <helpcard v-for="acard in help_array" :key="acard.ID" :scard=acard @text="contactus"></helpcard>
+                <div class="footer-wrapper">
+                    <span class="footer-text">Disclaimer:content open</span>
+                    <span class="footer-text">some contact details</span>
+                    <span class="footer-text">website designed and developed by: </span>
                 </div>
             </div>
-            <div class="footer-wrapper">
-                <span class="footer-text">Disclaimer:content open</span>
-                <span class="footer-text">some contact details</span>
-                <span class="footer-text">website designed and developed by: </span>
-            </div>
-		</div>
-    </section>
-    <section class="footer">
+        </section>
+        <section class="footer">
 
-    </section>
-</div>
+        </section>
+    </div>
+    <div class="univ-popup-wrap message-popup" id="some-message">
+        <div class="univ-popup-window">
+            <div class="close-btn" onclick="close_popup('#some-message')"><img src="general_assets/close-clr.svg" alt="" class="popup-btn-img"></div>
 
-    <div class="join-us-popup-wrapper" id="join-us-popup">
-        <div class="join-popup">
-            <div class="join-title">
-                <h2 class="join-title-black">Join TEAM</h2>
-                <h1 class="join-title-blue">UNBOTTLE</h1>
-            </div>
-            <div class="join-close-btn" onclick="close_popup('#join-us-popup')">
-                <img src="general_assets/close_btn.svg" alt="" class="close-popup">
-            </div>
-            <div class="join-image"><img src="general_assets/join-img.png" alt="join team unbottle , mental health" class="join-image-img"></div>
-            <div class="join-text">some word about ehy you should join, to motivate the visitor to join your page, now i am being repetative, but you get the point right..</div>
-            <div class="join-form">
-                <form action="" id="join-us-form">
-                    <input type="text" id="name" placeholder='name'>
-                    <input type="text" id="contact-no" placeholder='contact no'>
-                    <input type="text" id="emai-id" placeholder='Emai Id'>
-                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Leave a Message for us"></textarea>
-                    <button id="submit">Send Request</button>
-                </form>
+            <p class='popup-message'></p>
+            <img src="index_assets/what-ilst.svg" alt="what is mental health" class="popup-msg-img">
+            <div class="popup-msg-content">
+                <h4 class="popup-msg-title">For you Ushasi</h4>
+                <p class='popup-message'>
+                    <br>Hiii....wanted to write something here for you....but yahan nhi...willl be surprise. ....<br><br>Kumaran
+                </p>
             </div>
         </div>
     </div>
-	
 
-     
-<script src="help_assets/help_mid.js"></script>
-	 <script>
-        $(document).ready(close_popup('#join-us-popup'));
+    <div class="univ-popup-wrap" id='join-us-popup'>
+        <div class="univ-popup-window">
+            <img src="general_assets/team.svg" alt="create a forum on mental health" class="popup-img">
+            <div class="close-btn" onclick="close_popup('#join-us-popup')"><img src="general_assets/close-clr.svg" alt="" class="popup-btn-img"></div>
+            <h3 class="popup-title">Join <br><span class='blue-title'>UNBOTTLE</span></h3>
+            <p class="popup-desc">
+                __PLACEHOLDER:01__
+                <br> We are glad to have you on board with us.<br> Tell us the extant and your capacity with which you want to work for Unbottle, <br> and for how long you wish to be a part of Unbottle's efforts,. <br> Leave us any message for us</textxtarea>
+                <br> TEAM UNBOTTLE
+            </p>
+
+            <form action="" method="post" class="popup-form" id="create-fprum">
+                <div class="input-wrap">
+                    <input type="text" id="name" class="char-input char-input-full" placeholder="Name">
+                </div>
+                <div class="input-wrap">
+                    <input type="text" id="name" class="char-input" placeholder='age'>
+                    <input type="text" id="name" class="char-input" placeholder="Profession">
+                </div>
+                <div class="input-wrap">
+                    <input type="text" id="name" class="char-input" placeholder="Email ID">
+                    <input type="text" id="name" class="char-input" placeholder="Contact No">
+                </div>
+                <div class="para-wrap">
+                    <textarea name="message" id="" cols="30" rows="10" class='para-input'></textarea>
+                </div>
+                <div class="button-wrap">
+                    <button type="reset" class="form-btn"><img src="general_assets/reload.svg" alt="" class="popup-btn-img"></button>
+                    <button type="submit" class="form-btn"><img src="general_assets/success.svg" alt="" class="popup-btn-img"></button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('.univ-popup-wrap').fadeOut();
+        });
 
         function open_popup(which_one) {
             $(which_one).fadeIn();
@@ -142,6 +167,8 @@
             $(which_one).fadeOut();
         }
     </script>
+    <script src="help_assets/help_mid.js"></script>
+
 </body>
 
 </html>

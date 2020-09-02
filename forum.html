@@ -111,13 +111,7 @@
         </section>
     </div>
 
-    <div class="univ-popup-wrap message-popup" id="some-message">
-        <div class="univ-popup-window">
-            <div class="close-btn" onclick="close_popup('#some-message')"><img src="general_assets/close-clr.svg" alt="" class="popup-btn-img"></div>
 
-            <p class='popup-message'>For you Ushasi<br>Hiii....wanted to write something here for you....but yahan nhi...willl be surprise. ....<br>Kumaran
-        </div>
-    </div>
 
     <div class="univ-popup-wrap" id='create-forum-popup'>
         <div class="univ-popup-window">
@@ -145,10 +139,40 @@
                 </form>
         </div>
     </div>
+    <div class="univ-popup-wrap" id='join-us-popup'>
+        <div class="univ-popup-window">
+            <img src="general_assets/team.svg" alt="create a forum on mental health" class="popup-img">
+            <div class="close-btn" onclick="close_popup('#join-us-popup')"><img src="general_assets/close-clr.svg" alt="" class="popup-btn-img"></div>
+            <h3 class="popup-title">Join <br><span class='blue-title'>UNBOTTLE</span></h3>
+            <p class="popup-desc">
+                __PLACEHOLDER:01__
+                <br> We are glad to have you on board with us.<br> Tell us the extant and your capacity with which you want to work for Unbottle, <br> and for how long you wish to be a part of Unbottle's efforts,. <br> Leave us any message for us</textxtarea>
+                <br> TEAM UNBOTTLE
+            </p>
 
-    <script src="forum_assets/forum.js" async defer></script>
+            <form action="" method="post" class="popup-form" id="create-fprum">
+                <div class="input-wrap">
+                    <input type="text" id="name" class="char-input char-input-full" placeholder="Name">
+                </div>
+                <div class="input-wrap">
+                    <input type="text" id="name" class="char-input" placeholder='age'>
+                    <input type="text" id="name" class="char-input" placeholder="Profession">
+                </div>
+                <div class="input-wrap">
+                    <input type="text" id="name" class="char-input" placeholder="Email ID">
+                    <input type="text" id="name" class="char-input" placeholder="Contact No">
+                </div>
+                <div class="para-wrap">
+                    <textarea name="message" id="" cols="30" rows="10" class='para-input'></textarea>
+                </div>
+                <div class="button-wrap">
+                    <button type="reset" class="form-btn"><img src="general_assets/reload.svg" alt="" class="popup-btn-img"></button>
+                    <button type="submit" class="form-btn"><img src="general_assets/success.svg" alt="" class="popup-btn-img"></button>
+                </div>
 
-    <script src="forum_assets/forum_mid.js"></script>
+            </form>
+        </div>
+    </div>
     <script>
         $(document).ready(function() {
             $('.univ-popup-wrap').fadeOut();
@@ -162,6 +186,12 @@
             $(which_one).fadeOut();
         }
     </script>
+
+
+    <script src="forum_assets/forum.js" async defer></script>
+
+    <script src="forum_assets/forum_mid.js"></script>
+
 
 </body>
 

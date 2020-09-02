@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="forum_assets/forum-view.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="general_assets/mb_menu.css">
+    <link rel="stylesheet" href="general_assets/popup.css">
+    <link rel="stylesheet" href="general_assets/global.css">
 </head>
 
 <body>
@@ -62,9 +64,9 @@
                 <item onclick="window.location.href='index.html'">HOME</item>
                 <item onclick="window.location.href='team.html'">ABOUT</item>
                 <item onclick="window.location.href='help_page.html'">HELPLINE</item>
-				<item onclick="window.location.href='insta.html'">INSTAGRAM</item>
+                <item onclick="window.location.href='insta.html'">INSTAGRAM</item>
                 <item onclick="window.location.href='forum.html'">FORUM</item>
-				<item onclick="window.location.href='events.html'">EVENTS</item>
+                <item onclick="window.location.href='events.html'">EVENTS</item>
                 <item class='menu-btn' onclick="open_popup('#join-us-popup')">JOIN US</item>
             </nav>
             <div class="landing-heading">
@@ -126,7 +128,53 @@
 
         </section>
     </div>
+    <div class="univ-popup-wrap" id='join-us-popup'>
+        <div class="univ-popup-window">
+            <img src="general_assets/team.svg" alt="create a forum on mental health" class="popup-img">
+            <div class="close-btn" onclick="close_popup('#join-us-popup')"><img src="general_assets/close-clr.svg" alt="" class="popup-btn-img"></div>
+            <h3 class="popup-title">Join <br><span class='blue-title'>UNBOTTLE</span></h3>
+            <p class="popup-desc">
+                __PLACEHOLDER:01__
+                <br> We are glad to have you on board with us.<br> Tell us the extant and your capacity with which you want to work for Unbottle, <br> and for how long you wish to be a part of Unbottle's efforts,. <br> Leave us any message for us</textxtarea>
+                <br> TEAM UNBOTTLE
+            </p>
 
+            <form action="" method="post" class="popup-form" id="create-fprum">
+                <div class="input-wrap">
+                    <input type="text" id="name" class="char-input char-input-full" placeholder="Name">
+                </div>
+                <div class="input-wrap">
+                    <input type="text" id="name" class="char-input" placeholder='age'>
+                    <input type="text" id="name" class="char-input" placeholder="Profession">
+                </div>
+                <div class="input-wrap">
+                    <input type="text" id="name" class="char-input" placeholder="Email ID">
+                    <input type="text" id="name" class="char-input" placeholder="Contact No">
+                </div>
+                <div class="para-wrap">
+                    <textarea name="message" id="" cols="30" rows="10" class='para-input'></textarea>
+                </div>
+                <div class="button-wrap">
+                    <button type="reset" class="form-btn"><img src="general_assets/reload.svg" alt="" class="popup-btn-img"></button>
+                    <button type="submit" class="form-btn"><img src="general_assets/success.svg" alt="" class="popup-btn-img"></button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('.univ-popup-wrap').fadeOut();
+        });
+
+        function open_popup(which_one) {
+            $(which_one).fadeIn();
+        }
+
+        function close_popup(which_one) {
+            $(which_one).fadeOut();
+        }
+    </script>
 
     <script src="forum_assets/forum.js" async defer></script>
     <script src="forum_assets/forum_view_mid.js"></script>

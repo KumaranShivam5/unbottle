@@ -251,6 +251,7 @@ nav item{
   /*! padding-left: 3vh; */
   color: white;
   /*! padding-right: 3vh; */
+  /*! font-weight: ; */
 }
 .menu-btn{
   
@@ -268,6 +269,8 @@ nav item{
 
 nav{
   
+  padding-left: 2vh;
+  padding-right: 0vh;
 }
 nav item{
   

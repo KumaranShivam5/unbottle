@@ -12,6 +12,8 @@ font-family: 'Poppins', sans-serif;
      --pink-white:#FFCAD587;
      --blue-white:#77DDFF4F;
 }
+.menu-btn{padding: 2vh;background: #ff6584;border-radius: 5vh;color: white;font-weight: bold;}
+.top-nav item:hover{}
 
 * {
     box-sizing: border-box;

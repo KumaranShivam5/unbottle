@@ -12,6 +12,13 @@ font-family: 'Poppins', sans-serif;
     --pink-white: #FFCAD587;
     --blue-white: #77DDFF4F;
 }
+.menu-btn{
+    
+    padding: 2vh;
+    background: #fc7502;
+    color: white;
+    border-radius: 5vh;
+}
 
 * {
     box-sizing: border-box;
@@ -80,6 +87,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    background: none !important;
 }
 
 .menu-item {

@@ -102,6 +102,9 @@ a {
 }
 nav{
     
+    background: none !important;
+    top: 2vh !important;
+    right: 2vh !important;
 }
 item{
     

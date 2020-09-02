@@ -8,13 +8,15 @@
     --pink-white: #FFCAD587;
     --blue-white: #77DDFF4F;
 }
+.blue-title{color: var(--light-blue-a);font-size: 4vh;}
 
 a {
     color: inherit !important;
     ;
     text-decoration: inherit !important;
 }
-.top-nav item{font-size: 1.5vh;}
+.top-nav item{font-size: 1.5vh;font-weight:300;transition:0.3s ease-out;cursor:pointer;}
+.top-nav item:hover{font-weight:500;}
 
 body {
     margin: 0px;
