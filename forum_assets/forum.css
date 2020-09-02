@@ -18,7 +18,7 @@ font-family: 'Poppins', sans-serif;
 }
 
 .create-card-btn{/*! width: 14%; *//*! padding: 0%; *//*! padding: 10vh; */}
-.create-card-title{/*! width: 50%; */display: flex;align-items: center;justify-content: center;width: 50%;font-size: 3vh;font-weight: bold;color: var(--light-blue-a);}
+.create-card-title{/*! width: 50%; */display: flex;align-items: center;justify-content: center;width: 50%;font-size: 3vh;font-weight: bold;color: var(--light-blue-a);text-align: center;}
 .create-forum-btn-img{width: 15vh;}
 .create-card{justify-content: space-between;}
 
@@ -118,7 +118,8 @@ body {
     align-self: center;
     justify-self: last baseline;
     display: flex;
-    margin: 10vh;
+    /*! margin: 10vh; */
+    background: none !important;
 }
 
 .menu-item {
