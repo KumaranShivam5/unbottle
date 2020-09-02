@@ -29,8 +29,8 @@
             <a href='index.html' class="mb-menu-item">HOME</a>
             <a href="insta.html" class="mb-menu-item">INSTAGRAM</a>
             <a href="forum.html" class="mb-menu-item">FORUM</a>
-            <a href="help_page.html" class="mb-menu-item">ADVISOR</a>
-            <a href="team.html" class="mb-menu-item">TEAM</a>
+            <a href="help_page.html" class="mb-menu-item">HELPLINE</a>
+            <a href="team.html" class="mb-menu-item">ABOUT</a>
             <a href="events.html" class="mb-menu-item">EVENTS</a>
             <a href="#" onclick="open_popup()" class="mb-menu-item mb-join-btn">JOIN US</a>
         </div>
@@ -63,11 +63,13 @@
             <div class='subtitle'>This will be subtext for the unbottle project, right now ithis is just a filler text</div>
         </div>
         <nav class='top-nav'>
-            <item>HOME</item>
-            <item>TEAM</item>
-            <item>ADVISOR</item>
-            <item>FORUM</item>
-            <item class='menu-btn'>JOIN US</item>
+            <item onclick="window.location.href='index.html'">HOME</item>
+            <item onclick="window.location.href='team.html'">ABOUT</item>
+            <item onclick="window.location.href='help_page.html'">HELPLINE</item>
+			<item onclick="window.location.href='insta.html'">INSTAGRAM</item>
+            <item onclick="window.location.href='forum.html'">FORUM</item>
+			<item onclick="window.location.href='events.html'">EVENTS</item>
+            <item class='menu-btn' onclick="open_popup('#join-us-popup')">JOIN US</item>
         </nav>
         <div class="focal-btn">MORE</div>
         <img src='index_assets/index_ilst.svg' class="main-ilst">
