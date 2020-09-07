@@ -13,7 +13,7 @@ Vue.component ( 'forumcard', {
                             </div>
                             <div class="card-details">
                                 <div class="card-detail-item">
-                                    <span class="card-detail-head">Created BY - </span><span class="card-detail-text">J Solomon Ivan</span>
+                                    <span class="card-detail-head">Created BY - </span><span class="card-detail-text">{{scard.creator}}</span>
                                 </div>
                                 <div class="card-detail-item">
                                     <span class="card-detail-head">Date - </span><span class="card-detail-text">{{scard.date}}</span>
@@ -38,6 +38,12 @@ var forum_disp =new Vue ({
 		forum_array:[],
 		ctg_array:[],
 		namestore:null,
+		topic:"",
+		img:"",
+		ctg:"",
+		creator:"",
+		pop_notification:"",
+		notf_show:false,
 	},
 	
 	methods: {
@@ -64,6 +70,55 @@ var forum_disp =new Vue ({
 		forum_all()	{
 			const url="forum.html";
 			window.location.href=url;
+		},
+		
+		chooseimage(event) {
+			this.img = event.target.files[0];
+			var file = event.target.files[0].name;
+			var dflt = $(event.target).attr("placeholder");
+			console.log(this.img);
+			if($(event.target).val()!=""){
+			$(event.target).next().text(file);
+			console.log($(event.target).val());
+				} else {
+			$(event.target).next().text(dflt);
+				}
+		},
+		
+		new_forum() {
+			const formData1 = new FormData();
+			formData1.append('topic', this.topic);
+			formData1.append('image', this.img);
+			formData1.append('forum_ctg', this.ctg);
+			formData1.append('creator', this.creator);
+			
+			axios.post(apiurl+'kumaran/create-forum/', formData1,
+			{headers:{
+				'Content-Type': 'multipart/form-data'
+			}})
+			     .then(res => {
+					 this.pop_notification=res.data;
+					 this.notf_show=true;
+				 })
+				 .catch(e => {
+					 this.pop_notification = "some authorisation error probably... try again or contact customer support";
+					 this.notf_show=true;
+				 });
+		},
+		
+		reset_data() {
+			this.topic="";
+			this.img="";
+			this.ctg="";
+			this.creator="";
+		},
+		
+		close_button() {
+			$('#create-forum-popup').fadeOut();
+			this.topic="";
+			this.img="";
+			this.ctg="";
+			this.creator="";
 		},
 		
 	},
