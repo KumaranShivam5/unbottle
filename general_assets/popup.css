@@ -60,7 +60,7 @@ button {}
 
 .para-input {
     background: var(--pink-white);
-    height: 100%;
+    height: 80%;
     display: block;
     width: 97%;
     border: 0;
@@ -69,6 +69,12 @@ button {}
 
 .para-wrap {
     height: 14vh;
+	margin: 1vh;
+}
+
+.popup-label {
+	font-size:1.7vh;
+	width:97%;
 }
 
 .popup-btn-img:hover {
@@ -108,7 +114,7 @@ button {}
     justify-content: center;
     display: grid;
     grid-template-areas: "img title" "img form" "desc form";
-    grid-template-rows: 8vh 20vh 32vh;
+    grid-template-rows: 8vh 20vh auto;
     grid-template-columns: 1fr 1.5fr;
     align-items: center;
     padding: 3vh;
@@ -144,7 +150,7 @@ button {}
 .message-popup {}
 
 .popup-message {
-    font-size: 1.6vh;
+    font-size: 2vh;
     color: var(--dark-blue);
     grid-area: msg-end;
     font-weight: 300;
@@ -163,10 +169,11 @@ button {}
 }
 
 .message-popup .univ-popup-window {
+	
     display: flex;
     align-items: center;
+	height:fixed;
     justify-content: center;
-    overflow: hidden;
     border-radius: 1vh;
     /*! grid-template-areas: "img title""img msg"; */
 }
@@ -177,6 +184,68 @@ button {}
 
 .popup-msg-content {
     width: 70%;
+	margin-top:20vh;
+	height:auto;
+}
+
+.univ-popup-window::-webkit-scrollbar {
+  width: 5px;
+}
+
+.univ-popup-window::-webkit-scrollbar-track {
+  background: white;
+}
+
+.univ-popup-window::-webkit-scrollbar-thumb {
+  background: rgba(176,224,230,1);
+}
+
+.univ-popup-window::-webkit-scrollbar-thumb:hover {
+   background: var(--light-blue-b);
+}
+
+.filelabel, .fileinput {
+  color: var(--pink-white);
+  width:95%;
+ 
+}
+
+.filelabel {
+  display: inline-block;
+  text-align: right;
+   margin: 1vh;
+    height: 5vh;
+}
+
+.fileinput {
+  z-index:-999;
+}
+
+[type=file] {
+    position: absolute;
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+.fileinput,
+[type=file] + .filelabel {
+  border: 1px solid #CCC;
+  border-radius: 25px;
+  text-align: left;
+  padding: 5px;
+  font-size:2vh;
+  margin: 0;
+  left: 0;
+  position: relative;
+}
+[type=file] + .filelabel {
+  text-align: center;
+  background: var(--pink-white);
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+[type=file] + .filelabel:hover {
+  background: #3399ff;
 }
 
 @media only screen and (max-width: 600px) {
