@@ -53,7 +53,7 @@
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <div id="forum-mid-end">
+<div id="forum-mid-end">
         <section class="landing-section">
             <div class="top-left-splash splash"><img src="forum_assets/ilst/splash_01.svg" style="width: 30vw;"></div>
             <div class="logo">
@@ -106,39 +106,80 @@
                 </main>
             </div>
         </section>
+		
+		
         <section class="footer">
 
         </section>
-    </div>
-
-
 
     <div class="univ-popup-wrap" id='create-forum-popup'>
         <div class="univ-popup-window">
             <img src="forum_assets/ilst/undraw_team_work_k80m.svg" alt="create a forum on mental health" class="popup-img">
-            <div class="close-btn" onclick="close_popup('#create-forum-popup')"><img src="general_assets/close-clr.svg" alt="" class="popup-btn-img"></div>
+            <div class="close-btn" v-on:click="close_button"><img src="general_assets/close-clr.svg" alt="" class="popup-btn-img"></div>
             <h3 class="popup-title">Create a Forum</h3>
             <p class="popup-desc">
                 Once You submit this forum create request, kindly wait for some time for one of the moderators, to approve your this forum create request.<br> Team UNBOTTLE , are glad that you are creating a forum, <br> Thanks,
                 <br> TEAM UNBOTTLE
-                <form action="" method="post" class="popup-form" id="create-fprum">
+			</p>
+                <div class="popup-form" id="create-fprum">
                     <div class="input-wrap">
-                        <span class="input-title">Name </span><input type="text" id="name" class="char-input">
+                        <span class="input-title">Name</span><input type="text" id="name" class="char-input" v-model="creator">
                     </div>
                     <div class="input-wrap">
-                        <span class="input-title">Forum Title</span><input type="text" id="name" class="char-input">
+                        <span class="input-title">Forum Title</span><input type="text" id="name" class="char-input" v-model="topic">
+                    </div>
+					<div class="input-wrap">
+                        <span class="input-title">Category </span>
+						<select class="char-input" v-model="ctg">
+							<option v-for="el in ctg_array" :value="el.ctg_name">{{el.ctg_name}}</option>
+						</select>
                     </div>
                     <div class="input-wrap">
-                        <span class="input-title">Caption Image</span><input type="file" id="name" class="file-input">
+						<span class="input-title">Image</span>
+                        <input id="g01" class="fileinput" type="file" placeholder="Image" @change="chooseimage">
+						<label class="filelabel" for="g01">Image</label><br>
                     </div>
                     <div class="button-wrap">
-                        <button type="reset" class="form-btn"><img src="general_assets/reload.svg" alt="" class="popup-btn-img"></button>
-                        <button type="submit" class="form-btn"><img src="general_assets/success.svg" alt="" class="popup-btn-img"></button>
+                        <button type="reset" class="form-btn" v-on:click="reset_data"><img src="general_assets/reload.svg" alt="" class="popup-btn-img"></button>
+                        <button type="submit" class="form-btn" v-on:click="new_forum"><img src="general_assets/success.svg" alt="" class="popup-btn-img"></button>
                     </div>
-
-                </form>
+                </div>
         </div>
     </div>
+	
+	<div class="univ-popup-wrap message-popup" v-if="notf_show">
+        <div class="univ-popup-window">
+            <div class="close-btn" v-on:click="notf_show=false"><img src="general_assets/close-clr.svg" alt="" class="popup-btn-img"></div>
+
+            <p class='popup-message'></p>
+            <img src="index_assets/what-ilst.svg" alt="what is mental health" class="popup-msg-img">
+            <div class="popup-msg-content">
+                <h4 class="popup-msg-title">Message</h4>
+                <p class='popup-message'>
+                    <br>{{pop_notification}}
+                </p>
+            </div>
+        </div>
+    </div>
+	
+</div>
+	
+	<div class="univ-popup-wrap message-popup" id="some-message">
+        <div class="univ-popup-window">
+            <div class="close-btn" v-on:click="close_message"><img src="general_assets/close-clr.svg" alt="" class="popup-btn-img"></div>
+
+            <p class='popup-message'></p>
+            <img src="index_assets/what-ilst.svg" alt="what is mental health" class="popup-msg-img">
+            <div class="popup-msg-content">
+                <h4 class="popup-msg-title">Message</h4>
+                <p class='popup-message'>
+                    <br>{{pop_notification}}
+                </p>
+            </div>
+        </div>
+    </div>
+	
+	
     <div class="univ-popup-wrap" id='join-us-popup'>
         <div class="univ-popup-window">
             <img src="general_assets/team.svg" alt="create a forum on mental health" class="popup-img">
@@ -169,10 +210,12 @@
                     <button type="reset" class="form-btn"><img src="general_assets/reload.svg" alt="" class="popup-btn-img"></button>
                     <button type="submit" class="form-btn"><img src="general_assets/success.svg" alt="" class="popup-btn-img"></button>
                 </div>
-
             </form>
         </div>
-    </div>
+	</div>
+	
+   
+
     <script>
         $(document).ready(function() {
             $('.univ-popup-wrap').fadeOut();
