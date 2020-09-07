@@ -14,8 +14,8 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="index_assets/index.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.0/vue.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.0/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700;800;900&display=swap" rel="stylesheet">
 
@@ -209,106 +209,96 @@
 
     <div class="univ-popup-wrap message-popup" id="more-on-mental-health">
         <div class="univ-popup-window">
-            <div><div class="close-btn" onclick="close_popup('#more-on-mental-health')"><img src="general_assets/close-clr.svg" alt="" class="popup-btn-img"></div>
-            <img src="index_assets/what-ilst.svg" alt="what is mental health" class="popup-msg-img"></div>
+            <div>
+                <div class="close-btn" onclick="close_popup('#more-on-mental-health')"><img src="general_assets/close-clr.svg" alt="" class="popup-btn-img"></div>
+                <img src="index_assets/what-ilst.svg" alt="what is mental health" class="popup-msg-img"></div>
             <div class="popup-msg-content">
                 <h4 class="popup-msg-title">What is Mental Health</h4>
                 <p class='popup-message'>
-                    Mental health includes our emotional, psychological, and social well-being. It affects how we think, feel, and act. It also helps determine how we handle stress,
-					relate to others, and make choices<br><br>
-                    Mental health can affect daily living, relationships, and physical health. However, this link also works in the other direction. Factors in people’s lives,
-					interpersonal connections, and physical factors can all contribute to
-                    mental health disruptions.<br><br>
-                    3. Looking after mental health can preserve a person’s ability to enjoy life. Doing this involves reaching a balance between life activities, 
-					responsibilities, and efforts to achieve psychological resilience.<br><br>
-					
+                    Mental health includes our emotional, psychological, and social well-being. It affects how we think, feel, and act. It also helps determine how we handle stress, relate to others, and make choices<br><br> Mental health can affect daily
+                    living, relationships, and physical health. However, this link also works in the other direction. Factors in people’s lives, interpersonal connections, and physical factors can all contribute to mental health disruptions.<br><br> 3.
+                    Looking after mental health can preserve a person’s ability to enjoy life. Doing this involves reaching a balance between life activities, responsibilities, and efforts to achieve psychological resilience.<br><br>
+
                 </p>
-				<h4 class="popup-msg-title">Importance of mental health</h4>
+                <h4 class="popup-msg-title">Importance of mental health</h4>
                 <p class='popup-message'>
-<<<<<<< HEAD
-                    <br>Hiii....wanted to write something here for you....but yahan nhi...willl be a surprise. ....<br><br>Kumaran
-=======
-                    Like physical health, mental health is important at every stage of life. Emotional and mental health is important because it’s a vital part of your life and impacts your thoughts, behaviors and emotions. Being healthy
-                    emotionally can not only promote productivity and effectiveness in activities like work, school or caregiving.
-					It also plays an important part in the health of our relationships, and allows us to adapt to changes in out life and cope with adversity. When we are mentally healthy, we enjoy our life and environment,
-					and the people in it.<br><br>
-					It helps us to deal with all sorts of problems including those coming from chronic physical illnesses.A healthy mind helps us to
-					manage stress and the sadness and anger that can come with various emotional factors in our lives, we are able to move on and enjoy our lives once
-					again.
->>>>>>> 900a0c1d744cc94df77affe7df28bba52ef6c596
-                </p>
-            </div>
-        </div>
-    </div>
-	
-<div id="join-us-mid-end">
-	
-	<div class="univ-popup-wrap message-popup" id="some-message">
-        <div class="univ-popup-window">
-            <div class="close-btn" v-on:click="close_message"><img src="general_assets/close-clr.svg" alt="" class="popup-btn-img"></div>
-
-            <p class='popup-message'></p>
-            <img src="index_assets/what-ilst.svg" alt="what is mental health" class="popup-msg-img">
-            <div class="popup-msg-content">
-                <h4 class="popup-msg-title">Message</h4>
-                <p class='popup-message'>
-                    <br>{{pop_notification}}
+                    Like physical health, mental health is important at every stage of life. Emotional and mental health is important because it’s a vital part of your life and impacts your thoughts, behaviors and emotions. Being healthy emotionally can not only promote
+                    productivity and effectiveness in activities like work, school or caregiving. It also plays an important part in the health of our relationships, and allows us to adapt to changes in out life and cope with adversity. When we are mentally
+                    healthy, we enjoy our life and environment, and the people in it.<br><br> It helps us to deal with all sorts of problems including those coming from chronic physical illnesses.A healthy mind helps us to manage stress
+                    and the sadness and anger that can come with various emotional factors in our lives, we are able to move on and enjoy our lives once again.
                 </p>
             </div>
         </div>
     </div>
 
-    <div class="univ-popup-wrap" id='join-us-popup'>
-        <div class="univ-popup-window">
-            <img src="general_assets/team.svg" alt="create a forum on mental health" class="popup-img">
-            <div class="close-btn" v-on:click="close_popup"><img src="general_assets/close-clr.svg" alt="" class="popup-btn-img"></div>
-            <h3 class="popup-title">Join <br><span class='blue-title'>UNBOTTLE</span></h3>
-            <p class="popup-desc">
-                __PLACEHOLDER:01__
-                <br> We are glad to have you on board with us.<br> Tell us the extant and your capacity with which you want to work for Unbottle, <br> and for how long you wish to be a part of Unbottle's efforts,. <br> Leave us any message for us</textxtarea>
-                <br> TEAM UNBOTTLE
-            </p>
+    <div id="join-us-mid-end">
 
-            <div class="popup-form" id="create-fprum">
-                <div class="input-wrap">
-                    <input type="text" id="name" class="char-input char-input-full" placeholder="Name" v-model="name">
-                </div>
-                <div class="input-wrap">
-                    <input type="text" id="name" class="char-input" placeholder='age' v-model="age">
-                    <input type="text" id="name" class="char-input" placeholder="Contact No" v-model="contact_no">
-                </div>
-				<div class="input-wrap">
-                    <input type="text" id="name" class="char-input char-input-full" placeholder="Profession/Organisation" v-model="profession">
-                </div>
-                <div class="input-wrap">
-                    <input type="text" id="name" class="char-input char-input-full" placeholder="Email ID" v-model="email_id"> 
-                </div>
-				<div class="para-wrap">
-					<label class="popup-label">How long would you like to work for unbottle?</label>
-                    <textarea name="message" id="" cols="30" rows="10" class='para-input' v-model="how_long"></textarea>
-                </div>	
-				<div class="para-wrap">
-					<label class="popup-label">In what capacity would you like to work with unbottle?</label>
-                    <textarea name="message" id="" cols="30" rows="10" class='para-input' v-model="work_capacity"></textarea>
-                </div>
-				<div class="para-wrap">
-					<label class="popup-label">Other comments</label>
-                    <textarea name="message" id="" cols="30" rows="10" class='para-input' v-model="other_comments"></textarea>
-                </div>
-                <div class="button-wrap">
-                    <button class="form-btn" v-on:click="reset_button"><img src="general_assets/reload.svg" alt="" class="popup-btn-img"></button>
-                    <button class="form-btn" v-on:click="post_query"><img src="general_assets/success.svg" alt="" class="popup-btn-img"></button>
-                </div>
+        <div class="univ-popup-wrap message-popup" id="some-message">
+            <div class="univ-popup-window">
+                <div class="close-btn" v-on:click="close_message"><img src="general_assets/close-clr.svg" alt="" class="popup-btn-img"></div>
 
+                <p class='popup-message'></p>
+                <img src="index_assets/what-ilst.svg" alt="what is mental health" class="popup-msg-img">
+                <div class="popup-msg-content">
+                    <h4 class="popup-msg-title">Message</h4>
+                    <p class='popup-message'>
+                        <br>{{pop_notification}}
+                    </p>
+                </div>
             </div>
         </div>
+
+        <div class="univ-popup-wrap" id='join-us-popup'>
+            <div class="univ-popup-window">
+                <img src="general_assets/team.svg" alt="create a forum on mental health" class="popup-img">
+                <div class="close-btn" v-on:click="close_popup"><img src="general_assets/close-clr.svg" alt="" class="popup-btn-img"></div>
+                <h3 class="popup-title">Join <br><span class='blue-title'>UNBOTTLE</span></h3>
+                <p class="popup-desc">
+                    __PLACEHOLDER:01__
+                    <br> We are glad to have you on board with us.<br> Tell us the extant and your capacity with which you want to work for Unbottle, <br> and for how long you wish to be a part of Unbottle's efforts,. <br> Leave us any message for us</textxtarea>
+                    <br> TEAM UNBOTTLE
+                </p>
+
+                <div class="popup-form" id="create-fprum">
+                    <div class="input-wrap">
+                        <input type="text" id="name" class="char-input char-input-full" placeholder="Name" v-model="name">
+                    </div>
+                    <div class="input-wrap">
+                        <input type="text" id="name" class="char-input" placeholder='age' v-model="age">
+                        <input type="text" id="name" class="char-input" placeholder="Contact No" v-model="contact_no">
+                    </div>
+                    <div class="input-wrap">
+                        <input type="text" id="name" class="char-input char-input-full" placeholder="Profession/Organisation" v-model="profession">
+                    </div>
+                    <div class="input-wrap">
+                        <input type="text" id="name" class="char-input char-input-full" placeholder="Email ID" v-model="email_id">
+                    </div>
+                    <div class="para-wrap">
+                        <label class="popup-label">How long would you like to work for unbottle?</label>
+                        <textarea name="message" id="" cols="30" rows="10" class='para-input' v-model="how_long"></textarea>
+                    </div>
+                    <div class="para-wrap">
+                        <label class="popup-label">In what capacity would you like to work with unbottle?</label>
+                        <textarea name="message" id="" cols="30" rows="10" class='para-input' v-model="work_capacity"></textarea>
+                    </div>
+                    <div class="para-wrap">
+                        <label class="popup-label">Other comments</label>
+                        <textarea name="message" id="" cols="30" rows="10" class='para-input' v-model="other_comments"></textarea>
+                    </div>
+                    <div class="button-wrap">
+                        <button class="form-btn" v-on:click="reset_button"><img src="general_assets/reload.svg" alt="" class="popup-btn-img"></button>
+                        <button class="form-btn" v-on:click="post_query"><img src="general_assets/success.svg" alt="" class="popup-btn-img"></button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
     </div>
-	
-	
-</div>
-	
-	
-	<script src="general_assets/join.js"></script>
+
+
+    <script src="general_assets/join.js"></script>
     <script>
         $(document).ready(function() {
             $('.univ-popup-wrap').fadeOut();
