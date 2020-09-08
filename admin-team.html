@@ -2,8 +2,8 @@
 <html>
 
 <head>
-	<!--UPDATED on -->
-	<!--<script src="admin_assets/login_sys.js"></script>-->
+    <!--UPDATED on -->
+    <script src="admin_assets/login_sys.js"></script>
     <title>||Admin | Unbottle||</title>
     <link rel="icon" href="general_assets/logo.png">
     <meta charset="utf-8">
@@ -15,137 +15,133 @@
 
 
     <!--including theme and other css stuff here-->
-	<!--theme.css is for updating the theme and is shared with whole project-->
-	<link rel="stylesheet" href="admin_assets/admin.css">
-	<link rel="stylesheet" href="admin_assets/admin_2.css">
-	<link rel='stylesheet' href="general_assets/loader.css">
+    <!--theme.css is for updating the theme and is shared with whole project-->
+    <link rel="stylesheet" href="admin_assets/admin.css">
+    <link rel="stylesheet" href="admin_assets/admin_2.css">
+    <link rel='stylesheet' href="general_assets/loader.css">
 
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700;800;900&display=swap"
-		rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
 
-	<!--essential scripts-->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.0/vue.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-		crossorigin="anonymous"></script>
+    <!--essential scripts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.0/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-	<script src="https://kit.fontawesome.com/b1edde977d.js" crossorigin="anonymous"></script>	
+    <script src="https://kit.fontawesome.com/b1edde977d.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-<div id="team-mid-end">
+    <div id="team-mid-end">
 
-	<div id="div-1" class="wrapper-div display-open">
-		<div class="admin-image" style="background-image:url('admin_assets/images/b3.jpg');"></div>
-		<div class="sidenav-wrapper-2">
-			<h1 class="insta-head">TEAM</h1>
-			<div>
-			<a class="sidenav-card" href="admin.html">HOME</a>
-			<a class="sidenav-card" href="admin-insta.html">INSTA</a>
-			<a class="sidenav-card" href="admin-forum.html">FORUM</a>
-			<a class="sidenav-card" href="admin-therapy.html">HELPLINES</a>
-			<a class="sidenav-card" href="admin-event.html">EVENTS</a>
-			<a class="sidenav-card" href="admin-join.html">JOIN</a>
-			<a class="sidenav-card" href="admin-team.html">TEAM</a></div>
-		</div>
-		
-		<div class="search-bar">
-			<input class="search-input" placeholder="Search" v-model="key" v-on:click="reset_search"></input>
-			<button class="search-button" v-on:click="search"><i class="fas fa-search"></i></button>
-		</div>
-				
-		<div class="help-card-grid">
-			<teamcard v-for="acard in team_array" :key="acard.ID" :scard=acard @update="openupdatewindow" @delete="deleteentry"></teamcard>
-		</div>
-			
-			<button class="help-create-new" v-on:click="opencreatewindow"> Create New </button>
-	</div>
-	
-
-<!-- admin create a forum -->	
-	<div id="div-2" class="wrapper-div display-close"> 
-		<div class="admin-image" style="background-image:url('admin_assets/images/b6.jpg');"></div>
-		<div class="row form" onsubmit="return false">
-			<form class="help-form-layout">
-				<div class="forum-form-heading">NEW</div>
-                <input placeholder="Name" class="input-layout" v-model="name">
-				<input placeholder="Contact No." class="input-layout" v-model="contact">
-				<input placeholder="email-id" class="input-layout" v-model="mail">
-				<input placeholder="Designation" class="input-layout" v-model="desg">
-				<textarea placeholder="Description" class="input-layout" v-model="quote"></textarea>
-				<input id="g01" class="fileinput" type="file" placeholder="Image" @change="chooseimage">
-					<label class="filelabel" for="g01">Image</label><br>	
-                <button type="submit" id="submitblog" class="submit-close-button" v-on:click="createentry">Submit</button>
-				<button class="submit-close-button" v-on:click="closebutton">close</button>
-            </form>
-        </div>
-	</div>
-	
-<!-- update forum -->
-	<div id="div-3" class="wrapper-div display-close"> 
-		<div class="admin-image" style="background-image:url('admin_assets/images/b6.jpg');"></div>
-		<div class="row form" onsubmit="return false">
-			<form class="help-form-layout">
-				<div class="forum-form-heading">UPDATE</div>
-                <input placeholder="Name" class="input-layout" v-model="name">
-				<input placeholder="Contact No." class="input-layout" v-model="contact">
-				<input placeholder="email-id" class="input-layout" v-model="mail">
-				<input placeholder="Designation" class="input-layout" v-model="desg">
-				<textarea placeholder="Description" class="input-layout" v-model="quote"></textarea>
-				<input id="g01" class="fileinput" type="file" placeholder="Image" @change="chooseimage">
-					<label class="filelabel" for="g01">Image</label><br>	
-                <button type="submit" id="submitblog" class="submit-close-button" v-on:click="updateentry">Submit</button>
-				<button class="submit-close-button" v-on:click="closebutton">close</button>
-            </form>
-        </div>
-	</div>
-	
-	<div class="hover_bkgr_fricc">
-		<span class="helper"></span>
-		<div>
-			<div class="popupCloseButton">&times;</div>
-			<p class="style_modal">{{pop_notification}}</p>
-		</div>
-	</div>
-	
-	<div class="loader-full-wrapper" v-if="loader">
-        <div class='loader-container'>
-            <div class='loader-circle-wrapper'>
-                <div class='loader-circle circle--a l-a'></div>
-                <div class='loader-circle circle--b l-b'></div>
-                <div class='loader-circle circle--c l-c'></div>
-                <div class='loader-circle circle--d l-d'></div>
-                <div class='loader-circle circle--e l-e'></div>
-                <div class="loader-circle-main">
-                    ..LOADING..
-                </div>
-                <div class='loader-circle circle--a r-a'></div>
-                <div class='loader-circle circle--b r-b'></div>
-                <div class='loader-circle circle--c r-c'></div>
-                <div class='loader-circle circle--d r-d'></div>
-                <div class='loader-circle circle--e r-e'></div>
+        <div id="div-1" class="wrapper-div display-open">
+            <div class="admin-image" style="background-image:url('admin_assets/images/b3.jpg');"></div>
+            <div class="sidenav-wrapper-2">
+                <h1 class="insta-head">TEAM</h1>
+                <div>
+                    <a class="sidenav-card" href="admin.html">HOME</a>
+                    <a class="sidenav-card" href="admin-insta.html">INSTA</a>
+                    <a class="sidenav-card" href="admin-forum.html">FORUM</a>
+                    <a class="sidenav-card" href="admin-therapy.html">HELPLINES</a>
+                    <a class="sidenav-card" href="admin-event.html">EVENTS</a>
+                    <a class="sidenav-card" href="admin-join.html">JOIN</a>
+                    <a class="sidenav-card" href="admin-team.html">TEAM</a></div>
             </div>
 
-        </div>
-    </div>
-	
- </div>
+            <div class="search-bar">
+                <input class="search-input" placeholder="Search" v-model="key" v-on:click="reset_search"></input>
+                <button class="search-button" v-on:click="search"><i class="fas fa-search"></i></button>
+            </div>
 
-<script src="admin_assets/admin-team.js"></script>
-<script>
-$(window).load(function () {
-    $('.hover_bkgr_fricc').click(function(){
-        $('.hover_bkgr_fricc').hide();
-    });
-    $('.popupCloseButton').click(function(){
-        $('.hover_bkgr_fricc').hide();
-    });
-});
-</script>
+            <div class="help-card-grid">
+                <teamcard v-for="acard in team_array" :key="acard.ID" :scard=acard @update="openupdatewindow" @delete="deleteentry"></teamcard>
+            </div>
+
+            <button class="help-create-new" v-on:click="opencreatewindow"> Create New </button>
+        </div>
+
+
+        <!-- admin create a forum -->
+        <div id="div-2" class="wrapper-div display-close">
+            <div class="admin-image" style="background-image:url('admin_assets/images/b6.jpg');"></div>
+            <div class="row form" onsubmit="return false">
+                <form class="help-form-layout">
+                    <div class="forum-form-heading">NEW</div>
+                    <input placeholder="Name" class="input-layout" v-model="name">
+                    <input placeholder="Contact No." class="input-layout" v-model="contact">
+                    <input placeholder="email-id" class="input-layout" v-model="mail">
+                    <input placeholder="Designation" class="input-layout" v-model="desg">
+                    <textarea placeholder="Description" class="input-layout" v-model="quote"></textarea>
+                    <input id="g01" class="fileinput" type="file" placeholder="Image" @change="chooseimage">
+                    <label class="filelabel" for="g01">Image</label><br>
+                    <button type="submit" id="submitblog" class="submit-close-button" v-on:click="createentry">Submit</button>
+                    <button class="submit-close-button" v-on:click="closebutton">close</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- update forum -->
+        <div id="div-3" class="wrapper-div display-close">
+            <div class="admin-image" style="background-image:url('admin_assets/images/b6.jpg');"></div>
+            <div class="row form" onsubmit="return false">
+                <form class="help-form-layout">
+                    <div class="forum-form-heading">UPDATE</div>
+                    <input placeholder="Name" class="input-layout" v-model="name">
+                    <input placeholder="Contact No." class="input-layout" v-model="contact">
+                    <input placeholder="email-id" class="input-layout" v-model="mail">
+                    <input placeholder="Designation" class="input-layout" v-model="desg">
+                    <textarea placeholder="Description" class="input-layout" v-model="quote"></textarea>
+                    <input id="g01" class="fileinput" type="file" placeholder="Image" @change="chooseimage">
+                    <label class="filelabel" for="g01">Image</label><br>
+                    <button type="submit" id="submitblog" class="submit-close-button" v-on:click="updateentry">Submit</button>
+                    <button class="submit-close-button" v-on:click="closebutton">close</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="hover_bkgr_fricc">
+            <span class="helper"></span>
+            <div>
+                <div class="popupCloseButton">&times;</div>
+                <p class="style_modal">{{pop_notification}}</p>
+            </div>
+        </div>
+
+        <div class="loader-full-wrapper" v-if="loader">
+            <div class='loader-container'>
+                <div class='loader-circle-wrapper'>
+                    <div class='loader-circle circle--a l-a'></div>
+                    <div class='loader-circle circle--b l-b'></div>
+                    <div class='loader-circle circle--c l-c'></div>
+                    <div class='loader-circle circle--d l-d'></div>
+                    <div class='loader-circle circle--e l-e'></div>
+                    <div class="loader-circle-main">
+                        ..LOADING..
+                    </div>
+                    <div class='loader-circle circle--a r-a'></div>
+                    <div class='loader-circle circle--b r-b'></div>
+                    <div class='loader-circle circle--c r-c'></div>
+                    <div class='loader-circle circle--d r-d'></div>
+                    <div class='loader-circle circle--e r-e'></div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="admin_assets/admin-team.js"></script>
+    <script>
+        $(window).load(function() {
+            $('.hover_bkgr_fricc').click(function() {
+                $('.hover_bkgr_fricc').hide();
+            });
+            $('.popupCloseButton').click(function() {
+                $('.hover_bkgr_fricc').hide();
+            });
+        });
+    </script>
 
 </body>
 

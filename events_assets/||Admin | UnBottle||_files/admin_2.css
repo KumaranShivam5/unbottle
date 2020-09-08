@@ -1,0 +1,383 @@
+.showdiv-layout {
+	width:65vw;
+	padding:1vh;
+	border:none;
+	background:white;
+	margin-bottom:2vh;
+}
+
+.showdiv-layout-2 {
+	width:32.4vw;
+	display:inline-block;
+	padding:1vh;
+	border:none;
+	background:white;
+	margin-bottom:2vh;
+}
+
+.showdiv-wrapper {
+	width:80vw;
+	font-family:'ppl';
+	height:90vh;
+	background-color:rgba(176,223,229,0.9);
+	transform:translate(10vw,5vh);
+	border-radius:10px;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+}
+
+.showdiv-wrapper-2 {
+	width:80vw;
+	font-family:'ppl';
+	height:60vh;
+	background-color:rgba(176,223,229,0.9);
+	transform:translate(10vw,20vh);
+	border-radius:10px;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+}
+
+.showdiv-layout-3{
+	width:65vw;
+	height:12vh;
+	padding:1vh;
+	border:none;
+	background:white;
+	margin-bottom:2vh;
+}
+
+.sidenav-wrapper-2 {
+	width:100%;
+	display:flex;
+	align-items:center;
+}
+
+.insta-head {
+	font-size:10vh;
+	color:white;
+	width:65vw;
+	height:30%;
+	font-family:'ppeb';
+	margin-left:2vw;
+}
+
+.insta-card-grid {
+	display:grid;
+	justify-content: center;
+	align-items: center;
+	width:95%;
+	padding-left:5vw;
+	padding-right:5vw;
+	padding-top:2vh;
+	height:70%;
+	overflow-y:scroll;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-gap:1.5vw;
+}
+
+.insta-card {
+  justify-self:start;
+  height:50vh;
+  width:100%;
+  font-family:'ppr';
+  overflow:hidden;
+  border-radius:10px;
+  background-color:rgba(0,0,0,0.7);
+}
+
+.insta-card-subtitle {
+	color:white;
+	font-size:2vh;
+	font-family:'ppl';
+	margin:1vh;
+	word-wrap:break-word;
+	height:35%;
+	overflow:hidden;
+}
+
+.insta-card-im	{
+	width:100%;
+	height:50%;
+}
+
+
+.insta-view-delete {
+	color:#D8BFD8;
+	background:none;
+	font-family:'ppl';
+	bottom: 0px; 
+	font-size:2vh;
+	border-radius:25px;
+	padding:0.5vh 3vh;
+	margin-left:30%;
+	border:solid 1px #D8BFD8;
+}
+
+.insta-view-delete:hover	{
+	background:#D8BFD8;
+	color:black;
+}
+
+.search-bar	{
+   width:70vw;
+   margin-top:2vh;
+   margin-bottom:4vh;
+   margin-left:15vw;
+   display:flex;
+}
+
+.search-button	{
+	border:none;
+	width:5%;
+}
+
+.search-input {
+	width:95%;
+	background:rgba(0,0,0,0.7);
+	color:white;
+	border:solid 1px white;
+	padding:4px;
+}
+
+.search-input-2 {
+	width:90%;
+	background:rgba(0,0,0,0.7);
+	color:white;
+	border:solid 1px white;
+	padding:4px;
+}
+
+.help-card-grid	{
+	width:80vw;
+	padding-right:2vw;
+	padding-left:3vw;
+	margin-left:10vw;
+	height:60vh;
+	overflow-y:scroll;
+}
+
+.help-card 	{
+  width:100%;
+  display:flex;
+  margin-bottom:2vh;  
+  border-radius:10px;
+  background:rgba(255,255,255,0.8);
+}
+
+.help-card-desc {
+  width:80%;
+  padding:1.5vh;
+}
+
+.help-card-title {
+	font-size:3.5vh;
+	font-family:'ppr';
+	color:rgba(0,49,82,1);
+}
+
+.help-card-subtitle {
+	font-size:2vh;
+	margin-bottom:1vh;
+	color:#4682b4;
+}
+
+.help-update-button{
+	width:10%;
+	border:none;
+	background-color:#007FFF;
+	color:black;
+}
+
+.help-delete-button {
+	border-radius:0px 8px 8px 0px;
+	width:10%;
+	border:none;
+	background-color:#0f52ba;
+	color:white;
+}
+
+.help-create-new	{
+  width:60vw;
+  border:none;
+  color:white;
+  background:black;/*rgb(137,207,240)*/
+  padding:1vh;
+  border-left:solid 5px #0f52ba;
+  border-right:solid 5px #0f52ba;
+  border-top:solid 1px #0f52ba;
+  border-bottom:solid 1px #0f52ba;
+	margin-left:20vw;
+	margin-top:3vh;
+}
+
+.help-form-layout {
+	width:80vw;
+	font-family:'ppl';
+	height:85vh;
+	background-color:rgba(176,223,229,0.9);
+	transform:translate(10vw,7vh);
+	border-radius:10px;
+	text-align:center;
+}
+
+.login-form-layout {
+	width:50vw;
+	background:rgba(0,0,0,0.7);
+	display:flex;
+	border-radius:25px;
+	transform:translate(10vw, 40vh);
+	flex-direction:column;
+	align-items:center;
+	padding:5vh 3vh;
+}
+
+.login-form-head {
+	width:80%;
+	color:white;
+	font-size:5vh;
+	font-family:'ppr';
+}
+
+.login-input-layout {
+	width:80%;
+	color:white;
+	background:rgba(76,81,109 ,0.5);
+	border-right:solid 5px #0080ff;
+	border-left:solid 5px #0080ff;
+	border-top:solid 0px #0080ff;
+	border-bottom:solid 0px #0080ff;
+	font-family:'ppl';
+	font-size:2.5vh;
+	padding:1vh;
+	margin-top:2vh;
+	
+}
+
+.login-input-layout:focus {
+	border-right:solid 5px #0080ff;
+	border-left:solid 5px #0080ff;
+	border-top:solid 1px #0080ff;
+	border-bottom:solid 1px #0080ff;
+	background:black;
+}
+
+.login-submit-close-button	{
+	display:inline-block;
+	margin-right:0.5vh;
+	font-family:'ppl';
+	font-size:2.5vh;
+	border-right:solid 4px #0080ff;
+	border-left:solid 4px #0080ff;
+	border-top:solid 1px #0080ff;
+	border-bottom:solid 1px #0080ff;
+	background:black;
+	color:white;
+	width:10vw;
+	padding:1vh;
+	margin-top:2vh;
+}
+
+.login-submit-close-button:hover {
+	background:#0080ff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.3);
+  border:solid 1px white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(176,224,230,0.5); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(176,224,230,1); 
+}
+
+@media only screen and (orientation:portrait) {
+	.insta-head {
+		font-size:6vh;
+		width:90vw;
+		margin-left:5vw;
+	}
+	
+	.sidenav-wrapper-2 {
+		width:100%;
+		display:flex;
+		margin-top:5vh;
+		flex-direction:column;
+	}
+
+	.insta-card-grid {
+		height:60%;
+		grid-template-columns: 1fr 1fr ;
+	}
+
+	.insta-card {
+		height:45vh;
+	}
+
+	.insta-view-delete {
+		margin-left:20%;
+	}
+	
+	.search-bar	{
+		width:80vw;
+		margin-top:3vh;
+		margin-bottom:2vh;
+		margin-left:10vw;
+	}
+
+	.search-button	{
+		width:10%;
+		font-size:2vh;
+	}
+
+	.search-input {
+		width:90%;
+	}
+	
+	.help-form-layout {
+		width:90vw;
+		height:85vh;
+		transform:translate(7vw,10vh);
+	}
+	
+	.help-card-desc {
+		width:70%;
+		padding:1.5vh;
+	}
+
+	.help-card-title {
+		font-size:3vh;
+		font-family:'ppr';
+		color:rgba(0,49,82,1);
+	}
+
+	.help-update-button{
+		width:15%;
+	}
+	
+	.help-delete-button {
+		width:15%;
+	}
+	
+	.login-form-layout {
+		width:70vw;
+		transform:translate(15vw, 40vh);
+		padding:3vh 2vh;
+	}
+	
+	.login-submit-close-button	{
+	font-size:2vh;
+	width:20vw;
+	}
+	
+
+}

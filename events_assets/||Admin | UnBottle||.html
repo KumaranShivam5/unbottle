@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<!--UPDATED on -->
+	<title>||Admin | UnBottle||</title>
+	<link rel="icon" href="http://localhost:8000/general_assets/logo.png">
+	<meta charset="utf-8">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="keyword" content="alfaz-vrishti">
+
+
+	<!--including theme and other css stuff here-->
+	<!--theme.css is for updating the theme and is shared with whole project-->
+	<link rel="stylesheet" href="||Admin%20|%20UnBottle||_files/admin.css">
+	<link rel="stylesheet" href="||Admin%20|%20UnBottle||_files/admin_2.css">
+	<link rel="stylesheet" href="||Admin%20|%20UnBottle||_files/loader.css">
+
+	<link href="||Admin%20|%20UnBottle||_files/css2.css" rel="stylesheet">
+
+	<!--essential scripts-->
+	<script src="||Admin%20|%20UnBottle||_files/jquery.js"></script>
+	<script src="||Admin%20|%20UnBottle||_files/vue.js"></script>
+	<script src="||Admin%20|%20UnBottle||_files/axios.js"></script>
+	<link rel="stylesheet" href="||Admin%20|%20UnBottle||_files/bootstrap.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="||Admin%20|%20UnBottle||_files/bootstrap.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<script src="||Admin%20|%20UnBottle||_files/b1edde977d.js" crossorigin="anonymous"></script><link href="||Admin%20|%20UnBottle||_files/free-v4-shims.css" media="all" rel="stylesheet"><link href="||Admin%20|%20UnBottle||_files/free-v4-font-face.css" media="all" rel="stylesheet"><link href="||Admin%20|%20UnBottle||_files/free.css" media="all" rel="stylesheet">
+</head>
+
+<body>
+
+	<div id="login-vue" class="wrapper-div"><div class="admin-image" style="background-image: url(&quot;admin_assets/images/b10.jpg&quot;);"></div> <div onsubmit="return false" class="row form "><form class="login-form-layout"><div class="login-form-head">LOGIN</div> <input placeholder="Username" type="text" class="login-input-layout" value="kumara"> <input placeholder="Password" type="password" class="login-input-layout"> <div><button type="submit" class="login-submit-close-button">Submit</button> <button onclick="window.location.href='index.html'" class="login-submit-close-button">close</button></div></form></div></div>
+
+	<script>
+		var login_disp = new Vue({
+			el: '#login-vue',
+
+			data: {
+				tkn: "",
+				uname: "",
+				pwd: "",
+			},
+
+			methods: {
+				getCookie(cname) {
+					var name = cname + "=";
+					var decodedCookie = decodeURIComponent(document.cookie);
+					var ca = decodedCookie.split(';');
+					for (var i = 0; i < ca.length; i++) {
+						var c = ca[i];
+						while (c.charAt(0) == ' ') {
+							c = c.substring(1);
+						}
+						if (c.indexOf(name) == 0) {
+							return c.substring(name.length, c.length);
+						}
+					}
+					return "";
+				},
+				user_verification(token) {
+
+					var config = {
+						method: 'get',
+						url: 'https://ushasi.pythonanywhere.com/kumaran/is-user/',
+						headers: {
+							'Authorization': `Token ${token}`
+						}
+					};
+
+					axios(config)
+						.then(function (response) {
+							if (response.data.verified) {
+								return (1)
+							}
+							else return (0)
+						})
+						.catch(function (error) {
+							console.log(error);
+						});
+
+				},
+
+				login() {
+					this.tkn = this.getCookie("token");
+					if (this.tkn) {
+						if (this.user_verification(this.tkn)) { window.location.href = "admin.html"; }
+
+					}
+					else {
+
+
+						axios({
+							method: 'post',
+							url: 'https://dynamickumaran.pythonanywhere.com/admin-view/',
+							headers: {
+								'Content-Type': 'application/json'
+							},
+							data: JSON.stringify({ "username": this.uname, "password": this.pwd })
+						})
+							.then(function (response) {
+								console.log(response)
+								window.alert('Welcome..!!');
+								string = "token=" + response.data.token + "; max-age=3600; Path=/;";
+								document.cookie = string;
+								window.location.href = 'admin.html';
+
+							})
+							.catch(function (error) {
+								console.log(error);
+								window.alert("'get off this admin site now..!! ... oh..you are Nidhi...and forgot your password.....contact Ushasi or Kumaran...'");
+							});
+
+					}
+				},
+			},
+
+			mounted() {
+				this.tkn = this.getCookie("token");
+				if (this.tkn) {
+					if (this.user_verification(this.tkn)) { window.location.href = "admin.html"; }
+				}
+			},
+
+			updated() {
+
+			},
+
+		});
+	</script>
+
+
+</body></html>
