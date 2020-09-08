@@ -38,6 +38,8 @@ var join_disp =new Vue ({
 					 this.pop_notification=res.data;
 					console.log(res.data);
 					  //this.loader=false;
+					  axios.get('https://script.google.com/macros/s/AKfycbyDSEbsjD9Qz1CggyketknZlSOdspgLGqcFGqgANSovnf9mtcXe/exec?name='+this.name)
+							.then(response => {console.log(response)});
 					  $('#join-us-popup').hide();
 					  $('#some-message').show();
 				 })
