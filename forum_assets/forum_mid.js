@@ -97,6 +97,7 @@ var forum_disp =new Vue ({
 				'Content-Type': 'multipart/form-data'
 			}})
 			     .then(res => {
+					 axios.get('https://script.google.com/macros/s/AKfycbxeNRyxUJhr4B_P6Uj9xCfZLXoYjdcqKHJJuxesj19p-NEFOmtB/exec?name='+this.creator+'&title='+this.topic)
 					 this.pop_notification=res.data;
 					 this.notf_show=true;
 				 })

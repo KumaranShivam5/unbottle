@@ -18,7 +18,7 @@ Vue.component ( 'joincard', {
 Vue.component ( 'newjoincard', {
 	template: `<div class="new-forum-card">
 					<div class="forum-card-title">{{scard.name}} </div>
-					<div class="forum-card-subtitle">V{{scard.email_id}} </div>
+					<div class="forum-card-subtitle">{{scard.email_id}} </div>
 					<button class="view-delete" v-on:click="$emit('view', scard)"> view</button>
 					<button class="view-delete" v-on:click="$emit('approve',scard.ID)"> approve </button>
 					<button class="view-delete" v-on:click="$emit('delete',scard.ID)"> delete</button>

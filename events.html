@@ -102,55 +102,115 @@
                     </div>
                 </div>
 
-                <div class="footer-wrapper">
-                    <span class="footer-text">Disclaimer:content open</span>
-                    <span class="footer-text">some contact details</span>
-                    <span class="footer-text">website designed and developed by: </span>
+            </div>
+			<div class="footer-wrapper">
+                <span class="footer-text"><a href="#" onclick="open_popup('#disclaimer-pop')">Disclaimer</a></span>
+                <span class="footer-text">Contact No. : </span>
+				<span class="footer-text">Email ID :</span>
+				<span class="footer-text">Content Copyright: Team UnBottle</span>
+                <span class="footer-text">website designed and developed by: Ushasi and Kumaran </span>
+            </div>
+			
+        </section>
+		
+        <section class="footer">
+			
+        </section>
+    </div>
+	
+	<div class="univ-popup-wrap message-popup" id="disclaimer-pop">
+        <div class="univ-popup-window">
+                <div class="close-btn" onclick="close_popup('#disclaimer-pop')"><img src="general_assets/close-clr.svg" alt="" class="popup-btn-img"></div>
+
+                <p class='popup-message'></p>
+                <img src="index_assets/what-ilst.svg" alt="what is mental health" class="popup-msg-img">
+                <div class="popup-msg-content">
+                    <h4 class="popup-msg-title">Disclaimer</h4>
+                    <p class='popup-message'>
+                        <br>The information contained in this website is for general information purposes only. The information is provided by Unbottle but we make no representations
+						or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability or availability with respect to the website or the
+						information, products, services, or related graphics contained on the website for any purpose. Any reliance you place on such information is therefore
+						strictly at your own risk.
+						In no event will we be liable for any loss or damage in connection with the use of this website.<br>
+						Through this website you may able to link to other websites which are not under the control of Unbottle. We have no control over the nature, content and 
+						availability of those sites.
+						The inclusion of any links does not necessarily imply a recommendation or endorse the views expressed within them.<br>
+						Unbottle takes no responsibility for, and will not be liable for, the website being temporarily unavailable due to technical issues beyond our control.
+                    </p>
+                </div>
+         </div>
+    </div>
+
+
+
+
+    <div id="join-us-mid-end">
+
+        <div class="univ-popup-wrap message-popup" id="some-message">
+            <div class="univ-popup-window">
+                <div class="close-btn" v-on:click="close_message"><img src="general_assets/close-clr.svg" alt="" class="popup-btn-img"></div>
+
+                <p class='popup-message'></p>
+                <img src="index_assets/what-ilst.svg" alt="what is mental health" class="popup-msg-img">
+                <div class="popup-msg-content">
+                    <h4 class="popup-msg-title">Message</h4>
+                    <p class='popup-message'>
+                        <br>{{pop_notification}}
+                    </p>
                 </div>
             </div>
-        </section>
-        <section class="footer">
-
-        </section>
-    </div>
-
-
-
-
-    <div class="univ-popup-wrap" id='join-us-popup'>
-        <div class="univ-popup-window">
-            <img src="general_assets/team.svg" alt="create a forum on mental health" class="popup-img">
-            <div class="close-btn" onclick="close_popup('#join-us-popup')"><img src="general_assets/close-clr.svg" alt="" class="popup-btn-img"></div>
-            <h3 class="popup-title">Join <br><span class='blue-title'>UNBOTTLE</span></h3>
-            <p class="popup-desc">
-                __PLACEHOLDER:01__
-                <br> We are glad to have you on board with us.<br> Tell us the extant and your capacity with which you want to work for Unbottle, <br> and for how long you wish to be a part of Unbottle's efforts,. <br> Leave us any message for us</textxtarea>
-                <br> TEAM UNBOTTLE
-            </p>
-
-            <form action="" method="post" class="popup-form" id="create-fprum">
-                <div class="input-wrap">
-                    <input type="text" id="name" class="char-input char-input-full" placeholder="Name">
-                </div>
-                <div class="input-wrap">
-                    <input type="text" id="name" class="char-input" placeholder='age'>
-                    <input type="text" id="name" class="char-input" placeholder="Profession">
-                </div>
-                <div class="input-wrap">
-                    <input type="text" id="name" class="char-input" placeholder="Email ID">
-                    <input type="text" id="name" class="char-input" placeholder="Contact No">
-                </div>
-                <div class="para-wrap">
-                    <textarea name="message" id="" cols="30" rows="10" class='para-input'></textarea>
-                </div>
-                <div class="button-wrap">
-                    <button type="reset" class="form-btn"><img src="general_assets/reload.svg" alt="" class="popup-btn-img"></button>
-                    <button type="submit" class="form-btn"><img src="general_assets/success.svg" alt="" class="popup-btn-img"></button>
-                </div>
-
-            </form>
         </div>
+
+        <div class="univ-popup-wrap" id='join-us-popup'>
+            <div class="univ-popup-window">
+                <img src="general_assets/team.svg" alt="create a forum on mental health" class="popup-img">
+                <div class="close-btn" v-on:click="close_popup"><img src="general_assets/close-clr.svg" alt="" class="popup-btn-img"></div>
+                <h3 class="popup-title">Join <br><span class='blue-title'>UNBOTTLE</span></h3>
+                <p class="popup-desc">
+                    __PLACEHOLDER:01__
+                    <br> We are glad to have you on board with us.<br> Tell us the extant and your capacity with which you want to work for Unbottle, <br> and for how long you wish to be a part of Unbottle's efforts,. <br> Leave us any message for us</textxtarea>
+                    <br> TEAM UNBOTTLE
+                </p>
+
+                <div class="popup-form" id="create-fprum">
+                    <div class="input-wrap">
+                        <input type="text" id="name" class="char-input char-input-full" placeholder="Name" v-model="name">
+                    </div>
+                    <div class="input-wrap">
+                        <input type="text" id="name" class="char-input" placeholder='age' v-model="age">
+                        <input type="text" id="name" class="char-input" placeholder="Contact No" v-model="contact_no">
+                    </div>
+                    <div class="input-wrap">
+                        <input type="text" id="name" class="char-input char-input-full" placeholder="Profession/Organisation" v-model="profession">
+                    </div>
+                    <div class="input-wrap">
+                        <input type="text" id="name" class="char-input char-input-full" placeholder="Email ID" v-model="email_id">
+                    </div>
+                    <div class="para-wrap">
+                        <label class="popup-label">How long would you like to work for unbottle?</label>
+                        <textarea name="message" id="" cols="30" rows="10" class='para-input' v-model="how_long"></textarea>
+                    </div>
+                    <div class="para-wrap">
+                        <label class="popup-label">In what capacity would you like to work with unbottle?</label>
+                        <textarea name="message" id="" cols="30" rows="10" class='para-input' v-model="work_capacity"></textarea>
+                    </div>
+                    <div class="para-wrap">
+                        <label class="popup-label">Other comments</label>
+                        <textarea name="message" id="" cols="30" rows="10" class='para-input' v-model="other_comments"></textarea>
+                    </div>
+                    <div class="button-wrap">
+                        <button class="form-btn" v-on:click="reset_button"><img src="general_assets/reload.svg" alt="" class="popup-btn-img"></button>
+                        <button class="form-btn" v-on:click="post_query"><img src="general_assets/success.svg" alt="" class="popup-btn-img"></button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
     </div>
+
+    
     <script>
         $(document).ready(function() {
             $('.univ-popup-wrap').fadeOut();
@@ -164,6 +224,7 @@
             $(which_one).fadeOut();
         }
     </script>
+	<script src="general_assets/join.js"></script>
     <script src="events_assets/events_mid.js"></script>
 </body>
 
