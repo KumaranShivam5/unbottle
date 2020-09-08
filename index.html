@@ -203,9 +203,38 @@
         </div>
     </section>
     <section class='footer-section'>
-        <span class='footer-credits'>some footer contents<br>Maybe contacts, of copyright things, <br>maybe site designed and developed by thing..</span>
+		<div class="footer-wrapper">
+                <span class="footer-text"><a href="#" onclick="open_popup('#disclaimer-pop')">Disclaimer</a></span>
+                <span class="footer-text">Contact No. : </span>
+				<span class="footer-text">Email ID :</span>
+				<span class="footer-text">Content Copyright: Team UnBottle</span>
+                <span class="footer-text">website designed and developed by: Ushasi and Kumaran </span>
+            </div>
     </section>
     <script src="index_assets/main.js" async defer></script>
+	
+	<div class="univ-popup-wrap message-popup" id="disclaimer-pop">
+        <div class="univ-popup-window">
+                <div class="close-btn" onclick="close_popup('#disclaimer-pop')"><img src="general_assets/close-clr.svg" alt="" class="popup-btn-img"></div>
+
+                <p class='popup-message'></p>
+                <img src="index_assets/what-ilst.svg" alt="what is mental health" class="popup-msg-img">
+                <div class="popup-msg-content">
+                    <h4 class="popup-msg-title">Disclaimer</h4>
+                    <p class='popup-message'>
+                        <br>The information contained in this website is for general information purposes only. The information is provided by Unbottle but we make no representations
+						or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability or availability with respect to the website or the
+						information, products, services, or related graphics contained on the website for any purpose. Any reliance you place on such information is therefore
+						strictly at your own risk.
+						In no event will we be liable for any loss or damage in connection with the use of this website.<br>
+						Through this website you may able to link to other websites which are not under the control of Unbottle. We have no control over the nature, content and 
+						availability of those sites.
+						The inclusion of any links does not necessarily imply a recommendation or endorse the views expressed within them.<br>
+						Unbottle takes no responsibility for, and will not be liable for, the website being temporarily unavailable due to technical issues beyond our control.
+                    </p>
+                </div>
+         </div>
+    </div>
 
     <div class="univ-popup-wrap message-popup" id="more-on-mental-health">
         <div class="univ-popup-window">
