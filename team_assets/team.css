@@ -50,10 +50,13 @@
 }
 
 .about-us-desc-section {	
-    width:70vw;
+    /*! width:100vw; */
 	margin-left:15vw;
 	margin-top:10vh;
 
+    /*! text-align: center; */
+    /*! padding-left: 20vw; */
+    /*! padding-right: 20vw; */
 }
 
 .team-section {	
@@ -154,7 +157,7 @@ h1 {
 	font-size:10vh;
 	text-align:center;
 	font-family:'ppeb';
-	color:#1C9ECA;
+	color:var(--light-blue-b);
 	transform:translate(0,20vh);
 }
 
