@@ -206,7 +206,8 @@ var forum_admin_disp =new Vue ({
 		},
 		
 		approve_forum(id)	{
-			axios.patch(apiurl+"kumaran/set-forum-approval/"+id+"/approve")
+			var tkn = getCookie('token');
+			axios.patch(apiurl+"kumaran/set-forum-approval/"+id+"/approve", {headers: {'Authorization':`Token ${tkn}`} })
 			     .then(res => {
 					 console.log(res);
 					 axios.get(apiurl+'kumaran/view-forum-list/')
