@@ -27,7 +27,7 @@ else {
             if(!stat){window.location.href='admin-login.html'}
         }
     });
-    xhr.open("GET", "https://ushasi.pythonanywhere.com/kumaran/is-user/");
+    xhr.open("GET", "https://ushasi.pythonanywhere.com/kumaran/api-token-auth/");
     xhr.setRequestHeader("Authorization", `Token ${token}`);
     xhr.send();
 }
