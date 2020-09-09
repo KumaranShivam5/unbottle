@@ -226,6 +226,7 @@ var event_disp =new Vue ({
 					 axios.get(apiurl+'kumaran/view-all-events/')
 						  .then(resp => {
 							  this.event_array=JSON.parse(JSON.stringify(resp.data));
+						 	  this.sort();
 						  });
 				 });
 		},
