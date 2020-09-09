@@ -1,4 +1,4 @@
-var apiurl = 'https://ushasi.pythonanywhere.com/';
+var apiurl = 'https://unbottle.pythonanywhere.com/';
 
 Vue.component ( 'helpcard', {
 	template: `<div class="h-card">
