@@ -1,4 +1,4 @@
-var apiurl = 'https://ushasi.pythonanywhere.com/';
+var apiurl = 'https://unbottle.pythonanywhere.com/';
 
 Vue.component('instacard', {
     template: `<div class="grid-item" v-on:click="$emit('open', scard.post_url)">

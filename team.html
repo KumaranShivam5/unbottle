@@ -9,7 +9,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
+    <title>||UnBottle|About||</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
@@ -56,11 +56,13 @@
     <div class="wrap-it-up" id="team-mid-end">
 
         <nav class='top-nav'>
-            <item>HOME</item>
-            <item>TEAM</item>
-            <item>ADVISOR</item>
-            <item>FORUM</item>
-            <item class='menu-btn'>JOIN US</item>
+            <item onclick="window.location.href='index.html'">HOME</item>
+            <item onclick="window.location.href='team.html'">ABOUT</item>
+            <item onclick="window.location.href='help_page.html'">HELPLINE</item>
+            <item onclick="window.location.href='insta.html'">INSTAGRAM</item>
+            <item onclick="window.location.href='forum.html'">FORUM</item>
+            <item onclick="window.location.href='events.html'">EVENTS</item>
+            <item class='menu-btn' onclick="open_popup('#join-us-popup')">JOIN US</item>
         </nav>
         <section class="landing-section">
             <img src="team_assets/team_v2.svg" alt="team unbottle" class="landing-ilst">
@@ -96,50 +98,17 @@
             </article>
         </section>
 
-        <section class="team-section">
-            <div class="team-head-2"> MEET THE TEAM </div>
-            <div class="background-vec-2"><img src="team_assets/images/vec29.png" class="vec-resize"></div>
-
-            <div class="team-card-wrapper">
-                <teamcard v-for="acard in team_array" :scard="acard" :key="acard.ID"></teamcard>
-            </div>
-        </section>
+        <div class="team-head-2"> MEET THE TEAM </div>
         <section class="trial">
+			
             <div class="trial-wrap">
-                <div class="trial-card">
-                    <div class="trial-card-wrap">
-                        <div class="trial-card-skew"></div>
-                        <div class="trial-card-img"></div>
-                        <div class="trial-overlay-dark"></div>
-                        <div class="trial-overlay">
-                            <p class="overlay-quote">"Som quote about me"</p>
-                            <div class="trial-card-details">
-                                <span class="trial-card-detail">Name Here</span>
-                                <span class="trial-card-detail">Position</span>
-                                <span class="trial-card-detail">kumaranshivam57@gmail.com</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="trial-card">
-                    <div class="trial-card-wrap">
-                        <div class="trial-card-skew"></div>
-                        <div class="trial-card-img" style="background-image: url('team-assets/1.webp');"></div>
-                        <div class="trial-overlay-dark"></div>
-                        <div class="trial-overlay">
-                            <p class="overlay-quote">"Som quote about me"</p>
-                            <div class="trial-card-details">
-                                <span class="trial-card-detail">Name Here</span>
-                                <span class="trial-card-detail">Position</span>
-                                <span class="trial-card-detail">kumaranshivam57@gmail.com</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+               <teamcard v-for="acard in team_array" :scard="acard" :key="acard.ID"></teamcard>
             </div>
         </section>
 
     </div>
+	
+	
     <script src="team_assets/team_mid.js"></script>
     <script src="general_assets/join.js"></script>
 
@@ -162,10 +131,6 @@
         }
     </script>
 
-
-    <script src="forum_assets/forum.js" async defer></script>
-
-    <script src="forum_assets/forum_mid.js"></script>
 
 
 </body>

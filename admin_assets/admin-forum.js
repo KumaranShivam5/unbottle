@@ -1,4 +1,4 @@
-var apiurl = 'https://ushasi.pythonanywhere.com/';
+var apiurl = 'https://unbottle.pythonanywhere.com/';
 
 Vue.component ( 'forumcard', {
 	template: `<div class="forum-card">
@@ -349,7 +349,7 @@ var forum_admin_disp =new Vue ({
 		this.apiurl = apiurl;
 		this.loader=true;
 		
-		axios.all([axios.get(apiurl+'kumaran/view-forum-list/'), axios.get(apiurl+'kumaran/view-forum-id/1'),axios.get(apiurl+'kumaran/view-forum-ctg/')])
+		axios.all([axios.get(apiurl+'kumaran/view-forum-list/'), axios.get(apiurl+'kumaran/view-forum-id/6'),axios.get(apiurl+'kumaran/view-forum-ctg/')])
 			 .then(axios.spread((a,b, c) => {
 				 this.forum_array=JSON.parse(JSON.stringify(a.data));
 				 this.forum_message=JSON.parse(JSON.stringify(b.data));

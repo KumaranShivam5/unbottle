@@ -11,7 +11,7 @@ Vue.component ( 'forumcard', {
 	props:["scard"]
 });
 
-var apiurl='https://ushasi.pythonanywhere.com/';
+var apiurl='https://unbottle.pythonanywhere.com/';
 
 
 var forum_disp =new Vue ({

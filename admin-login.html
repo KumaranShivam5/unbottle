@@ -78,7 +78,7 @@
                     console.log('inside user verification')
                     var config = {
                         method: 'get',
-                        url: 'https://ushasi.pythonanywhere.com/kumaran/is-user/',
+                        url: 'https://unbottle.pythonanywhere.com/kumaran/is-user/',
                         headers: {
                             'Authorization': `Token ${token}`
                         }
@@ -113,7 +113,7 @@
 
                         axios({
                                 method: 'post',
-                                url: 'https://ushasi.pythonanywhere.com/kumaran/api-token-auth/',
+                                url: 'https://unbottle.pythonanywhere.com/kumaran/api-token-auth/',
                                 headers: {
                                     'Content-Type': 'application/json'
                                 },
@@ -132,7 +132,7 @@
                             })
                             .catch(function(error) {
                                 console.log(error);
-                                window.alert("'get off this admin site now..!! ... oh..you are Nidhi...and forgot your password.....contact Ushasi or Kumaran...'");
+                                window.alert("'Invalid Credentials... contact customer support'");
                             });
 
                     }
