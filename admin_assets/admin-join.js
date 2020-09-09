@@ -1,4 +1,4 @@
-var apiurl = 'http://unbottle.pythonanywhere.com/';
+var apiurl = 'https://unbottle.pythonanywhere.com/';
 
 Vue.component ( 'joincard', {
 	template: `<div class="forum-card">
