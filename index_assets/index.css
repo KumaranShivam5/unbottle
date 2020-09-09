@@ -15,6 +15,66 @@ font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
 
+
+.h-event-details{
+    
+    grid-area: title;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.h-event-details-title{
+    
+    color: white;
+    font-size: 6vh;
+    margin: 1vh;
+}
+.h-event-ilst{
+    
+    width: 100%;
+    grid-area: ilst;
+    grid-template-columns: 1fr 0;
+    grid-template-rows: 1fr 0fr;
+}
+.h-event-section{
+    
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    /*! background: var(--pink-a); */
+    padding: 5vh;
+}
+.h-event-wrapper{
+    
+    width: 80%;
+    display: grid;
+    grid-template-areas: "ilst title";
+    grid-template-columns: 1fr 1fr;
+    background: var(--pink-a);
+    padding: 8vh;
+    border-radius: 17vh;
+}
+
+.h-page-button{
+    
+    padding: 2vh;
+    background: white;
+    border: 0;
+    color: white;
+    font-size: 2vh;
+    border-radius: 5vh;
+    transition: 0.3s;
+    margin: 1vh;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 body {
     margin: 0px;
     padding: 0px;
@@ -22,6 +82,11 @@ body {
     overflow-x: hidden;
 }
 
+.h-page-button:hover{
+    
+    background: var(--light-blue-a);
+    color: white !important;
+}
 a {
     color: unset;text-decoration: none;
 }
@@ -511,7 +576,7 @@ item{
     .forum-talk{}
     .forum-text{align-self: first baseline;}
     .forum-title{align-self: first baseline;justify-self: baseline;text-align: left;}
-    .forum-wrapper{width: 90%;height: unset;grid-template-rows: 1fr 2fr 2fr 0fr;grid-template-columns: 2fr 0.6fr;}
+    .forum-wrapper{width: 90%;height: unset;grid-template-rows: 1fr 1fr 2fr 0fr;grid-template-columns: 2fr 0.6fr;}
     .open-forum-btn{justify-self: first baseline;}
     .footer-section{margin-top: 0;height: 30vh;}
     .footer-credits{font-size: 1.5vh;}
@@ -523,7 +588,12 @@ item{
     .adv-card-container{}
     .top-nav{display: none !important;}
     .focal-btn{box-shadow: none;}
-    
+    .h-event-section{}
+    .h-event-wrapper{padding: 0;grid-template-areas: "ilst" "title";width: 100%;padding: 0;grid-template-columns: 1fr 0fr;border-radius: 0;margin-top: 5vh;padding-top: 5vh;padding-bottom: 5vh;}
+    .h-event-ilst{}
+    .h-event-details{}
+    .h-event-details-title{}
+    .h-event-section{padding: 0;}
 
 }
         
