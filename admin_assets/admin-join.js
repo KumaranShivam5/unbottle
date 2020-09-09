@@ -97,7 +97,7 @@ var team_disp =new Vue ({
 					 console.log(res);
 					 axios.get(apiurl+'kumaran/view-all-join-request/')
 						  .then(resp => {
-							  this.team_array=JSON.parse(JSON.stringify(resp.data));
+							  this.join_array=JSON.parse(JSON.stringify(resp.data));
 						 	  this.sort();
 						  });
 				 });
