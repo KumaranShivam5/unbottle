@@ -7,10 +7,7 @@ Vue.component ( 'forumcard', {
                             <span class="card-title">
 								{{scard.topic}}
                             </span>
-                            <div class="card-subtext">
-                                <span class="msg-writer">Anonymus</span>
-                                <span class="card-message">this is the placeholder that contains most recent message in this thread</span>
-                            </div>
+                       
                             <div class="card-details">
                                 <div class="card-detail-item">
                                     <span class="card-detail-head">Created BY - </span><span class="card-detail-text">{{scard.creator}}</span>
@@ -136,7 +133,7 @@ var forum_disp =new Vue ({
 				.then(axios.spread ( (a,b)=> {
 					this.forum_array=JSON.parse(JSON.stringify(a.data));
 					this.ctg_array=JSON.parse(JSON.stringify(b.data));
-				 //this.get_right_stuff();
+				 this.get_right_stuff();
 				} ));
 		}
 		
@@ -146,7 +143,7 @@ var forum_disp =new Vue ({
 				.then(axios.spread ( (a,b)=> {
 					this.forum_array=JSON.parse(JSON.stringify(a.data));
 					this.ctg_array=JSON.parse(JSON.stringify(b.data));
-				 //this.get_right_stuff();
+				 this.get_right_stuff();
 				} ));
 		}
 	},	
