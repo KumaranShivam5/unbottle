@@ -26,7 +26,7 @@ if (!token) {
             if (!stat) { window.location.href = 'admin-login.html' }
         }
     });
-    xhr.open("GET", "https://ushasi.pythonanywhere.com/kumaran/is-user/");
+    xhr.open("GET", "http://unbottle.pythonanywhere.com/kumaran/is-user/");
     xhr.setRequestHeader("Authorization", `Token ${token}`);
     xhr.send();
 }
