@@ -72,9 +72,8 @@
                     <span class="h-title-black">REACH</span>
                     <span class="h-title-blue">OUT</span>
                     <span class='title-about'>
-                    some para about this page,. right now i am filling this placeholder with random content,
-            will fill up this with proper content , once you give it to us, now I need to write one more line
-                </span>
+                        ...
+                    </span>
                 </div>
                 <div class="logo">
                     <img src="help_assets/logo.png" alt="unbottle" class="logo-img">
@@ -94,21 +93,21 @@
                         <helpcard v-for="acard in help_array" :key="acard.ID" :scard=acard @text="contactus"></helpcard>
                     </div>
                 </div>
-            <div class="footer-wrapper">
-                <span class="footer-text"><a href="#" onclick="open_popup('#disclaimer-pop')">Disclaimer</a></span>
-                <span class="footer-text">Email ID: unbottle.vrss@gmail.com</span>
-				<span class="footer-text">Instagram - https://instagram.com/un.bottle?igshid=1lmu6lwwr2fdi </span>
-				<span class="footer-text">Content Copyright: Team UnBottle</span>
-                <span class="footer-text">website designed and developed by: Ushasi and Kumaran </span>
-            </div>
+                <div class="footer-wrapper">
+                    <span class="footer-text"><a href="#" onclick="open_popup('#disclaimer-pop')">Disclaimer</a></span>
+                    <span class="footer-text">Email ID: unbottle.vrss@gmail.com</span>
+                    <span class="footer-text">Instagram - https://instagram.com/un.bottle?igshid=1lmu6lwwr2fdi </span>
+                    <span class="footer-text">Content Copyright: Team UnBottle</span>
+                    <span class="footer-text">website designed and developed by: Ushasi and Kumaran </span>
+                </div>
             </div>
         </section>
         <section class="footer">
 
         </section>
-		
-		<div class="univ-popup-wrap message-popup" id="disclaimer-pop">
-			<div class="univ-popup-window">
+
+        <div class="univ-popup-wrap message-popup" id="disclaimer-pop">
+            <div class="univ-popup-window">
                 <div class="close-btn" onclick="close_popup('#disclaimer-pop')"><img src="general_assets/close-clr.svg" alt="" class="popup-btn-img"></div>
 
                 <p class='popup-message'></p>
@@ -116,21 +115,17 @@
                 <div class="popup-msg-content">
                     <h4 class="popup-msg-title">Disclaimer</h4>
                     <p class='popup-message'>
-                        <br>The information contained in this website is for general information purposes only. The information is provided by Unbottle but we make no representations
-						or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability or availability with respect to the website or the
-						information, products, services, or related graphics contained on the website for any purpose. Any reliance you place on such information is therefore
-						strictly at your own risk.
-						In no event will we be liable for any loss or damage in connection with the use of this website.<br>
-						Through this website you may able to link to other websites which are not under the control of Unbottle. We have no control over the nature, content and 
-						availability of those sites.
-						The inclusion of any links does not necessarily imply a recommendation or endorse the views expressed within them.<br>
-						Unbottle takes no responsibility for, and will not be liable for, the website being temporarily unavailable due to technical issues beyond our control.
+                        <br>The information contained in this website is for general information purposes only. The information is provided by Unbottle but we make no representations or warranties of any kind, express or implied, about the completeness,
+                        accuracy, reliability, suitability or availability with respect to the website or the information, products, services, or related graphics contained on the website for any purpose. Any reliance you place on such information is
+                        therefore strictly at your own risk. In no event will we be liable for any loss or damage in connection with the use of this website.<br> Through this website you may able to link to other websites which are not under the control
+                        of Unbottle. We have no control over the nature, content and availability of those sites. The inclusion of any links does not necessarily imply a recommendation or endorse the views expressed within them.<br> Unbottle takes no
+                        responsibility for, and will not be liable for, the website being temporarily unavailable due to technical issues beyond our control.
                     </p>
                 </div>
-			</div>
-		</div>
-		
-		<div class="univ-popup-wrap message-popup" id="notfpop">
+            </div>
+        </div>
+
+        <div class="univ-popup-wrap message-popup" id="notfpop">
             <div class="univ-popup-window">
                 <div class="close-btn" v-on:click="close_message"><img src="general_assets/close-clr.svg" alt="" class="popup-btn-img"></div>
 
@@ -151,8 +146,8 @@
                 <div class="close-btn" v-on:click="closecontactus"><img src="general_assets/close-clr.svg" alt="" class="popup-btn-img"></div>
                 <h3 class="popup-title">Join <br><span class='blue-title'>UNBOTTLE</span></h3>
                 <p class="popup-desc">
-                    __PLACEHOLDER:01__
-                    <br>  Please tell us your query
+
+                    <br> Please tell us your query
                     <br> TEAM UNBOTTLE
                 </p>
 
@@ -175,10 +170,10 @@
                 </div>
             </div>
         </div>
-		
+
     </div>
-	
-	<div id="join-us-mid-end">
+
+    <div id="join-us-mid-end">
 
         <div class="univ-popup-wrap message-popup" id="some-message">
             <div class="univ-popup-window">
@@ -201,7 +196,7 @@
                 <div class="close-btn" v-on:click="close_popup"><img src="general_assets/close-clr.svg" alt="" class="popup-btn-img"></div>
                 <h3 class="popup-title">Join <br><span class='blue-title'>UNBOTTLE</span></h3>
                 <p class="popup-desc">
-                    __PLACEHOLDER:01__
+
                     <br> We are glad to have you on board with us.<br> Tell us the extant and your capacity with which you want to work for Unbottle, <br> and for how long you wish to be a part of Unbottle's efforts,. <br> Leave us any message for us</textxtarea>
                     <br> TEAM UNBOTTLE
                 </p>
@@ -246,7 +241,7 @@
 
 
     <script src="general_assets/join.js"></script>
-    
+
     <script>
         $(document).ready(function() {
             $('.univ-popup-wrap').fadeOut();
