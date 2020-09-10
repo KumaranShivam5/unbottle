@@ -107,6 +107,73 @@
         </section>
 
     </div>
+    
+    <div id="join-us-mid-end">
+
+        <div class="univ-popup-wrap message-popup" id="some-message">
+            <div class="univ-popup-window">
+                <div class="close-btn" v-on:click="close_message"><img src="general_assets/close-clr.svg" alt="" class="popup-btn-img"></div>
+
+                <p class='popup-message'></p>
+                <img src="index_assets/what-ilst.svg" alt="what is mental health" class="popup-msg-img">
+                <div class="popup-msg-content">
+                    <h4 class="popup-msg-title">Message</h4>
+                    <p class='popup-message'>
+                        <br>{{pop_notification}}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="univ-popup-wrap" id='join-us-popup'>
+            <div class="univ-popup-window">
+                <img src="general_assets/team.svg" alt="create a forum on mental health" class="popup-img">
+                <div class="close-btn" v-on:click="close_popup"><img src="general_assets/close-clr.svg" alt="" class="popup-btn-img"></div>
+                <h3 class="popup-title">Join <br><span class='blue-title'>UNBOTTLE</span></h3>
+                <p class="popup-desc">
+                    <br> Do you wish to be a part of Unbottle? <br>Are you someone who advocates/wishes to advocate for Mental Health? <br>Do you wish to be a part 
+			of our initiative and help create an environment devoid of stigmas where you and your fellow hooomans can unbottle their emotions ? 
+			<br>If yes, then volunteer with us in any capacity you wish to!
+                    <br> TEAM UNBOTTLE
+                </p>
+
+                <div class="popup-form" id="create-fprum">
+                    <div class="input-wrap">
+                        <input type="text" id="name" class="char-input char-input-full" placeholder="Name" v-model="name">
+                    </div>
+                    <div class="input-wrap">
+                        <input type="text" id="name" class="char-input" placeholder='age' v-model="age">
+                        <input type="text" id="name" class="char-input" placeholder="Contact No" v-model="contact_no">
+                    </div>
+                    <div class="input-wrap">
+                        <input type="text" id="name" class="char-input char-input-full" placeholder="Profession/Organisation" v-model="profession">
+                    </div>
+                    <div class="input-wrap">
+                        <input type="text" id="name" class="char-input char-input-full" placeholder="Email ID" v-model="email_id">
+                    </div>
+                    <div class="para-wrap">
+                        <label class="popup-label">How long would you like to work for unbottle?</label>
+                        <textarea name="message" id="" cols="30" rows="10" class='para-input' v-model="how_long"></textarea>
+                    </div>
+                    <div class="para-wrap">
+                        <label class="popup-label">In what capacity would you like to work with unbottle?</label>
+                        <textarea name="message" id="" cols="30" rows="10" class='para-input' v-model="work_capacity"></textarea>
+                    </div>
+                    <div class="para-wrap">
+                        <label class="popup-label">Other comments</label>
+                        <textarea name="message" id="" cols="30" rows="10" class='para-input' v-model="other_comments"></textarea>
+                    </div>
+                    <div class="button-wrap">
+                        <button class="form-btn" v-on:click="reset_button"><img src="general_assets/reload.svg" alt="" class="popup-btn-img"></button>
+                        <button class="form-btn" v-on:click="post_query"><img src="general_assets/success.svg" alt="" class="popup-btn-img"></button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
 
 
     <script src="team_assets/team_mid.js"></script>
