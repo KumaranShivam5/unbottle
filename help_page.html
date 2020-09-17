@@ -37,10 +37,10 @@
             <a href='index.html' class="mb-menu-item">HOME</a>
             <a href="insta.html" class="mb-menu-item">INSTAGRAM</a>
             <a href="forum.html" class="mb-menu-item">FORUM</a>
-            <a href="help_page.html" class="mb-menu-item">HELPLINE</a>
+            <a href="help_page.html" class="mb-menu-item">SEEK HELP</a>
             <a href="team.html" class="mb-menu-item">ABOUT</a>
             <a href="events.html" class="mb-menu-item">EVENTS</a>
-            <a href="#" onclick="open_popup()" class="mb-menu-item mb-join-btn">JOIN US</a>
+            <a href="#" onclick="open_popup()" class="mb-menu-item mb-join-btn">VOLUNTEER</a>
         </div>
     </div>
     <script>
@@ -62,11 +62,11 @@
                 <nav class='top-nav'>
                     <item onclick="window.location.href='index.html'">HOME</item>
                     <item onclick="window.location.href='team.html'">ABOUT</item>
-                    <item onclick="window.location.href='help_page.html'">HELPLINE</item>
+                    <item onclick="window.location.href='help_page.html'">SEEK HELP</item>
                     <item onclick="window.location.href='insta.html'">INSTAGRAM</item>
                     <item onclick="window.location.href='forum.html'">FORUM</item>
                     <item onclick="window.location.href='events.html'">EVENTS</item>
-                    <item class='menu-btn' onclick="open_popup('#join-us-popup')">JOIN US</item>
+                    <item class='menu-btn' onclick="open_popup('#join-us-popup')">VOLUNTEER</item>
                 </nav>
                 <div class="h-title">
                     <span class="h-title-black">REACH</span>
@@ -78,16 +78,27 @@
                 <div class="logo">
                     <img src="help_assets/logo.png" alt="unbottle" class="logo-img">
                 </div>
+				
             </div>
+			
         </section>
         <section class="h-content">
+			<div class="h-intro-text">
+				<div style="width:70vw;transform:translate(15vw,0);">
+				<b>Psychiatrists</b> are medical doctors while <b>psychologists</b> aren't.
+				Treatment by <b>psychiatrists</b> include medication, brain stimulation therapies, psychological treatments, etc.<br>
+				<b>Psychologists</b> focus on providing psychological treatments.
+				<b>Psychiatrists</b> usually treat people with complex conditions such as schizophrenia, severe depression, etc.<br>
+				<b>Psychologists</b> are more likely to see people with conditions that can be helped with psychological treatments which include learning difficulties, depression and 
+				anxiety.</div>
+			</div>
             <span class="h-about">
             
         </span>
             <div class="h-content-wrapper">
                 <div class="main-content">
                     <div class="content-title">
-                        <span class="title-section">HELPLINES</span>
+                        <span class="title-section">SEEK HELP</span>
                     </div>
                     <div class="card-wrapper">
                         <helpcard v-for="acard in help_array" :key="acard.ID" :scard=acard @text="contactus"></helpcard>
@@ -206,7 +217,7 @@
                         <input type="text" id="name" class="char-input char-input-full" placeholder="Name" v-model="name">
                     </div>
                     <div class="input-wrap">
-                        <input type="text" id="name" class="char-input" placeholder='age' v-model="age">
+                        <input type="text" id="name" class="char-input" placeholder='Age' v-model="age">
                         <input type="text" id="name" class="char-input" placeholder="Contact No" v-model="contact_no">
                     </div>
                     <div class="input-wrap">
@@ -216,11 +227,11 @@
                         <input type="text" id="name" class="char-input char-input-full" placeholder="Email ID" v-model="email_id">
                     </div>
                     <div class="para-wrap">
-                        <label class="popup-label">How long would you like to work for unbottle?</label>
+                        <label class="popup-label">How long would you like to volunteer unbottle?</label>
                         <textarea name="message" id="" cols="30" rows="10" class='para-input' v-model="how_long"></textarea>
                     </div>
                     <div class="para-wrap">
-                        <label class="popup-label">In what capacity would you like to work with unbottle?</label>
+                        <label class="popup-label">In what capacity would you like to volunteer unbottle?</label>
                         <textarea name="message" id="" cols="30" rows="10" class='para-input' v-model="work_capacity"></textarea>
                     </div>
                     <div class="para-wrap">
