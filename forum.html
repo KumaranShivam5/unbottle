@@ -10,7 +10,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>||UnBottle|Forum||</title>
-    <meta name="description" content="">
+    <meta name="description" content="Breaking Stigmas, Unbottling Emotions. We, at Unbottle aim to create a safe space for people to vent their feels, unbottle their emotions.
+	A no judgement zone for you to let your thoughts flow. Share your thoughts here!">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.0/vue.js"></script>
@@ -25,9 +26,9 @@
 
 <body>
     <!--can you keep this mobile menu out of vue ..??....if not put iska wala script in head..-->
-    <div class="mb-menu-btn open-btn" onclick="open_mb_menu()"><img src="general_assets/open-menu.svg" alt=""></div>
+    <div class="mb-menu-btn open-btn" onclick="open_mb_menu()"><img src="general_assets/open-menu.svg" alt="mobile menu for unbottle"></div>
     <div class="mb-menu-wrapper" onclick="close_mb_menu()">
-        <div class="mb-menu-btn close-btn"><img src="general_assets/close.svg" alt=""></div>
+        <div class="mb-menu-btn close-btn"><img src="general_assets/close.svg" alt="mobile menu for unbottle"></div>
         <div class="mb-menu">
             <a href='index.html' class="mb-menu-item">HOME</a>
             <a href="insta.html" class="mb-menu-item">INSTAGRAM</a>
@@ -55,17 +56,17 @@
         <![endif]-->
 <div id="forum-mid-end">
         <section class="landing-section">
-            <div class="top-left-splash splash"><img src="forum_assets/ilst/splash_01.svg" style="width: 30vw;"></div>
+            <div class="top-left-splash splash"><img src="forum_assets/ilst/splash_01.svg" alt="share your views" style="width: 30vw;"></div>
             <div class="logo">
-                <img src="forum_assets/ilst/Group 6.png">
+                <img src="forum_assets/ilst/Group 6.png" alt="share your views on this mental health forum">
             </div>
             <nav class="top-nav">
-                <item onclick="window.location.href='index.html'">HOME</item>
-                <item onclick="window.location.href='team.html'">ABOUT</item>
-                <item onclick="window.location.href='help_page.html'">SEEK HELP</item>
-                <item onclick="window.location.href='insta.html'">INSTAGRAM</item>
-                <item onclick="window.location.href='forum.html'">FORUM</item>
-                <item onclick="window.location.href='events.html'">EVENTS</item>
+                <item><a href="index.html">HOME</a></item>
+                <item><a href="team.html">ABOUT</a></item>
+                <item><a href="help_page.html">SEEK HELP</a></item>
+                <item><a href="insta.html">INSTAGRAM</a></item>
+                <item><a href="forum.html">FORUM</a></item>
+                <item><a href="events.html">EVENTS</a></item>
                 <item class='menu-btn' onclick="open_popup('#join-us-popup')">VOLUNTEER</item>
             </nav>
             <div class="landing-heading">
@@ -75,7 +76,7 @@
                 <span class="title-out">AWAY</span>
             </div>
             <div class="landing-illustration">
-                <img src="forum_assets/ilst/undraw_team_work_k80m.svg" style="height: 100%;
+                <img src="forum_assets/ilst/undraw_team_work_k80m.svg" alt="share your views" style="height: 100%;
             padding-bottom: 5vh;
             width: 100%;
             object-fit: contain;">
@@ -98,7 +99,7 @@
                     <div class="card-container">
                         <div class=card onclick="open_popup('#create-forum-popup')">
                             <div class="create-card-title">CREATE FORUM</div>
-                            <div class="create-card-btn"><img src="general_assets/plus.svg" alt="" class="create-forum-btn-img">
+                            <div class="create-card-btn"><img src="general_assets/plus.svg" alt="topics of discussion" class="create-forum-btn-img">
                             </div>
                         </div>
                         <forumcard v-for="acard in forum_array" :scard="acard" :key="acard.ID" @read=searchstuff></forumcard>
@@ -112,7 +113,7 @@
 			<div class="footer-wrapper">
                 <span class="footer-text"><a href="#" onclick="open_popup('#disclaimer-pop')">Disclaimer</a></span>
                 <span class="footer-text">Email ID: unbottle.vrss@gmail.com</span>
-				<span class="footer-text">Instagram - https://instagram.com/un.bottle?igshid=1lmu6lwwr2fdi </span>
+				<span class="footer-text"><a href="https://instagram.com/un.bottle?igshid=1lmu6lwwr2fdi">Check out our Instagram </a></span>
 				<span class="footer-text">Content Copyright: Team UnBottle</span>
                 <span class="footer-text">website designed and developed by: Ushasi and Kumaran </span>
             </div>
@@ -120,7 +121,7 @@
 		
 		<div class="univ-popup-wrap message-popup" id="disclaimer-pop">
         <div class="univ-popup-window">
-                <div class="close-btn" onclick="close_popup('#disclaimer-pop')"><img src="general_assets/close-clr.svg" alt="" class="popup-btn-img"></div>
+                <div class="close-btn" onclick="close_popup('#disclaimer-pop')"><img src="general_assets/close-clr.svg" alt="close unbottle popup" class="popup-btn-img"></div>
 
                 <p class='popup-message'></p>
                 <img src="index_assets/what-ilst.svg" alt="what is mental health" class="popup-msg-img">
@@ -144,7 +145,7 @@
     <div class="univ-popup-wrap" id='create-forum-popup'>
         <div class="univ-popup-window">
             <img src="forum_assets/ilst/undraw_team_work_k80m.svg" alt="create a forum on mental health" class="popup-img">
-            <div class="close-btn" v-on:click="close_button"><img src="general_assets/close-clr.svg" alt="" class="popup-btn-img"></div>
+            <div class="close-btn" v-on:click="close_button"><img src="general_assets/close-clr.svg" alt="close unbottle popup" class="popup-btn-img"></div>
             <h3 class="popup-title">Create a Forum</h3>
             <p class="popup-desc">
                 Once You submit this forum create request, kindly wait for some time for one of the moderators, to approve your this forum create request.<br> Team UNBOTTLE , are glad that you are creating a forum, <br> Thanks,
@@ -169,8 +170,8 @@
 						<label class="filelabel" for="g01">Image</label><br>
                     </div>
                     <div class="button-wrap">
-                        <button type="reset" class="form-btn" v-on:click="reset_data"><img src="general_assets/reload.svg" alt="" class="popup-btn-img"></button>
-                        <button type="submit" class="form-btn" v-on:click="new_forum"><img src="general_assets/success.svg" alt="" class="popup-btn-img"></button>
+                        <button type="reset" class="form-btn" v-on:click="reset_data"><img src="general_assets/reload.svg" alt="reload unbottle popup" class="popup-btn-img"></button>
+                        <button type="submit" class="form-btn" v-on:click="new_forum"><img src="general_assets/success.svg" alt="submit form" class="popup-btn-img"></button>
                     </div>
                 </div>
         </div>
@@ -178,7 +179,7 @@
 	
 	<div class="univ-popup-wrap message-popup" v-if="notf_show">
         <div class="univ-popup-window">
-            <div class="close-btn" v-on:click="notf_show=false"><img src="general_assets/close-clr.svg" alt="" class="popup-btn-img"></div>
+            <div class="close-btn" v-on:click="notf_show=false"><img src="general_assets/close-clr.svg" alt="reload unbottle popup" class="popup-btn-img"></div>
 
             <p class='popup-message'></p>
             <img src="index_assets/what-ilst.svg" alt="what is mental health" class="popup-msg-img">
@@ -213,7 +214,7 @@
     <div class="univ-popup-wrap" id='join-us-popup'>
         <div class="univ-popup-window">
             <img src="general_assets/team.svg" alt="create a forum on mental health" class="popup-img">
-            <div class="close-btn" v-on:click="close_popup"><img src="general_assets/close-clr.svg" alt="" class="popup-btn-img"></div>
+            <div class="close-btn" v-on:click="close_popup"><img src="general_assets/close-clr.svg" alt="close unbottle popup" class="popup-btn-img"></div>
             <h3 class="popup-title">Join <br><span class='blue-title'>UNBOTTLE</span></h3>
             <p class="popup-desc">
                 <br> Do you wish to be a part of Unbottle? <br>Are you someone who advocates/wishes to advocate for Mental Health? <br>Do you wish to be a part 
@@ -249,8 +250,8 @@
                     <textarea name="message" id="" cols="30" rows="10" class='para-input' v-model="other_comments"></textarea>
                 </div>
                 <div class="button-wrap">
-                    <button class="form-btn" v-on:click="reset_button"><img src="general_assets/reload.svg" alt="" class="popup-btn-img"></button>
-                    <button class="form-btn" v-on:click="post_query"><img src="general_assets/success.svg" alt="" class="popup-btn-img"></button>
+                    <button class="form-btn" v-on:click="reset_button"><img src="general_assets/reload.svg" alt="reload unbottle popup" class="popup-btn-img"></button>
+                    <button class="form-btn" v-on:click="post_query"><img src="general_assets/success.svg" alt="submit form" class="popup-btn-img"></button>
                 </div>
 
             </div>
