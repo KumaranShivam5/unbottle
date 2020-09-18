@@ -10,7 +10,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>||UnBottle|About||</title>
-    <meta name="description" content="">
+	<meta name="description" content="Breaking Stigmas, Unbottling Emotions. We, at Unbottle aim to create a safe space for people to vent their feels, unbottle their emotions.
+	A no judgement zone for you to let your thoughts flow. Meet the team!">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.0/vue.js"></script>
@@ -27,9 +28,9 @@
 
 <body>
     <!--can you keep this mobile menu out of vue ..??....if not put iska wala script in head..-->
-    <div class="mb-menu-btn open-btn" onclick="open_mb_menu()"><img src="general_assets/open-menu.svg" alt=""></div>
+    <div class="mb-menu-btn open-btn" onclick="open_mb_menu()"><img src="general_assets/open-menu.svg" alt="open menu"></div>
     <div class="mb-menu-wrapper" onclick="close_mb_menu()">
-        <div class="mb-menu-btn close-btn"><img src="general_assets/close.svg" alt=""></div>
+        <div class="mb-menu-btn close-btn"><img src="general_assets/close.svg" alt="close menu"></div>
         <div class="mb-menu">
             <a href='index.html' class="mb-menu-item">HOME</a>
             <a href="insta.html" class="mb-menu-item">INSTAGRAM</a>
@@ -56,17 +57,17 @@
     <div class="wrap-it-up" id="team-mid-end">
 
         <nav class='top-nav'>
-            <item onclick="window.location.href='index.html'">HOME</item>
-            <item onclick="window.location.href='team.html'">ABOUT</item>
-            <item onclick="window.location.href='help_page.html'">SEEK HELP</item>
-            <item onclick="window.location.href='insta.html'">INSTAGRAM</item>
-            <item onclick="window.location.href='forum.html'">FORUM</item>
-            <item onclick="window.location.href='events.html'">EVENTS</item>
+            <item><a href="index.html">HOME</a></item>
+            <item><a href="team.html">ABOUT</a></item>
+            <item><a href="help_page.html">SEEK HELP</a></item>
+            <item><a href="insta.html">INSTAGRAM</a></item>
+            <item><a href="forum.html">FORUM</a></item>
+            <item><a href="events.html">EVENTS</a></item>
             <item class='menu-btn' onclick="open_popup('#join-us-popup')">VOLUNTEER</item>
         </nav>
         <section class="landing-section">
             <img src="team_assets/team.svg" alt="team unbottle" class="landing-ilst">
-            <img src="forum_assets/ilst/Group 6.png" alt="" class="logo">
+            <img src="forum_assets/ilst/Group 6.png" alt="unbottle" class="logo">
             <div class="team-head">
                 <span class="black">TEAM</span>
                 <span class="blue">UNBOTTLE</span>
@@ -103,14 +104,14 @@
             <div class="footer-wrapper"><!--<img src='insta_assets/top-splash.svg' class='footer-bkg-img'>-->
 				<span class="footer-text"><a href="#" onclick="open_popup('#disclaimer-pop')">Disclaimer</a></span>
                 		<span class="footer-text">Email ID: unbottle.vrss@gmail.com</span>
-				<span class="footer-text">Instagram - https://instagram.com/un.bottle?igshid=1lmu6lwwr2fdi </span>
+				<span class="footer-text"><a href="https://instagram.com/un.bottle?igshid=1lmu6lwwr2fdi">Check out our Instagram </a></span>
 				<span class="footer-text">Content Copyright: Team UnBottle</span>
                 <span class="footer-text">website designed and developed by: Ushasi and Kumaran </span>
 	    </div>
         </section>
 		<div class="univ-popup-wrap message-popup" id="disclaimer-pop">
 			<div class="univ-popup-window">
-                <div class="close-btn" onclick="close_popup('#disclaimer-pop')"><img src="general_assets/close-clr.svg" alt="" class="popup-btn-img"></div>
+                <div class="close-btn" onclick="close_popup('#disclaimer-pop')"><img src="general_assets/close-clr.svg" alt="close message" class="popup-btn-img"></div>
 
                 <p class='popup-message'></p>
                 <img src="index_assets/what-ilst.svg" alt="what is mental health" class="popup-msg-img">
@@ -137,7 +138,7 @@
 
         <div class="univ-popup-wrap message-popup" id="some-message">
             <div class="univ-popup-window">
-                <div class="close-btn" v-on:click="close_message"><img src="general_assets/close-clr.svg" alt="" class="popup-btn-img"></div>
+                <div class="close-btn" v-on:click="close_message"><img src="general_assets/close-clr.svg" alt="close message" class="popup-btn-img"></div>
 
                 <p class='popup-message'></p>
                 <img src="index_assets/what-ilst.svg" alt="what is mental health" class="popup-msg-img">
@@ -153,7 +154,7 @@
         <div class="univ-popup-wrap" id='join-us-popup'>
             <div class="univ-popup-window">
                 <img src="general_assets/team.svg" alt="create a forum on mental health" class="popup-img">
-                <div class="close-btn" v-on:click="close_popup"><img src="general_assets/close-clr.svg" alt="" class="popup-btn-img"></div>
+                <div class="close-btn" v-on:click="close_popup"><img src="general_assets/close-clr.svg" alt="close message" class="popup-btn-img"></div>
                 <h3 class="popup-title">Join <br><span class='blue-title'>UNBOTTLE</span></h3>
                 <p class="popup-desc">
                     <br> Do you wish to be a part of Unbottle? <br>Are you someone who advocates/wishes to advocate for Mental Health? <br>Do you wish to be a part 
@@ -189,8 +190,8 @@
                         <textarea name="message" id="" cols="30" rows="10" class='para-input' v-model="other_comments"></textarea>
                     </div>
                     <div class="button-wrap">
-                        <button class="form-btn" v-on:click="reset_button"><img src="general_assets/reload.svg" alt="" class="popup-btn-img"></button>
-                        <button class="form-btn" v-on:click="post_query"><img src="general_assets/success.svg" alt="" class="popup-btn-img"></button>
+                        <button class="form-btn" v-on:click="reset_button"><img src="general_assets/reload.svg" alt="reset form" class="popup-btn-img"></button>
+                        <button class="form-btn" v-on:click="post_query"><img src="general_assets/success.svg" alt="submit form" class="popup-btn-img"></button>
                     </div>
 
                 </div>
