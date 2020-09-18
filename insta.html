@@ -10,7 +10,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>||UnBottle|Insta||</title>
-    <meta name="description" content="">
+	<meta name="description" content="Breaking Stigmas, Unbottling Emotions. We, at Unbottle aim to create a safe space for people to vent their feels, unbottle their emotions.
+	A no judgement zone for you to let your thoughts flow. Check out our latest posts!">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="insta_assets/insta.css">
 
@@ -27,9 +28,9 @@
 
 <body>
     <!--can you keep this mobile menu out of vue ..??....if not put iska wala script in head..-->
-    <div class="mb-menu-btn open-btn" onclick="open_mb_menu()"><img src="general_assets/open-menu.svg" alt=""></div>
+    <div class="mb-menu-btn open-btn" onclick="open_mb_menu()"><img src="general_assets/open-menu.svg" alt="mobile menu"></div>
     <div class="mb-menu-wrapper" onclick="close_mb_menu()">
-        <div class="mb-menu-btn close-btn"><img src="general_assets/close.svg" alt=""></div>
+        <div class="mb-menu-btn close-btn"><img src="general_assets/close.svg" alt="mobile menu"></div>
         <div class="mb-menu">
             <a href='index.html' class="mb-menu-item">HOME</a>
             <a href="insta.html" class="mb-menu-item">INSTAGRAM</a>
@@ -58,23 +59,23 @@
             <div class="insta--landing-section">
                 <div class="insta-landing-dot"></div>
                 <nav class="top-nav">
-                    <item onclick="window.location.href='index.html'">HOME</item>
-                    <item onclick="window.location.href='team.html'">ABOUT</item>
-                    <item onclick="window.location.href='help_page.html'">SEEK HELP</item>
-                    <item onclick="window.location.href='insta.html'">INSTAGRAM</item>
-                    <item onclick="window.location.href='forum.html'">FORUM</item>
-                    <item onclick="window.location.href='events.html'">EVENTS</item>
+                    <item><a href="index.html">HOME</a></item>
+                    <item><a href="team.html">ABOUT</a></item>
+                    <item><a href="help_page.html">SEEK HELP</a></item>
+                    <item><a href="insta.html">INSTAGRAM</a></item>
+                    <item><a href="forum.html">FORUM</a></item>
+                    <item><a href="events.html">EVENTS</a></item>
                     <item class='menu-btn' onclick="open_popup('#join-us-popup')">VOLUNTEER</item>
                 </nav>
                 <div class="insta-center-content">
-                    <img src="insta_assets/central_logo.svg" class="insta-center-logo">
+                    <img src="insta_assets/central_logo.svg" alt="welcome to unbottle instagram" class="insta-center-logo">
                 </div>
                 <div class="insta-landing-scroll-more-btn"></div>
             </div>
         </section>
         <section class='post-section'>
             <div class='top-splash'></div>
-            <div class="post-title"><img src='insta_assets/post-title.svg'></div>
+            <div class="post-title"><img src='insta_assets/post-title.svg' alt="welcome to instagram"></div>
             <div class='post-grid-wrapper'>
                 <!--IMPOERTANT....Hiii. ushasi..kya haal..:) .....yrr ye bda dilemma he....body ka background black mast lg rha, but shaayad...shaayad ye website ki theme se 
  match na kare..so wht do you recommend...??
@@ -95,7 +96,7 @@ jb open kro kisi post ko to it opens a popup-with actual post, proper instagram 
             <div class="footer-wrapper"><!--<img src='insta_assets/top-splash.svg' class='footer-bkg-img'>-->
 				<span class="footer-text"><a href="#" onclick="open_popup('#disclaimer-pop')">Disclaimer</a></span>
                 <span class="footer-text">Email ID: unbottle.vrss@gmail.com</span>
-				<span class="footer-text">Instagram - https://instagram.com/un.bottle?igshid=1lmu6lwwr2fdi </span>
+				<span class="footer-text"><a href="https://instagram.com/un.bottle?igshid=1lmu6lwwr2fdi">Check out our Instagram </a></span>
 				<span class="footer-text">Content Copyright: Team UnBottle</span>
                 <span class="footer-text">website designed and developed by: Ushasi and Kumaran </span>
 			</div>
@@ -103,7 +104,7 @@ jb open kro kisi post ko to it opens a popup-with actual post, proper instagram 
 		
 		<div class="univ-popup-wrap message-popup" id="disclaimer-pop">
 			<div class="univ-popup-window">
-                <div class="close-btn" onclick="close_popup('#disclaimer-pop')"><img src="general_assets/close-clr.svg" alt="" class="popup-btn-img"></div>
+                <div class="close-btn" onclick="close_popup('#disclaimer-pop')"><img src="general_assets/close-clr.svg" alt="close message" class="popup-btn-img"></div>
 
                 <p class='popup-message'></p>
                 <img src="index_assets/what-ilst.svg" alt="what is mental health" class="popup-msg-img">
@@ -126,7 +127,7 @@ jb open kro kisi post ko to it opens a popup-with actual post, proper instagram 
 		
         <div class="post-popup">
             <div class='window-wrapper'>
-                <div class="popup-close-btn" onclick="close_post()"><img src='insta_assets/close_btn.svg'></div>
+                <div class="popup-close-btn" onclick="close_post()"><img src='insta_assets/close_btn.svg' alt="unbottle post"></div>
                 <div class='post-bkg'>
                     <div class="post-container">
                         <div class='post-container-scroller' id="test">
@@ -183,7 +184,7 @@ jb open kro kisi post ko to it opens a popup-with actual post, proper instagram 
 
         <div class="univ-popup-wrap message-popup" id="some-message">
             <div class="univ-popup-window">
-                <div class="close-btn" v-on:click="close_message"><img src="general_assets/close-clr.svg" alt="" class="popup-btn-img"></div>
+                <div class="close-btn" v-on:click="close_message"><img src="general_assets/close-clr.svg" alt="close message" class="popup-btn-img"></div>
 
                 <p class='popup-message'></p>
                 <img src="index_assets/what-ilst.svg" alt="what is mental health" class="popup-msg-img">
@@ -199,7 +200,7 @@ jb open kro kisi post ko to it opens a popup-with actual post, proper instagram 
         <div class="univ-popup-wrap" id='join-us-popup'>
             <div class="univ-popup-window">
                 <img src="general_assets/team.svg" alt="create a forum on mental health" class="popup-img">
-                <div class="close-btn" v-on:click="close_popup"><img src="general_assets/close-clr.svg" alt="" class="popup-btn-img"></div>
+                <div class="close-btn" v-on:click="close_popup"><img src="general_assets/close-clr.svg" alt="close form" class="popup-btn-img"></div>
                 <h3 class="popup-title">Join <br><span class='blue-title'>UNBOTTLE</span></h3>
                 <p class="popup-desc">
                     <br> Do you wish to be a part of Unbottle? <br>Are you someone who advocates/wishes to advocate for Mental Health? <br>Do you wish to be a part 
@@ -235,8 +236,8 @@ jb open kro kisi post ko to it opens a popup-with actual post, proper instagram 
                         <textarea name="message" id="" cols="30" rows="10" class='para-input' v-model="other_comments"></textarea>
                     </div>
                     <div class="button-wrap">
-                        <button class="form-btn" v-on:click="reset_button"><img src="general_assets/reload.svg" alt="" class="popup-btn-img"></button>
-                        <button class="form-btn" v-on:click="post_query"><img src="general_assets/success.svg" alt="" class="popup-btn-img"></button>
+                        <button class="form-btn" v-on:click="reset_button"><img src="general_assets/reload.svg" alt="reset form" class="popup-btn-img"></button>
+                        <button class="form-btn" v-on:click="post_query"><img src="general_assets/success.svg" alt="submit form" class="popup-btn-img"></button>
                     </div>
 
                 </div>
