@@ -37,7 +37,7 @@
             <a href="help_page.html" class="mb-menu-item">HELPLINE</a>
             <a href="team.html" class="mb-menu-item">ABOUT</a>
             <a href="events.html" class="mb-menu-item">EVENTS</a>
-            <a href="#" onclick="open_popup()" class="mb-menu-item mb-join-btn">JOIN US</a>
+            <a href="#" onclick="open_popup('#join-us-popup')" class="mb-menu-item mb-join-btn">JOIN US</a>
         </div>
     </div>
     <script>
@@ -92,17 +92,18 @@ jb open kro kisi post ko to it opens a popup-with actual post, proper instagram 
         </section>
         <section class='footer-section'>
 
-            <div class="footer-wrapper"><!--<img src='insta_assets/top-splash.svg' class='footer-bkg-img'>-->
-				<span class="footer-text"><a href="#" onclick="open_popup('#disclaimer-pop')">Disclaimer</a></span>
+            <div class="footer-wrapper">
+                <!--<img src='insta_assets/top-splash.svg' class='footer-bkg-img'>-->
+                <span class="footer-text"><a href="#" onclick="open_popup('#disclaimer-pop')">Disclaimer</a></span>
                 <span class="footer-text">Email ID: unbottle.vrss@gmail.com</span>
-				<span class="footer-text">Instagram - https://instagram.com/un.bottle?igshid=1lmu6lwwr2fdi </span>
-				<span class="footer-text">Content Copyright: Team UnBottle</span>
-                <span class="footer-text">website designed and developed by: Ushasi and Kumaran </span>
-			</div>
+                <span class="footer-text">Instagram - https://instagram.com/un.bottle?igshid=1lmu6lwwr2fdi </span>
+                <span class="footer-text">Content Copyright: Team UnBottle</span>
+                <span class="footer-text">website designed and developed by: Ushasi and Team </span>
+            </div>
         </section>
-		
-		<div class="univ-popup-wrap message-popup" id="disclaimer-pop">
-			<div class="univ-popup-window">
+
+        <div class="univ-popup-wrap message-popup" id="disclaimer-pop">
+            <div class="univ-popup-window">
                 <div class="close-btn" onclick="close_popup('#disclaimer-pop')"><img src="general_assets/close-clr.svg" alt="" class="popup-btn-img"></div>
 
                 <p class='popup-message'></p>
@@ -110,20 +111,16 @@ jb open kro kisi post ko to it opens a popup-with actual post, proper instagram 
                 <div class="popup-msg-content">
                     <h4 class="popup-msg-title">Disclaimer</h4>
                     <p class='popup-message'>
-                        <br>The information contained in this website is for general information purposes only. The information is provided by Unbottle but we make no representations
-						or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability or availability with respect to the website or the
-						information, products, services, or related graphics contained on the website for any purpose. Any reliance you place on such information is therefore
-						strictly at your own risk.
-						In no event will we be liable for any loss or damage in connection with the use of this website.<br>
-						Through this website you may able to link to other websites which are not under the control of Unbottle. We have no control over the nature, content and 
-						availability of those sites.
-						The inclusion of any links does not necessarily imply a recommendation or endorse the views expressed within them.<br>
-						Unbottle takes no responsibility for, and will not be liable for, the website being temporarily unavailable due to technical issues beyond our control.
+                        <br>The information contained in this website is for general information purposes only. The information is provided by Unbottle but we make no representations or warranties of any kind, express or implied, about the completeness,
+                        accuracy, reliability, suitability or availability with respect to the website or the information, products, services, or related graphics contained on the website for any purpose. Any reliance you place on such information is
+                        therefore strictly at your own risk. In no event will we be liable for any loss or damage in connection with the use of this website.<br> Through this website you may able to link to other websites which are not under the control
+                        of Unbottle. We have no control over the nature, content and availability of those sites. The inclusion of any links does not necessarily imply a recommendation or endorse the views expressed within them.<br> Unbottle takes no
+                        responsibility for, and will not be liable for, the website being temporarily unavailable due to technical issues beyond our control.
                     </p>
                 </div>
-			</div>
-		</div>
-		
+            </div>
+        </div>
+
         <div class="post-popup">
             <div class='window-wrapper'>
                 <div class="popup-close-btn" onclick="close_post()"><img src='insta_assets/close_btn.svg'></div>
@@ -202,9 +199,9 @@ jb open kro kisi post ko to it opens a popup-with actual post, proper instagram 
                 <div class="close-btn" v-on:click="close_popup"><img src="general_assets/close-clr.svg" alt="" class="popup-btn-img"></div>
                 <h3 class="popup-title">Join <br><span class='blue-title'>UNBOTTLE</span></h3>
                 <p class="popup-desc">
-                    <br> Do you wish to be a part of Unbottle? <br>Are you someone who advocates/wishes to advocate for Mental Health? <br>Do you wish to be a part 
-			of our initiative and help create an environment devoid of stigmas where you and your fellow hooomans can unbottle their emotions ? 
-			<br>If yes, then volunteer with us in any capacity you wish to!
+                    <br> Do you wish to be a part of Unbottle? <br>Are you someone who advocates/wishes to advocate for Mental Health? <br>Do you wish to be a part of our initiative and help create an environment devoid of stigmas where you and your fellow
+                    hooomans can unbottle their emotions ?
+                    <br>If yes, then volunteer with us in any capacity you wish to!
                     <br> TEAM UNBOTTLE
                 </p>
 
