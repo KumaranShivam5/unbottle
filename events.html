@@ -10,7 +10,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>||UnBottle|Events||</title>
-    <meta name="description" content="">
+    <meta name="description" content="Breaking Stigmas, Unbottling Emotions. We, at Unbottle aim to create a safe space for people to vent their feels, unbottle their emotions.
+	A no judgement zone for you to let your thoughts flow. Tune in to our latest events.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="events_assets/events.css">
     <link rel="stylesheet" href="events_assets/events_mb.css">
@@ -36,10 +37,10 @@
             <a href='index.html' class="mb-menu-item">HOME</a>
             <a href="insta.html" class="mb-menu-item">INSTAGRAM</a>
             <a href="forum.html" class="mb-menu-item">FORUM</a>
-            <a href="help_page.html" class="mb-menu-item">HELPLINE</a>
+            <a href="help_page.html" class="mb-menu-item">SEEK HELP</a>
             <a href="team.html" class="mb-menu-item">ABOUT</a>
             <a href="events.html" class="mb-menu-item">EVENTS</a>
-            <a href="#" onclick="open_popup('#join-us-popup')" class="mb-menu-item mb-join-btn">JOIN US</a>
+            <a href="#" onclick="open_popup('#join-us-popup')" class="mb-menu-item mb-join-btn">VOLUNTEER</a>
         </div>
     </div>
     <script>
@@ -60,13 +61,14 @@
             <div class="bkg-grad"></div>
             <div class="bkg-wrapper">
                 <nav class='top-nav'>
-                    <item onclick="window.location.href='index.html'">HOME</item>
-                    <item onclick="window.location.href='team.html'">ABOUT</item>
-                    <item onclick="window.location.href='help_page.html'">HELPLINE</item>
-                    <item onclick="window.location.href='insta.html'">INSTAGRAM</item>
-                    <item onclick="window.location.href='forum.html'">FORUM</item>
-                    <item onclick="window.location.href='events.html'">EVENTS</item>
-                    <item class='menu-btn' onclick="open_popup('#join-us-popup')">JOIN US</item>
+                    <item><a href="index.html">HOME</a></item>
+                    <item><a href="team.html">ABOUT</a></item>
+                    <item><a href="help_page.html">SEEK HELP</a></item>
+                    <item><a href="insta.html">INSTAGRAM</a></item>
+                    <item><a href="forum.html">FORUM</a></item>
+                    <item><a href="events.html">EVENTS</a></item>
+                    <item class='menu-btn' onclick="open_popup('#join-us-popup')">VOLUNTEER</a>
+                    </item>
                 </nav>
                 <div class="h-title">
                     <span class="h-title-black">OUR</span>
@@ -159,11 +161,12 @@
         <div class="univ-popup-wrap" id='join-us-popup'>
             <div class="univ-popup-window">
                 <img src="general_assets/team.svg" alt="create a forum on mental health" class="popup-img">
-                <div class="close-btn" v-on:click="close_popup"><img src="general_assets/close-clr.svg" alt="" class="popup-btn-img"></div>
+                <div class="close-btn" v-on:click="close_popup"><img src="general_assets/close-clr.svg" alt="close unbottle image" class="popup-btn-img"></div>
                 <h3 class="popup-title">Join <br><span class='blue-title'>UNBOTTLE</span></h3>
                 <p class="popup-desc">
-                    __PLACEHOLDER:01__
-                    <br> We are glad to have you on board with us.<br> Tell us the extant and your capacity with which you want to work for Unbottle, <br> and for how long you wish to be a part of Unbottle's efforts,. <br> Leave us any message for us</textxtarea>
+                    <br> Do you wish to be a part of Unbottle? <br>Are you someone who advocates/wishes to advocate for Mental Health? <br>Do you wish to be a part of our initiative and help create an environment devoid of stigmas where you and your fellow
+                    hooomans can unbottle their emotions ?
+                    <br>If yes, then volunteer with us in any capacity you wish to!
                     <br> TEAM UNBOTTLE
                 </p>
 
@@ -172,14 +175,14 @@
                         <input type="text" id="name" class="char-input char-input-full" placeholder="Name" v-model="name">
                     </div>
                     <div class="input-wrap">
-                        <input type="text" id="name" class="char-input" placeholder='age' v-model="age">
-                        <input type="text" id="name" class="char-input" placeholder="Contact No" v-model="contact_no">
+                        <input type="text" id="age" class="char-input" placeholder='Age' v-model="age">
+                        <input type="text" id="contact" class="char-input" placeholder="Contact No" v-model="contact_no">
                     </div>
                     <div class="input-wrap">
-                        <input type="text" id="name" class="char-input char-input-full" placeholder="Profession/Organisation" v-model="profession">
+                        <input type="text" id="prof" class="char-input char-input-full" placeholder="Profession/Organisation" v-model="profession">
                     </div>
                     <div class="input-wrap">
-                        <input type="text" id="name" class="char-input char-input-full" placeholder="Email ID" v-model="email_id">
+                        <input type="text" id="org" class="char-input char-input-full" placeholder="Email ID" v-model="email_id">
                     </div>
                     <div class="para-wrap">
                         <label class="popup-label">How long would you like to work for unbottle?</label>
@@ -187,15 +190,15 @@
                     </div>
                     <div class="para-wrap">
                         <label class="popup-label">In what capacity would you like to work with unbottle?</label>
-                        <textarea name="message" id="" cols="30" rows="10" class='para-input' v-model="work_capacity"></textarea>
+                        <textarea name="message2" id="" cols="30" rows="10" class='para-input' v-model="work_capacity"></textarea>
                     </div>
                     <div class="para-wrap">
                         <label class="popup-label">Other comments</label>
-                        <textarea name="message" id="" cols="30" rows="10" class='para-input' v-model="other_comments"></textarea>
+                        <textarea name="message3" id="" cols="30" rows="10" class='para-input' v-model="other_comments"></textarea>
                     </div>
                     <div class="button-wrap">
-                        <button class="form-btn" v-on:click="reset_button"><img src="general_assets/reload.svg" alt="" class="popup-btn-img"></button>
-                        <button class="form-btn" v-on:click="post_query"><img src="general_assets/success.svg" alt="" class="popup-btn-img"></button>
+                        <button class="form-btn" v-on:click="reset_button"><img src="general_assets/reload.svg" alt="reload unbottle popup" class="popup-btn-img"></button>
+                        <button class="form-btn" v-on:click="post_query"><img src="general_assets/success.svg" alt="submit unbottle form" class="popup-btn-img"></button>
                     </div>
 
                 </div>

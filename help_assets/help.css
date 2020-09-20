@@ -220,6 +220,13 @@
   flex-direction: column;
   line-height: 1;
 }
+
+.h-intro-text {
+	width:100%;
+	background-color:white;
+	text-align: justify;
+}
+
 .footer-wrapper{
   
   height: 20vh;

@@ -10,7 +10,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>||UnBottle|Forum||</title>
-    <meta name="description" content="">
+    <meta name="description" content="Breaking Stigmas, Unbottling Emotions. We, at Unbottle aim to create a safe space for people to vent their feels, unbottle their emotions.
+	A no judgement zone for you to let your thoughts flow. Share your thoughts here!">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.0/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
@@ -26,17 +27,19 @@
 
 <body>
     <!--can you keep this mobile menu out of vue ..??....if not put iska wala script in head..-->
-    <div class="mb-menu-btn open-btn" onclick="open_mb_menu()"><img src="general_assets/open-menu.svg" alt=""></div>
+    <div class="mb-menu-btn open-btn" onclick="open_mb_menu()"><img src="general_assets/open-menu.svg" alt="unbottle menu"></div>
     <div class="mb-menu-wrapper" onclick="close_mb_menu()">
-        <div class="mb-menu-btn close-btn"><img src="general_assets/close.svg" alt=""></div>
+        <div class="mb-menu-btn close-btn"><img src="general_assets/close.svg" alt="close unbottle menu"></div>
         <div class="mb-menu">
             <a href='index.html' class="mb-menu-item">HOME</a>
             <a href="insta.html" class="mb-menu-item">INSTAGRAM</a>
             <a href="forum.html" class="mb-menu-item">FORUM</a>
-            <a href="help_page.html" class="mb-menu-item">HELPLINE</a>
+            <a href="help_page.html" class="mb-menu-item">SEEK HELP</a>
             <a href="team.html" class="mb-menu-item">ABOUT</a>
             <a href="events.html" class="mb-menu-item">EVENTS</a>
-            <a href="#" onclick="open_popup('#join-us-popup')" class="mb-menu-item mb-join-btn">JOIN US</a>
+            <<<<<<< HEAD <a href="#" onclick="open_popup('#join-us-popup')" class="mb-menu-item mb-join-btn">JOIN US</a>
+                =======
+                <a href="#" onclick="open_popup()" class="mb-menu-item mb-join-btn">VOLUNTEER</a> >>>>>>> 17abe230cda6dcb8c0ff7870d43772d115c0caa9
         </div>
     </div>
     <script>
@@ -56,27 +59,27 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <section class="landing-section">
-            <div class="top-left-splash splash"><img src="forum_assets/ilst/splash_01.svg" style="width: 30vw;"></div>
+            <div class="top-left-splash splash"><img src="forum_assets/ilst/splash_01.svg" alt="welcome to forum" style="width: 30vw;"></div>
             <div class="logo">
-                <img src="forum_assets/ilst/Group 6.png">
+                <img src="forum_assets/ilst/Group 6.png" alt="unbottle logo">
             </div>
             <nav class="top-nav">
-                <item onclick="window.location.href='index.html'">HOME</item>
-                <item onclick="window.location.href='team.html'">ABOUT</item>
-                <item onclick="window.location.href='help_page.html'">HELPLINE</item>
-                <item onclick="window.location.href='insta.html'">INSTAGRAM</item>
-                <item onclick="window.location.href='forum.html'">FORUM</item>
-                <item onclick="window.location.href='events.html'">EVENTS</item>
-                <item class='menu-btn' onclick="open_popup('#join-us-popup')">JOIN US</item>
+                <item><a href="index.html">HOME</a></item>
+                <item><a href="team.html">ABOUT</a></item>
+                <item><a href="help_page.html">SEEK HELP</a></item>
+                <item><a href="insta.html">INSTAGRAM</a></item>
+                <item><a href="forum.html">FORUM</a></item>
+                <item><a href="events.html">EVENTS</a></item>
+                <item class='menu-btn' onclick="open_popup('#join-us-popup')">VOLUNTEER</item>
             </nav>
             <div class="landing-heading">
-                <span class='title-unbotle'>UNBOTTLE</span>
-                <span class="title-forum">FORUM</span>
+                <!--<span class='title-unbotle'>UNBOTTLE</span>
+                <span class="title-forum">FORUM</span>-->
                 <span class="title-talk-it">UNBOTTLE</span>
                 <span class="title-out">AWAY</span>
             </div>
             <div class="landing-illustration">
-                <img src="forum_assets/ilst/undraw_team_work_k80m.svg" style="height: 100%;
+                <img src="forum_assets/ilst/undraw_team_work_k80m.svg" src="welcome to forum" style="height: 100%; 
             padding-bottom: 5vh;
             width: 100%;
             object-fit: contain;">
@@ -99,14 +102,14 @@
                     <div class="card-container">
                         <div class="header-card f-card">
                             <div class="forum-img">
-                                <img class='forum-img-img' :src="apiurl+forum_array[0].image">
+                                <img class='forum-img-img' alt="thumbnail for forum" :src="apiurl+forum_array[0].image">
                             </div>
                             <div class="forum-details">
                                 <span class='forum-title'>
                                 {{forum_array[0].topic}}
                             </span>
                                 <span class='forum-details-all'>
-                                Created by - Kumaran Shivam <br>
+                                Created by - {{forum_array[0].creator}} <br>
                                 Date created - {{forum_array[0].date}}
                             </span>
                                 <span class='forum-ctg'>Topic One</span>
@@ -128,7 +131,7 @@
             <div class="footer-wrapper">
                 <span class="footer-text"><a href="#" onclick="open_popup('#disclaimer-pop')">Disclaimer</a></span>
                 <span class="footer-text">Email ID: unbottle.vrss@gmail.com</span>
-                <span class="footer-text">Instagram - https://instagram.com/un.bottle?igshid=1lmu6lwwr2fdi </span>
+                <span class="footer-text"><a href="https://instagram.com/un.bottle?igshid=1lmu6lwwr2fdi">Check out our Instagram </a></span>
                 <span class="footer-text">Content Copyright: Team UnBottle</span>
                 <span class="footer-text">website designed and developed by: Ushasi and Team </span>
             </div>
@@ -136,7 +139,7 @@
 
         <div class="univ-popup-wrap message-popup" id="disclaimer-pop">
             <div class="univ-popup-window">
-                <div class="close-btn" onclick="close_popup('#disclaimer-pop')"><img src="general_assets/close-clr.svg" alt="" class="popup-btn-img"></div>
+                <div class="close-btn" onclick="close_popup('#disclaimer-pop')"><img src="general_assets/close-clr.svg" alt="close unbottle popup" class="popup-btn-img"></div>
 
                 <p class='popup-message'></p>
                 <img src="index_assets/what-ilst.svg" alt="what is mental health" class="popup-msg-img">
@@ -154,40 +157,71 @@
         </div>
 
     </div>
-    <div class="univ-popup-wrap" id='join-us-popup'>
-        <div class="univ-popup-window">
-            <img src="general_assets/team.svg" alt="create a forum on mental health" class="popup-img">
-            <div class="close-btn" onclick="close_popup('#join-us-popup')"><img src="general_assets/close-clr.svg" alt="" class="popup-btn-img"></div>
-            <h3 class="popup-title">Join <br><span class='blue-title'>UNBOTTLE</span></h3>
-            <p class="popup-desc">
-                <br> Do you wish to be a part of Unbottle? <br>Are you someone who advocates/wishes to advocate for Mental Health? <br>Do you wish to be a part of our initiative and help create an environment devoid of stigmas where you and your fellow
-                hooomans can unbottle their emotions ?
-                <br>If yes, then volunteer with us in any capacity you wish to!
-                <br> TEAM UNBOTTLE
-            </p>
+    <div id="join-us-mid-end">
 
-            <form action="" method="post" class="popup-form" id="create-fprum">
-                <div class="input-wrap">
-                    <input type="text" id="name" class="char-input char-input-full" placeholder="Name">
-                </div>
-                <div class="input-wrap">
-                    <input type="text" id="name" class="char-input" placeholder='age'>
-                    <input type="text" id="name" class="char-input" placeholder="Profession">
-                </div>
-                <div class="input-wrap">
-                    <input type="text" id="name" class="char-input" placeholder="Email ID">
-                    <input type="text" id="name" class="char-input" placeholder="Contact No">
-                </div>
-                <div class="para-wrap">
-                    <textarea name="message" id="" cols="30" rows="10" class='para-input'></textarea>
-                </div>
-                <div class="button-wrap">
-                    <button type="reset" class="form-btn"><img src="general_assets/reload.svg" alt="" class="popup-btn-img"></button>
-                    <button type="submit" class="form-btn"><img src="general_assets/success.svg" alt="" class="popup-btn-img"></button>
-                </div>
+        <div class="univ-popup-wrap message-popup" id="some-message">
+            <div class="univ-popup-window">
+                <div class="close-btn" v-on:click="close_message"><img src="general_assets/close-clr.svg" alt="close unbottle popup" class="popup-btn-img"></div>
 
-            </form>
+                <p class='popup-message'></p>
+                <img src="index_assets/what-ilst.svg" alt="what is mental health" class="popup-msg-img">
+                <div class="popup-msg-content">
+                    <h4 class="popup-msg-title">Message</h4>
+                    <p class='popup-message'>
+                        <br>{{pop_notification}}
+                    </p>
+                </div>
+            </div>
         </div>
+
+        <div class="univ-popup-wrap" id='join-us-popup'>
+            <div class="univ-popup-window">
+                <img src="general_assets/team.svg" alt="create a forum on mental health" class="popup-img">
+                <div class="close-btn" v-on:click="close_popup"><img src="general_assets/close-clr.svg" alt="create your own forum" class="popup-btn-img"></div>
+                <h3 class="popup-title">Join <br><span class='blue-title'>UNBOTTLE</span></h3>
+                <p class="popup-desc">
+                    <br> Do you wish to be a part of Unbottle? <br>Are you someone who advocates/wishes to advocate for Mental Health? <br>Do you wish to be a part of our initiative and help create an environment devoid of stigmas where you and your fellow
+                    hooomans can unbottle their emotions ?
+                    <br>If yes, then volunteer with us in any capacity you wish to!
+                    <br> TEAM UNBOTTLE
+                </p>
+
+                <div class="popup-form" id="create-fprum">
+                    <div class="input-wrap">
+                        <input type="text" id="name" class="char-input char-input-full" placeholder="Name" v-model="name">
+                    </div>
+                    <div class="input-wrap">
+                        <input type="text" id="name" class="char-input" placeholder='Age' v-model="age">
+                        <input type="text" id="name" class="char-input" placeholder="Contact No" v-model="contact_no">
+                    </div>
+                    <div class="input-wrap">
+                        <input type="text" id="name" class="char-input char-input-full" placeholder="Profession/Organisation" v-model="profession">
+                    </div>
+                    <div class="input-wrap">
+                        <input type="text" id="name" class="char-input char-input-full" placeholder="Email ID" v-model="email_id">
+                    </div>
+                    <div class="para-wrap">
+                        <label class="popup-label">How long would you like to volunteer for unbottle?</label>
+                        <textarea name="message" id="" cols="30" rows="10" class='para-input' v-model="how_long"></textarea>
+                    </div>
+                    <div class="para-wrap">
+                        <label class="popup-label">In what capacity would you like to volunteer for unbottle?</label>
+                        <textarea name="message" id="" cols="30" rows="10" class='para-input' v-model="work_capacity"></textarea>
+                    </div>
+                    <div class="para-wrap">
+                        <label class="popup-label">Other comments</label>
+                        <textarea name="message" id="" cols="30" rows="10" class='para-input' v-model="other_comments"></textarea>
+                    </div>
+                    <div class="button-wrap">
+                        <button class="form-btn" v-on:click="reset_button"><img src="general_assets/reload.svg" alt="reload unbottle popup" class="popup-btn-img"></button>
+                        <button class="form-btn" v-on:click="post_query"><img src="general_assets/success.svg" alt="submit form" class="popup-btn-img"></button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
     </div>
     <script>
         $(document).ready(function() {
@@ -204,6 +238,7 @@
     </script>
 
     <script src="forum_assets/forum.js" async defer></script>
+    <script src="general_assets/join.js"></script>
     <script src="forum_assets/forum_view_mid.js"></script>
 </body>
 

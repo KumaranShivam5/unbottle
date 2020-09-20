@@ -149,7 +149,7 @@ var therapy_disp =new Vue ({
 			if(this.category!= this.therapy_array[this.tempindex].org_category) formData1.append('org_category', this.category);
 			if(this.website!= this.therapy_array[this.tempindex].website) formData1.append('website', this.website);
 			if(this.mail!= this.therapy_array[this.tempindex].emai_id) formData1.append('emai_id', this.mail);
-			if(this.logo!= "Logo") formData1.append('org_logo', this.logo);
+			if(typeof(this.logo)=="object") formData1.append('org_logo', this.logo);
 			if(this.quote!= this.therapy_array[this.tempindex].quote) formData1.append('quote', this.quote);
 			
 			axios.post(apiurl+'kumaran/update-org/'+this.ID, formData1,
